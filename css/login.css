@@ -13,13 +13,23 @@ body form h1 {
   margin-bottom: 10px;
   text-align: center;
 }
+body form .wrong-credentials {
+  text-align: center;
+  padding: 10px 0;
+  border: 1px red solid;
+  margin: 20px;
+  border-radius: 5px;
+  color: red;
+  font-weight: bold;
+}
 body form label, body form input {
   display: block;
+}
+body form .email-field input {
   width: 100%;
 }
 body form .password-field input {
   display: inline-block;
-  width: 80%;
 }
 body form .error-text {
   color: red;
@@ -32,9 +42,22 @@ body form #login-btn {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
+  color: white;
+  background: green;
+  outline: none;
+  border: none;
+  border-radius: 5px;
 }
 body form .ps-forgot {
   text-align: center;
+}
+body form .remember-me {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+body form input {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=login.css.map */

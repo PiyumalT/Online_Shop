@@ -11,14 +11,26 @@ body {
       margin-bottom: 10px;
       text-align: center;
     }
+    .wrong-credentials {
+      text-align: center;
+      padding: 10px 0 ;
+      border: 1px red solid;
+      margin: 20px;
+      border-radius: 5px;
+      color: red;
+      font-weight: bold;
+    }
     label, input {
       display: block;
-      width: 100%;
+    }
+    .email-field {
+      input {
+        width: 100%;
+      }
     }
     .password-field {
       input {
         display: inline-block;
-        width: 80%;
       }
     }
     .error-text {
@@ -32,9 +44,22 @@ body {
       width: 100%;
       padding: 10px;
       margin-bottom: 10px;
+      color: white;
+      background: green;
+      outline: none;
+      border: none;
+      border-radius: 5px;
     }
     .ps-forgot {
       text-align: center;
+    }
+    .remember-me {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    input {
+      margin-right: 5px;
     }
   }
 }
