@@ -1,0 +1,57 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+body form {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: black 10px 10px 10px;
+}
+body form h1 {
+  margin-bottom: 10px;
+}
+body form label, body form input {
+  display: block;
+  width: 100%;
+}
+body form .password-field input {
+  display: inline-block;
+  width: 80%;
+}
+body form .error-text {
+  color: red;
+  margin-bottom: 20px;
+}
+body form input, body form input:focus {
+  border-bottom: 1px solid black;
+}
+body form #login-btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+body form .ps-forgot {
+  text-align: center;
+}
+body form hr {
+  margin: 10px 0;
+}
+body form .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body form .social-links i {
+  cursor: pointer;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50vw;
+}
+
+/*# sourceMappingURL=login.css.map */
