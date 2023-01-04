@@ -18,6 +18,9 @@ if(isset($_POST['Confirm_OTP'])){
             $sql_delete = "DELETE FROM temp_users WHERE email = '$email'";
             $result_del = mysqli_query($connect, $sql_delete); 
             echo "Register succss";
+            setcookie("email", $email);
+            echo $_COOKIE['email'];
+            unset($_SESSION['email']);
             //make cookie
             //sesion destroy
         }
