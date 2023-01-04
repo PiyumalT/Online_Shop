@@ -1,0 +1,57 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  form {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: black 10px 10px 10px;
+    h1 {
+      margin-bottom: 10px;
+    }
+    label, input {
+      display: block;
+      width: 100%;
+    }
+    .password-field {
+      input {
+        display: inline-block;
+        width: 80%;
+      }
+    }
+    .error-text {
+      color: red;
+      margin-bottom: 20px;
+    }
+    input, input:focus {
+      border-bottom: 1px solid black;
+    }
+    #login-btn {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .ps-forgot {
+      text-align: center;
+    }
+    hr {
+      margin: 10px 0;
+    }
+    .social-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      i {
+        cursor: pointer;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50vw;
+      }
+    }
+  }
+}
