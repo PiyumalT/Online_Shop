@@ -1,12 +1,33 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /*font: inherit;*/
+}
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+}
+/*set core root default*/
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html, body {
+  height: 100%;
+}
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 a {
   text-decoration: none;
   color: black;
   cursor: pointer;
+}
+/*no class element get */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 :empty:not(img, picture, svg, input, button, hr){
   display: none;
@@ -14,4 +35,20 @@ a {
 input, input:active, input:focus, input:target {
   outline: none;
   border: none;
+}
+img, picture, svg {
+  min-width: 100%;
+  display: block;
+}
+/*remove all animations, transitions*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

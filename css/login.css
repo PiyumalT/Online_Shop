@@ -60,4 +60,28 @@ body form input {
   margin-right: 5px;
 }
 
+@media (max-width: 500px) {
+  form {
+    width: 90vw;
+  }
+  form h1 {
+    font-size: 4.5rem;
+  }
+  form label {
+    font-size: 2rem;
+  }
+  form a {
+    font-size: 1.5rem;
+  }
+  form input[type=checkbox] {
+    padding: 500px;
+  }
+  form button[type=submit] {
+    font-size: 2rem;
+  }
+  form .password-field input {
+    width: 90%;
+  }
+}
+
 /*# sourceMappingURL=login.css.map */
