@@ -11,6 +11,7 @@ body form {
 }
 body form h1 {
   margin-bottom: 10px;
+  text-align: center;
 }
 body form label, body form input {
   display: block;
@@ -34,24 +35,6 @@ body form #login-btn {
 }
 body form .ps-forgot {
   text-align: center;
-}
-body form hr {
-  margin: 10px 0;
-}
-body form .social-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-body form .social-links i {
-  cursor: pointer;
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50vw;
 }
 
 /*# sourceMappingURL=login.css.map */
