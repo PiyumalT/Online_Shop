@@ -17,12 +17,10 @@ if(isset($_POST['Confirm_OTP'])){
             $result_reg = mysqli_query($connect, $sql_insert); 
             $sql_delete = "DELETE FROM temp_users WHERE email = '$email'";
             $result_del = mysqli_query($connect, $sql_delete); 
-            echo "Register succss";
+            echo "Register succss <br>";
             setcookie("email", $email);
-            echo $_COOKIE['email'];
             unset($_SESSION['email']);
-            //make cookie
-            //sesion destroy
+            echo $_COOKIE['email'];
         }
         else{
             header("Location:otp_get.php?error=Invalid OTP. Try Again"); 
