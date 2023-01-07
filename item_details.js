@@ -44,9 +44,9 @@ function validate_all(){
   return false;
 }
 
-function setOptions(value) {
+function setOptions(value1) {
   var optionsInput = document.getElementById("h_options");
-  optionsInput.value = value;
+  optionsInput.value = value1;
 }
 
 function setQuantity() {

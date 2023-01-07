@@ -53,7 +53,12 @@
                 <?php
                 $option_index=0;
                 for ($option_index=0;$option_index<sizeof($item_option_array);$option_index++){
+                  
+                  //removing unespected spaces
                   $option_value=$item_option_array[$option_index];
+                  $option_value = str_replace(" ", "_", $option_value);
+
+                  //making radio buttons
                   if($option_index==0){
                     echo "<input type='radio' name='option' value='".$option_value."' id='".$option_value."' class='option-button' checked>";
                   }
@@ -74,10 +79,11 @@
                 <input type="hidden" name="available_qty" id="available_qty" value="<?php echo $item_qty?>">
                 </div>
                 <p id="qtyError"></p>
-          <form class="item-options" action="cart_or_order.php" method="POST" onsubmit="return validateQuantity()">
+          <form class="item-options" action="cart_or_order.php" method="get" onsubmit="return validateQuantity()">
                 <div class="cart-buttons">
                 <input type="hidden" name="options" id="h_options" value="<?php echo $item_option_array[0]?>">
-                <input type="hidden" name="quantity" id="h_qty" value="1">
+                <input type="hidden" name="qanutity" id="h_qty" value="1">
+                <input type="hidden" name="item_id" id="h_item_id" value="<?php echo $item_id?>">
                 <input type="submit" value="Add to Cart" name="addtocart" id="addtocart" class="cart-buttons_button">
                 <input type="submit" value="Buy Now" name="buynow" id="buynow" class="cart-buttons_button">
 
