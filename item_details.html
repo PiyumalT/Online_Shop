@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="item_details.css" />
+        <script src="item_details.js" type="text/javascript"></script>
+
+
+    </head>
+  <body>
+    <div class="flex-container">
+        <div class="image-buttons">
+            <button onclick="previousImage()" id="image-button1"><</button>
+            <button onclick="nextImage()" id="image-button2">></button>
+        </div>
+      <div>
+        <img src="item-image.jpg" alt="Item Image" class="item-image" />
+      </div>
+      <div class="item-details">
+        <h1 class="item-name">Item Name</h1>
+        <p class="item-description">Item Description - In publishing and graphic design, Lorem ipsum is a placeholder 
+            text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. 
+            Lorem ipsum may be used as a placeholder before final copy is available.</p>
+            <form class="item-options">
+                <input type="radio" name="option" value="option1" id="option1" class="option-button" checked>
+                <label for="option1" class="option-label">Option 1</label>
+                <input type="radio" name="option" value="option2" id="option2" class="option-button">
+                <label for="option2" class="option-label">Option 2</label>
+                <input type="radio" name="option" value="option3" id="option3" class="option-button">
+                <label for="option3" class="option-label">Option 3</label>
+                           
+                <p class="item-price">Item Price:1000 $</p>
+                <div class="quantity">
+                <label for="quantity">Quantity:</label>
+                <button onclick="decreaseQuantity()">-</button>
+                <input type="text" id="quantity" value="1" />
+                <button onclick="increaseQuantity()">+</button>
+                </div>
+                <div class="cart-buttons">
+                <button>Add to Cart</button>
+                <button>Buy Now</button>
+            </form> 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

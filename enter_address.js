@@ -111,10 +111,59 @@ function validateName() {
 
   function validateForm() {
     if (validateName() && validateAddress1() && validateAddress2() && validateCity() && validatePostalCode() && validateProvince() && validateCountry() && validatePhoneNumber()) {
+      checkValues()
       return true;
     } else {
       return false;
     }
   }
+  
+  function setv(){
+    document.getElementById("name").value=document.getElementById("h_name").value;
+    document.getElementById("address1").value = document.getElementById("h_line1").value;
+    document.getElementById("address2").value = document.getElementById("h_line2").value;
+    document.getElementById("city").value = document.getElementById("h_city").value;
+    document.getElementById("province").value = document.getElementById("h_province").value;
+    document.getElementById("country").value = document.getElementById("h_country").value;
+    document.getElementById("postalCode").value = document.getElementById("h_zip").value;
+    document.getElementById("phoneNumber").value = document.getElementById("h_phone").value;
+  }
+
+  window.onload = function() {
+    document.getElementById("name").value=document.getElementById("h_name").value;
+    document.getElementById("address1").value = document.getElementById("h_line1").value;
+    document.getElementById("address2").value = document.getElementById("h_line2").value;
+    document.getElementById("city").value = document.getElementById("h_city").value;
+    document.getElementById("province").value = document.getElementById("h_province").value;
+    document.getElementById("country").value = document.getElementById("h_country").value;
+    document.getElementById("postalCode").value = document.getElementById("h_zip").value;
+    document.getElementById("phoneNumber").value = document.getElementById("h_phone").value;
+  }
+  
+  function checkValues() {
+    var changed = 0;
+    if (document.getElementById("address1").value != document.getElementById("h_line1").value) {
+      changed = 1;
+    } else if (document.getElementById("name").value != document.getElementById("h_name").value) {
+      changed = 1;
+    } else if (document.getElementById("address2").value != document.getElementById("h_line2").value) {
+      changed = 1;
+    } else if (document.getElementById("city").value != document.getElementById("h_city").value) {
+      changed = 1;
+    } else if (document.getElementById("province").value != document.getElementById("h_province").value) {
+      changed = 1;
+    } else if (document.getElementById("country").value != document.getElementById("h_country").value) {
+      changed = 1;
+    } else if (document.getElementById("postalCode").value != document.getElementById("h_zip").value) {
+      changed = 1;
+    } else if (document.getElementById("phoneNumber").value != document.getElementById("h_phone").value) {
+      changed = 1;
+    }
+    if(changed=0){
+      document.getElementById("address_changed").value = changed=document.getElementById("h_address_id").value;
+    }
+    document.getElementById("address_changed").value = 0;
+  }
+  
   
   

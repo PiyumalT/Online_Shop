@@ -25,7 +25,17 @@
                 $user_id=1; //take from cokie
                 $sql="INSERT INTO temp_orders (order_id, user_id, item_id, options, qty) VALUES (NULL, '$user_id', '$item_qty', '$item_option', '$item_qty')";
                 $result = mysqli_query($connect, $sql); 
-                if (mysqli_affected_rows($connect) > 0) {
+                if ($result) {
+                    $temp_order_id = mysqli_insert_id($connect);
+                    $url = "enter_address.php?order_id=$temp_order_id";
+                    header("Location: $url");
+                    exit;
+                    
+                  } else {
+                    // Insertion failed
+                  }
+                
+                /*if (mysqli_affected_rows($connect) > 0) {
                     $sql="SELECT order_id FROM temp_orders WHERE user_id = $user_id AND item_id = $item_id AND options LIKE '$item_option' AND qty = $item_qty";
                     $result = mysqli_query($connect, $sql); 
                     if (mysqli_affected_rows($connect) > 0) {
@@ -37,10 +47,11 @@
                     else{
                     echo ("Error #2"); //insert failed 
                     }
+
                 } 
                 else {
                     echo ("Error"); //insert failed 
-                }
+                }*/
             }
         }
     }

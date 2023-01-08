@@ -48,7 +48,20 @@ input {
     border-radius: 4px;
     cursor: pointer;
   }
-  
+  #Place_order{
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    margin: 5%;
+    background-color: #4caf50;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: auto;
+  }
 
 .error {
     margin-top: 0;
