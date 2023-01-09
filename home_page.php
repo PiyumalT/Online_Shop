@@ -15,9 +15,7 @@ include_once("connect.php");
     <link rel="stylesheet" href="css/home_page.css">
 </head>
 <body>
-<svg viewBox="0 0 5.05711 8.7"><defs><style>.a{fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;}</style></defs><polyline class="a" points="0.5 0.5 4.35 4.35 0.5 8.2"/></svg>
 <main>
-
     <div class="hero-img">
     </div>
 </main>
@@ -41,5 +39,17 @@ include_once("connect.php");
         <div class="category-img"> </div>
     </div>
 </section>
+<script>
+    // change hero img
+    let i = 0;
+    function changeHeroImg() {
+        const colorArray = ["red", "pink", "black"]; //php retrieve here
+        heroImg.style.background = colorArray[colorArray[i] % colorArray.length];
+        i = (i + 1)  % colorArray.length;
+        heroImg.style.background = colorArray[i];
+    }
+    const heroImg = document.querySelector("main");
+    setInterval(changeHeroImg, 5000);
+</script>
 </body>
 </html>
