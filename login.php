@@ -32,7 +32,6 @@ if (isset($_POST) and count($_POST) > 0) {
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<?php create_header();?>
 <form class="login-form" method="post">
     <h1>Log in</h1>
     <?php if (isset($wrong_credentials) and $wrong_credentials) {

@@ -1,7 +1,8 @@
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
     <script src="reg_data_check.js" type="text/javascript"></script>
+      <title>Register</title>
   </head>
   <body>
     <?php
@@ -13,7 +14,7 @@
       $email=$_POST['email'];
       $sql_email="select email from users where email='$email'";
       $result_email = mysqli_query($connect,$sql_email);
-      //if email alredy exist
+      //if email already exist
       if (mysqli_num_rows($result_email) > 0) {
         $error_email="Email Already exist";
         $email_already=true;
@@ -41,7 +42,8 @@
         header("Location:otp_get.php");
       }
     }
-    else{ 
+    else{
+        // $error_email = $_REQUEST['error'] ?? "";
       if(isset($_REQUEST['error'])){
         $error_email=$_REQUEST['error'];
       }
