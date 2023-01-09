@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 04, 2023 at 11:14 AM
+-- Generation Time: Jan 09, 2023 at 06:15 PM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -32,6 +32,7 @@ DROP TABLE IF EXISTS `address`;
 CREATE TABLE IF NOT EXISTS `address` (
   `address_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(5) NOT NULL,
+  `name` varchar(50) NOT NULL,
   `line_1` varchar(25) NOT NULL,
   `line_2` varchar(25) NOT NULL,
   `city` varchar(20) NOT NULL,
@@ -40,7 +41,37 @@ CREATE TABLE IF NOT EXISTS `address` (
   `zip_code` varchar(8) NOT NULL,
   `phone` varchar(15) NOT NULL,
   PRIMARY KEY (`address_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `address`
+--
+
+INSERT INTO `address` (`address_id`, `user_id`, `name`, `line_1`, `line_2`, `city`, `province`, `country`, `zip_code`, `phone`) VALUES
+(1, 1, 'user test 1', 'ad 1', 'ad 2', 'cty 1', 'pr 1', 'sl', '0001', '0771234567'),
+(2, 1, 'user test 111', 'ad 1', 'ad 2', 'cty 1', 'pr 1', 'sl', '0001', '0771234567'),
+(3, 1, 'user test 1', 'ad 1cd', 'ad 2', 'cty 1', 'pr 1', 'sl', '0001', '0771234567'),
+(4, 1, 'user test 1dfgdf', 'ad 1cd', 'ad 2', 'cty 1', 'pr 1', 'sl', '0001', '0771234567'),
+(5, 1, 'user test 1dfgdffasg', 'ad 1cd', 'ad 2', 'cty 1', 'pr 1', 'sl', '0001', '0771234567'),
+(6, 1, 'user test 1dfgdffasg', 'ad 1cd', 'ad 2', 'cty 1', 'pr 1', 'sl', '0001', '0771234567'),
+(7, 1, 'user test 1dfgdffasg', 'ad 1cd', 'ad 2', 'cty 1', 'pr 1', 'sl', '0001', '0771234567'),
+(8, 1, 'user test 1dfgdffasg', 'ad 1cd', 'ad 2', 'cty 1', 'pr 1', 'sl', '0001', '0771234567'),
+(9, 1, 'user test 1dfgdffasg', 'ad 1cd', 'ad 2', 'cty 1', 'pr 1', 'sl', '0001', '0771234567'),
+(10, 1, 'my name', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '9771234567'),
+(11, 1, 'my name', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '9771234567'),
+(12, 1, 'my name', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '9771234567'),
+(13, 1, 'my namex', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234567'),
+(14, 1, 'my namex', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234567'),
+(15, 1, 'my namex', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234567'),
+(16, 1, 'my namexz', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234567'),
+(17, 1, 'my namex', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234567'),
+(18, 1, 'my namex', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234567'),
+(19, 1, 'my namex', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234567'),
+(20, 1, 'my namex', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234567'),
+(21, 1, 'my namex', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234567'),
+(22, 1, 'my namex', 'ad 1cd', '', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234561616'),
+(23, 1, 'my namex', 'ad 1cd', 'yfyvfy', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234561616'),
+(24, 1, 'my namexaaa', 'ad 1cd', 'yfyvfy', 'cty 1 b', 'pr 1', 'sl2', '0001', '7771234561616');
 
 -- --------------------------------------------------------
 
@@ -77,6 +108,13 @@ CREATE TABLE IF NOT EXISTS `cart` (
   PRIMARY KEY (`user_id`,`item_id`,`options`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`user_id`, `item_id`, `options`, `qty`) VALUES
+(1, 1, 'red', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -86,13 +124,22 @@ CREATE TABLE IF NOT EXISTS `cart` (
 DROP TABLE IF EXISTS `item`;
 CREATE TABLE IF NOT EXISTS `item` (
   `item_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) NOT NULL,
-  `description` varchar(50) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  `description` varchar(255) NOT NULL,
   `price` float NOT NULL,
-  `options` varchar(30) NOT NULL,
+  `options` varchar(100) NOT NULL,
   `qty` int(8) NOT NULL,
+  `category` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`item_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `item`
+--
+
+INSERT INTO `item` (`item_id`, `name`, `description`, `price`, `options`, `qty`, `category`) VALUES
+(1, 'sample toy car', 'remote control toy car for children and adults. brand-new toy car. rechargeable battery up to 5 hours works', 2500, 'red, blue, green, yellow, black, white, gray, random', 50, NULL),
+(0, 'Sorry, invalid Item.', 'Unavailable item', 0, 'default ', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -104,10 +151,30 @@ DROP TABLE IF EXISTS `orders`;
 CREATE TABLE IF NOT EXISTS `orders` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
   `cus_id` int(11) NOT NULL,
-  `address_id` int(11) NOT NULL,
-  `price` float NOT NULL,
+  `address_id` int(11) DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  `paid` int(5) DEFAULT NULL,
+  `shipped` int(11) DEFAULT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `cus_id`, `address_id`, `price`, `date`, `paid`, `shipped`) VALUES
+(1, 1, 0, 1000, '2023-01-09 00:00:00', 1, NULL),
+(2, 1, NULL, NULL, NULL, NULL, NULL),
+(3, 1, 14, NULL, NULL, NULL, NULL),
+(4, 1, 15, NULL, NULL, NULL, NULL),
+(5, 1, 18, NULL, NULL, NULL, NULL),
+(6, 1, 19, 17500, '2023-01-09 16:07:37', 1, NULL),
+(7, 1, 20, NULL, NULL, NULL, NULL),
+(8, 1, 21, NULL, NULL, NULL, NULL),
+(9, 1, 22, NULL, NULL, NULL, NULL),
+(10, 1, 23, 22500, '2023-01-09 12:18:47', 1, NULL),
+(11, 1, 24, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -120,9 +187,57 @@ CREATE TABLE IF NOT EXISTS `order_details` (
   `order_id` int(11) NOT NULL,
   `item_id` int(11) NOT NULL,
   `qty` int(11) NOT NULL,
-  `price` float NOT NULL,
-  PRIMARY KEY (`order_id`,`item_id`)
+  `options` varchar(50) NOT NULL,
+  `price` float NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order_details`
+--
+
+INSERT INTO `order_details` (`order_id`, `item_id`, `qty`, `options`, `price`) VALUES
+(1, 1, 2, 'red', 22),
+(18, 1, 1, 'green', 2500),
+(19, 1, 7, 'random', 17500),
+(3, 1, 8, 'random', 20000),
+(4, 1, 1, 'yellow', 2500),
+(5, 1, 2, 'yellow', 5000),
+(6, 1, 2, 'yellow', 5000),
+(6, 1, 5, 'red', 12500),
+(7, 1, 1, 'black', 2500),
+(8, 1, 1, 'white', 2500),
+(9, 1, 2, 'green', 5000),
+(10, 1, 9, 'yellow', 22500),
+(11, 1, 4, 'green', 10000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `temp_orders`
+--
+
+DROP TABLE IF EXISTS `temp_orders`;
+CREATE TABLE IF NOT EXISTS `temp_orders` (
+  `order_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `item_id` int(11) NOT NULL,
+  `options` varchar(50) NOT NULL,
+  `qty` int(11) NOT NULL,
+  `address_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`order_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `temp_orders`
+--
+
+INSERT INTO `temp_orders` (`order_id`, `user_id`, `item_id`, `options`, `qty`, `address_id`) VALUES
+(15, 1, 1, 'red', 3, 1),
+(14, 1, 1, 'black', 1, NULL),
+(16, 1, 1, 'red', 3, 9),
+(17, 1, 2, 'blue', 2, 11),
+(18, 1, 1, 'green', 1, 12),
+(19, 1, 7, 'random', 7, NULL);
 
 -- --------------------------------------------------------
 
