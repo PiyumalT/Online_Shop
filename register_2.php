@@ -15,7 +15,7 @@
       $result_email = mysqli_query($connect,$sql_email);
       //if email alredy exist
       if (mysqli_num_rows($result_email) > 0) {
-        $error_email="Email Already exisit";
+        $error_email="Email Already exist";
         $email_already=true;
         //echo $error_email;
         header("Location:".$_SERVER['PHP_SELF']."?error=".$error_email);
@@ -46,7 +46,7 @@
         $error_email=$_REQUEST['error'];
       }
       else{
-        $error_email="";
+        $error_email=""; // same as line 11
       }
     //HTML file for register form
     ?>

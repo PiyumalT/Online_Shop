@@ -1,0 +1,87 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+body form {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: black 10px 10px 10px;
+}
+body form h1 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+body form .wrong-credentials {
+  text-align: center;
+  padding: 10px 0;
+  border: 1px red solid;
+  margin: 20px;
+  border-radius: 5px;
+  color: red;
+  font-weight: bold;
+}
+body form label, body form input {
+  display: block;
+}
+body form .email-field input {
+  width: 100%;
+}
+body form .password-field input {
+  display: inline-block;
+}
+body form .error-text {
+  color: red;
+  margin-bottom: 20px;
+}
+body form input, body form input:focus {
+  border-bottom: 1px solid black;
+}
+body form #login-btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+  background: green;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+body form .ps-forgot {
+  text-align: center;
+}
+body form .remember-me {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+body form input {
+  margin-right: 5px;
+}
+
+@media (max-width: 500px) {
+  form {
+    width: 90vw;
+  }
+  form h1 {
+    font-size: 4.5rem;
+  }
+  form label {
+    font-size: 2rem;
+  }
+  form a {
+    font-size: 1.5rem;
+  }
+  form input[type=checkbox] {
+    padding: 500px;
+  }
+  form button[type=submit] {
+    font-size: 2rem;
+  }
+  form .password-field input {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

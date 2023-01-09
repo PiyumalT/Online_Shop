@@ -1,0 +1,32 @@
+footer {
+  margin: 0 20px;
+}
+footer .main {
+  display: flex;
+  align-items: center;
+}
+footer .main * {
+  flex-grow: 1;
+}
+footer .main section *:not(:first-child) {
+  margin-left: 10px;
+}
+footer .copyright {
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  footer {
+    font-size: 2rem;
+  }
+  footer .main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .main section:not(:last-child) {
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */
