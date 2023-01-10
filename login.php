@@ -8,11 +8,19 @@ if (isset($_POST) and count($_POST) > 0) {
     if (isset($_POST["remember-me"])) {
         $rememberMe =  $_POST["remember-me"];
     }
-    $sql = "SELECT email,password FROM $table WHERE email='$email' AND password='$password'";
+    $sql = "SELECT id, email,password FROM $table WHERE email='$email' AND password='$password'";
     $result = mysqli_query($connect,$sql);
     if (mysqli_num_rows($result)) {
-        mysqli_fetch_assoc($result);
+        $user_id = mysqli_fetch_assoc($result)['id'];
         echo "good";
+        if (isset($rememberMe) && $rememberMe) {
+            echo "good";
+            setcookie("user_id", $user_id, time() + 60* 60 * 24 * 50); // with time sec * min * hours * day
+        }
+        else {
+            setcookie("user_id", $user_id);
+        }
+        header("Location: home_page.php");
     }
     else {
         $wrong_credentials = true;
@@ -32,7 +40,6 @@ if (isset($_POST) and count($_POST) > 0) {
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<?php create_header();?>
 <form class="login-form" method="post">
     <h1>Log in</h1>
     <?php if (isset($wrong_credentials) and $wrong_credentials) {

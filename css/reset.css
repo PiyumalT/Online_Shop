@@ -29,7 +29,7 @@ a {
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-:empty:not(img, picture, svg, input, button, hr){
+:empty:not(img, picture, svg, input, button, hr, polygon, path, line){
   display: none;
 }
 input, input:active, input:focus, input:target {
