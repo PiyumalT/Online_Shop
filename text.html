@@ -1,0 +1,57 @@
+<html>
+<head>
+        <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .column {
+          float: left;
+          width: 25%;
+          padding: 5px;
+        }
+        
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        .pic{
+            text-align: center;
+        }
+        .sort{
+            text-align: right;
+        }
+
+        </style>
+</head>
+<body>
+    <br>
+    <div class="sort">
+    <button type="button">Sort by</button>
+    
+    <button type="button">Filters</button><br>
+    </div>
+
+    <div class="row">
+        <div class="column">
+          <img src="beef.jpg" alt="Snow" style="width:100%">
+          <h5 class="pic">ORANGE</h5>
+        </div>
+        <div class="column">
+          <img src="beef.jpg" alt="Forest" style="width:100%">
+          <h5 class="pic">ORANGE</h5>
+        </div>
+        <div class="column">
+          <img src="beef.jpg" alt="Mountains" style="width:100%">
+          <h5 class="pic">ORANGE</h5>
+        </div>
+        <div class="column">
+            <img src="beef.jpg" alt="Mountains" style="width:100%">
+            <h5 class="pic">ORANGE</h5>
+          </div>
+      </div>
+      
+
+</body>
+</html>
