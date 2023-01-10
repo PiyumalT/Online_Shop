@@ -22,32 +22,34 @@ include_once("connect.php");
 <section class="popular category">
     <div class="category-tag">Popular</div>
     <div class="image-container">
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
+        <div class="category-img"></div>
+        <div class="category-img"></div>
+        <div class="category-img"></div>
+        <div class="category-img"></div>
+        <div class="category-img"></div>
     </div>
 </section>
 <section class="latest category">
     <div class="category-tag">Latest</div>
     <div class="image-container">
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
+        <div class="category-img"></div>
+        <div class="category-img"></div>
+        <div class="category-img"></div>
+        <div class="category-img"></div>
+        <div class="category-img"></div>
     </div>
 </section>
 <script>
     // change hero img
     let i = 0;
+
     function changeHeroImg() {
         const colorArray = ["red", "pink", "black"]; //php retrieve here
         heroImg.style.background = colorArray[colorArray[i] % colorArray.length];
-        i = (i + 1)  % colorArray.length;
+        i = (i + 1) % colorArray.length;
         heroImg.style.background = colorArray[i];
     }
+
     const heroImg = document.querySelector("main");
     setInterval(changeHeroImg, 5000);
 </script>
