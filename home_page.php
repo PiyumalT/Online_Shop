@@ -1,6 +1,3 @@
-<?php
-include_once("connect.php");
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,50 +5,85 @@ include_once("connect.php");
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Index Page</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/nav_bar.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/home_page.css">
 </head>
 <body>
-<main>
-    <div class="hero-img">
+Popular
+<div class="container">
+    <button class="handle left hidden"></button>
+    <div class="slider">
+        <img src="https://via.placeholder.com/200?text=1" alt="">
+        <img src="https://via.placeholder.com/200?text=2" alt="">
+        <img src="https://via.placeholder.com/200?text=3" alt="">
+        <img src="https://via.placeholder.com/200?text=4" alt="">
+        <img src="https://via.placeholder.com/200?text=5" alt="">
     </div>
-</main>
-<section class="popular category">
-    <div class="category-tag">Popular</div>
-    <div class="image-container">
-        <div class="category-img"></div>
-        <div class="category-img"></div>
-        <div class="category-img"></div>
-        <div class="category-img"></div>
-        <div class="category-img"></div>
+    <button class="handle right"> </button>
+</div>
+Latest
+<div class="container">
+    <button class="handle left hidden"></button>
+    <div class="slider">
+        <img src="https://via.placeholder.com/200?text=1" alt="">
+        <img src="https://via.placeholder.com/200?text=2" alt="">
+        <img src="https://via.placeholder.com/200?text=3" alt="">
+        <img src="https://via.placeholder.com/200?text=4" alt="">
+        <img src="https://via.placeholder.com/200?text=5" alt="">
     </div>
-</section>
-<section class="latest category">
-    <div class="category-tag">Latest</div>
-    <div class="image-container">
-        <div class="category-img"></div>
-        <div class="category-img"></div>
-        <div class="category-img"></div>
-        <div class="category-img"></div>
-        <div class="category-img"></div>
-    </div>
-</section>
+    <button class="handle right"> </button>
+</div>
 <script>
-    // change hero img
-    let i = 0;
+    let sliderChanged = true;
+    const leftHandles = document.querySelectorAll(".handle.left");
+    const rightHandles = document.querySelectorAll(".handle.right");
+    const sliders  = document.querySelectorAll(".slider");
+    setInterval(() => {
+        if (sliderChanged) {
+            for (const slider of sliders) {
+                slider.style.transform = "translateX(0%)";
+            }
+            sliderChanged = !sliderChanged;
 
-    function changeHeroImg() {
-        const colorArray = ["red", "pink", "black"]; //php retrieve here
-        heroImg.style.background = colorArray[colorArray[i] % colorArray.length];
-        i = (i + 1) % colorArray.length;
-        heroImg.style.background = colorArray[i];
+            for (let i = 0; i < leftHandles.length; i++) {
+                rightHandles[i].classList.remove("hidden");
+                leftHandles[i].classList.add("hidden");
+            }
+
+            // rightHandle.classList.remove("hidden");
+            // leftHandle.classList.add("hidden");
+        }
+        else {
+            for (const slider of document.querySelectorAll(".slider")) {
+                slider.style.transform = "translateX(-100%)";
+            }
+            sliderChanged = !sliderChanged;
+            for (let i = 0; i < leftHandles.length; i++) {
+                rightHandles[i].classList.add("hidden");
+                leftHandles[i].classList.remove("hidden");
+            }
+            // rightHandle.classList.add("hidden");
+            // leftHandle.classList.remove("hidden");
+        }
+    }, 3000)
+
+
+    for (const container of document.querySelectorAll(".container")) {
+        const leftHandle = container.querySelector(".handle.left");
+        const rightHandle = container.querySelector(".handle.right");
+            leftHandle.addEventListener("click", e => {
+                container.querySelector(".slider").style.transform = "translateX(0%)";
+                rightHandle.classList.remove("hidden");
+                leftHandle.classList.add("hidden");
+            });
+            rightHandle.addEventListener("click", e => {
+                container.querySelector(".slider").style.transform = "translateX(-100%)";
+                rightHandle.classList.add("hidden");
+                leftHandle.classList.remove("hidden");
+            });
     }
 
-    const heroImg = document.querySelector("main");
-    setInterval(changeHeroImg, 5000);
 </script>
 </body>
 </html>
