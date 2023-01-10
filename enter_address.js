@@ -117,6 +117,8 @@ function validateName() {
       return false;
     }
   }
+
+  
   
   function setv(){
     document.getElementById("name").value=document.getElementById("h_name").value;
@@ -159,11 +161,14 @@ function validateName() {
     } else if (document.getElementById("phoneNumber").value != document.getElementById("h_phone").value) {
       changed = 1;
     }
+    //if address changed, set 0, otherwise set address id.
     if(changed=0){
       document.getElementById("address_changed").value = changed=document.getElementById("h_address_id").value;
     }
     document.getElementById("address_changed").value = 0;
   }
-  
+  function goBack() {
+    history.back();
+  }
   
   

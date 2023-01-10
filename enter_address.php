@@ -6,11 +6,19 @@
 </head>
 <body>
     <?php
+    //check user loged in
+    if (isset($_COOKIE['user_id'])) {
+        $user_id = $_COOKIE['user_id'];
+    } else {
+        // The cookie has not been set
+        $user_id = null;
+        header("Location: register.php");
+        exit;
+    }
     if(true){//get cookie
         if(isset($_REQUEST['order_id'])){
             include "connect.php";
             $temp_order_id = $_REQUEST['order_id'];
-            $user_id=1;
             $sql="SELECT * FROM address WHERE user_id = $user_id ORDER BY address_id DESC";
             $result = mysqli_query($connect, $sql); 
             
@@ -105,7 +113,7 @@
                         <p id="phoneNumberError" class="error"></p>
                     </td>
                     <td>
-                        <button type="reset" style="width: 40%;">Clear Address</button>
+                        <button type="reset" style="width: 40%; margin-left:5%;">Clear all</button>
                     </td>
 
                 </tr>
@@ -115,9 +123,10 @@
 
                 <div class="button-container">
                     <input type="submit" name="place_order" id="place_order" value="Continue Checkout">
-                    <button type="submit" >Cancel Order</button>
+                    </form> 
+                    <button type="submit" onclick="goBack()">Cancel Order</button>
                 </div>      
-            </form> 
+            
             </div>
         <?php
         }

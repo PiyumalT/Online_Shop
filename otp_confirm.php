@@ -15,12 +15,14 @@ if(isset($_POST['Confirm_OTP'])){
             //inserting user data to user table and remove user from temp user table
             $sql_insert="INSERT INTO users (email, password, Name, reg_date) VALUES ('$email', '$result_password', null,'$reg_date')";
             $result_reg = mysqli_query($connect, $sql_insert); 
+            $user_id = mysqli_insert_id($connect);
             $sql_delete = "DELETE FROM temp_users WHERE email = '$email'";
             $result_del = mysqli_query($connect, $sql_delete); 
             echo "Register succss <br>";
-            setcookie("email", $email);
+            setcookie("user_id", $user_id);
             unset($_SESSION['email']);
-            echo $_COOKIE['email'];
+
+            //make header to home or whatever
         }
         else{
             header("Location:otp_get.php?error=Invalid OTP. Try Again"); 

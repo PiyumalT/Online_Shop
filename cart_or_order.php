@@ -1,21 +1,32 @@
 <?php
     include "connect.php";
+    //check user loged in
+    if (isset($_COOKIE['user_id'])) {
+        $user_id = $_COOKIE['user_id'];
+    } else {
+        // The cookie has not been set
+        $user_id = null;
+        header("Location: register.php");
+        exit;
+    }      
+
     if (true){ //add userid cookie
         if(isset($_REQUEST['addtocart'])){
             $item_id=$_REQUEST['item_id'];
             $item_option=$_REQUEST['options'];
             $item_qty=$_REQUEST['qanutity'];
-            $user_id=1; //take from cokie
+
             $sql="INSERT INTO cart (user_id, item_id, options, qty) VALUES ('$user_id', '$item_id', '$item_option', '$item_qty')";
             $result = mysqli_query($connect, $sql); 
             if (mysqli_affected_rows($connect) > 0) {
                 echo("Done");
+                header("Location: cart.php");
+                exit;
             } 
             else {
                 echo ("Error"); //insert failed (duplicate)
             }
-            //header("Location: cart.php");
-            //exit;
+            
         }
         elseif (isset($_REQUEST['buynow'])){
             if(isset($_REQUEST['buynow'])){
@@ -23,15 +34,30 @@
                 $item_option=$_REQUEST['options'];
                 $item_qty=$_REQUEST['qanutity'];
                 $user_id=1; //take from cokie
-                $sql="INSERT INTO temp_orders (order_id, user_id, item_id, options, qty) VALUES (NULL, '$user_id', '$item_qty', '$item_option', '$item_qty')";
+                $sql="INSERT INTO orders (order_id, cus_id, address_id, price) VALUES (NULL, '$user_id', NULL, NULL)";
                 $result = mysqli_query($connect, $sql); 
                 if ($result) {
-                    $temp_order_id = mysqli_insert_id($connect);
-                    $url = "enter_address.php?order_id=$temp_order_id";
-                    header("Location: $url");
-                    exit;
+                    $order_id = mysqli_insert_id($connect);
+                    $sql="SELECT price FROM item WHERE `item_id` = $item_id";
+                    $result = mysqli_query($connect, $sql); 
+                    if ($result) {
+                        $row = mysqli_fetch_assoc($result);
+                        $item_price = $row['price'];
+                        $order_price = $item_qty * $item_price;
+                        $sql="INSERT INTO order_details (order_id, item_id, qty, options, price) VALUES ('$order_id', '$item_id', '$item_qty', '$item_option', '$order_price')";
+                        $result = mysqli_query($connect, $sql); 
+                        
+                        if ($result) {
+                            $url = "enter_address.php?order_id=$order_id";
+                            header("Location: $url");
+                            exit;
+                        }
+                        
+                    }
                     
-                  } else {
+                    
+                } else {
+                    echo "Error";
                     // Insertion failed
                   }
                 
