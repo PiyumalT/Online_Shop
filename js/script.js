@@ -1,18 +1,19 @@
 const passwordField = document.getElementById("password");
 const emailField = document.getElementById("email");
-const rememberMeField = document.getElementById("remember-me");
+// const rememberMeField = document.getElementById("remember-me");
 const passwordErrorText = document.querySelector(".password-field .error-text");
 const emailErrorText = document.querySelector(".email-field .error-text");
 const passwordShowHiddenBtn = document.getElementById("password-hide-show");
 
 let loginError;
 
-function setErrorText(element,text) {
+function setErrorText(element, text) {
     element.innerHTML = `${text}`;
 }
 
 // email validation
-const emailPattern  = /[a-zA-Z0-9._+-]+@[a-zA-Z0-9 -]+\.[a-z]{2,}/g;
+const emailPattern = /[a-zA-Z0-9._+-]+@[a-zA-Z0-9 -]+\.[a-z]{2,}/g;
+
 function validateEmail() {
     const email = this.value;
     let goodEmail = true;
@@ -31,10 +32,11 @@ function validateEmail() {
     }
     return goodEmail;
 }
+
 emailField.addEventListener("input", validateEmail);
 
 //toggle visibility of password
-passwordShowHiddenBtn.addEventListener("click", ()=>{
+passwordShowHiddenBtn.addEventListener("click", () => {
     if (passwordShowHiddenBtn.dataset.psHidden === "true") {
         passwordShowHiddenBtn.dataset.psHidden = "false";
         passwordShowHiddenBtn.innerText = "view";
@@ -58,46 +60,32 @@ function validatePassword() {
     passwordErrorText.style.color = "red";
     if (password.length < 8) {
         // console.log(password)
-        setErrorText(passwordErrorText,"password is too short");
+        setErrorText(passwordErrorText, "password is too short");
         goodPassword = false;
     }
     if (!password.match(lowerCaseLetters)) {
-        setErrorText(passwordErrorText,"add lower case letter/s.");
+        setErrorText(passwordErrorText, "add lower case letter/s.");
         goodPassword = false;
     }
     if (!password.match(upperCaseLetters)) {
-        setErrorText(passwordErrorText,"add upper case letter/s.");
+        setErrorText(passwordErrorText, "add upper case letter/s.");
         goodPassword = false;
     }
     if (!password.match(numbers)) {
-        setErrorText(passwordErrorText,"add number/s.");
+        setErrorText(passwordErrorText, "add number/s.");
         goodPassword = false;
     }
     if (!password) {
-        setErrorText(passwordErrorText,"password cannot be empty");
+        setErrorText(passwordErrorText, "password cannot be empty");
         goodPassword = false
     }
     if (goodPassword) {
         passwordErrorText.style.color = "green";
-        setErrorText(passwordErrorText,"password accepted.");
+        setErrorText(passwordErrorText, "password accepted.");
     }
     return goodPassword;
 }
 
 passwordField.addEventListener("input", validatePassword);
-
-// nav bar toggle
-const menuIcon = document.querySelector(".menu-icon");
-const navElement = document.querySelector("nav");
-menuIcon.addEventListener("click", ()=>{
-    if (menuIcon.ariaExpanded === "false") {
-        menuIcon.ariaExpanded = "true";
-        navElement.style.transform = "translateX(0%)";
-    } else {
-        menuIcon.ariaExpanded = "false";
-        navElement.style.transform = "translateX(-100%)";
-    }
-
-});
 
 
