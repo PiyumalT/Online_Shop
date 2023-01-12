@@ -10,31 +10,45 @@
     <link rel="stylesheet" href="css/home_page.css">
 </head>
 <body>
-Popular
-<div class="container">
-    <button class="handle left hidden"></button>
-    <div class="slider">
-        <img src="https://via.placeholder.com/200?text=1" alt="">
-        <img src="https://via.placeholder.com/200?text=2" alt="">
-        <img src="https://via.placeholder.com/200?text=3" alt="">
-        <img src="https://via.placeholder.com/200?text=4" alt="">
-        <img src="https://via.placeholder.com/200?text=5" alt="">
+<main>
+    <div class="hero-img-container">
+        <?php
+        for ($i = 1; $i < 4; $i++) {
+            echo "<img src=\"https://via.placeholder.com/200?text=$i\" alt=\"\">";
+        }
+        ?>
     </div>
-    <button class="handle right"></button>
-</div>
-Latest
-<div class="container">
-    <button class="handle left hidden"></button>
-    <div class="slider">
-        <img src="https://via.placeholder.com/200?text=1" alt="">
-        <img src="https://via.placeholder.com/200?text=2" alt="">
-        <img src="https://via.placeholder.com/200?text=3" alt="">
-        <img src="https://via.placeholder.com/200?text=4" alt="">
-        <img src="https://via.placeholder.com/200?text=5" alt="">
+</main>
+<section>
+    <h3 class="section-title">Popular</h3>
+    <div class="container">
+        <button class="handle left hidden"></button>
+        <div class="slider">
+            <?php
+            for ($i = 1; $i < 6; $i++) {
+                echo "<img src=\"https://via.placeholder.com/200?text=$i\" alt=\"\">";
+            }
+            ?>
+        </div>
+        <button class="handle right"></button>
     </div>
-    <button class="handle right"></button>
-</div>
+</section>
+<section>
+    <h3 class="section-title">Latest</h3>
+    <div class="container">
+        <button class="handle left hidden"></button>
+        <div class="slider">
+            <?php
+            for ($i = 1; $i < 6; $i++) {
+                echo "<img src=\"https://via.placeholder.com/200?text=$i\" alt=\"\">";
+            }
+            ?>
+        </div>
+        <button class="handle right"></button>
+    </div>
+</section>
 <script>
+
     let sliderChanged = true;
     const leftHandles = document.querySelectorAll(".handle.left");
     const rightHandles = document.querySelectorAll(".handle.right");

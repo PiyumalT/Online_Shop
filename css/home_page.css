@@ -1,70 +1,88 @@
-.container {
-    width: 100%;
-    overflow: clip;
-    position: relative;
+@charset "UTF-8";
+body main {
+  overflow: clip;
+  height: 80vh;
+}
+body main .hero-img-container {
+  display: flex;
+  animation: slide 10s cubic-bezier(1, 0, 0, 1) infinite alternate;
+}
+body main .hero-img-container img {
+  height: 80vh;
+  aspect-ratio: 9/9;
+  margin: 0 10px 0 0;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+body section .container {
+  width: 100%;
+  overflow: clip;
+  position: relative;
+}
+body section .container .handle {
+  position: absolute;
+  border: none;
+  border-radius: 1rem;
+  height: 100px;
+  flex: 0 0 5%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+body section .container .handle:hover, body section .container .handle:focus {
+  background: rgba(0, 0, 0, 0.5);
+}
+body section .container .handle:after {
+  font-size: 5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+body section .container .handle.left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  top: 50%;
+  left: 20px;
+}
+body section .container .handle.left:after {
+  content: "‹";
+}
+body section .container .handle.right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  top: 50%;
+  right: 20px;
+}
+body section .container .handle.right:after {
+  content: "›";
+}
+body section .container .slider {
+  display: flex;
+  transform: translateX(0%);
+  transition: 0.5s linear all;
+}
+body section .container .slider img {
+  min-width: 33%;
+  /*flex: 0 0 33%;*/
+  aspect-ratio: 16/9;
+  padding: 0.5rem;
+  overflow: hidden;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-.handle {
-    position: absolute;
-    border: none;
-    border-radius: 1rem;
-    height: 100px;
-    flex: 0 0 5%;
-    background: rgba(0, 0, 0, .25);
-    z-index: 100;
-    cursor: pointer;
-    transform: translateY(-50%);
-}
-
-.handle:hover, .handle:focus {
-    background: rgba(0, 0, 0, .5);
-}
-
-.handle:after {
-    font-size: 5rem;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0;
-}
-
-.handle.left {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    top: 50%;
-    left: 20px;
-}
-
-.handle.left:after {
-    content: "\2039";
-}
-
-.handle.right {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    top: 50%;
-    right: 20px;
-}
-
-.handle.right:after {
-    content: "\203A";
-}
-
-.slider {
-    display: flex;
-    transform: translateX(0%);
-    transition: .5s linear all;
-}
-
-.slider > img {
-    min-width: 33%;
-    /*flex: 0 0 33%;*/
-    aspect-ratio: 16 / 9;
-    padding: .5rem;
-    overflow: hidden;
-}
+/*# sourceMappingURL=home_page.css.map */
