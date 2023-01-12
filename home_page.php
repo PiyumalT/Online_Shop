@@ -20,7 +20,7 @@ Popular
         <img src="https://via.placeholder.com/200?text=4" alt="">
         <img src="https://via.placeholder.com/200?text=5" alt="">
     </div>
-    <button class="handle right"> </button>
+    <button class="handle right"></button>
 </div>
 Latest
 <div class="container">
@@ -32,56 +32,57 @@ Latest
         <img src="https://via.placeholder.com/200?text=4" alt="">
         <img src="https://via.placeholder.com/200?text=5" alt="">
     </div>
-    <button class="handle right"> </button>
+    <button class="handle right"></button>
 </div>
 <script>
     let sliderChanged = true;
     const leftHandles = document.querySelectorAll(".handle.left");
     const rightHandles = document.querySelectorAll(".handle.right");
-    const sliders  = document.querySelectorAll(".slider");
-    setInterval(() => {
-        if (sliderChanged) {
-            for (const slider of sliders) {
-                slider.style.transform = "translateX(0%)";
-            }
-            sliderChanged = !sliderChanged;
+    const sliders = document.querySelectorAll(".slider");
 
-            for (let i = 0; i < leftHandles.length; i++) {
-                rightHandles[i].classList.remove("hidden");
-                leftHandles[i].classList.add("hidden");
-            }
-
-            // rightHandle.classList.remove("hidden");
-            // leftHandle.classList.add("hidden");
-        }
-        else {
-            for (const slider of document.querySelectorAll(".slider")) {
-                slider.style.transform = "translateX(-100%)";
-            }
-            sliderChanged = !sliderChanged;
-            for (let i = 0; i < leftHandles.length; i++) {
-                rightHandles[i].classList.add("hidden");
-                leftHandles[i].classList.remove("hidden");
-            }
-            // rightHandle.classList.add("hidden");
-            // leftHandle.classList.remove("hidden");
-        }
-    }, 3000)
+    // setInterval(() => {
+    //     if (sliderChanged) {
+    //         for (const slider of sliders) {
+    //             slider.style.transform = "translateX(0%)";
+    //         }
+    //         sliderChanged = !sliderChanged;
+    //
+    //         for (let i = 0; i < leftHandles.length; i++) {
+    //             rightHandles[i].classList.remove("hidden");
+    //             leftHandles[i].classList.add("hidden");
+    //         }
+    //
+    //         // rightHandle.classList.remove("hidden");
+    //         // leftHandle.classList.add("hidden");
+    //     }
+    //     else {
+    //         for (const slider of document.querySelectorAll(".slider")) {
+    //             slider.style.transform = "translateX(-100%)";
+    //         }
+    //         sliderChanged = !sliderChanged;
+    //         for (let i = 0; i < leftHandles.length; i++) {
+    //             rightHandles[i].classList.add("hidden");
+    //             leftHandles[i].classList.remove("hidden");
+    //         }
+    //         // rightHandle.classList.add("hidden");
+    //         // leftHandle.classList.remove("hidden");
+    //     }
+    // }, 3000)
 
 
     for (const container of document.querySelectorAll(".container")) {
         const leftHandle = container.querySelector(".handle.left");
         const rightHandle = container.querySelector(".handle.right");
-            leftHandle.addEventListener("click", e => {
-                container.querySelector(".slider").style.transform = "translateX(0%)";
-                rightHandle.classList.remove("hidden");
-                leftHandle.classList.add("hidden");
-            });
-            rightHandle.addEventListener("click", e => {
-                container.querySelector(".slider").style.transform = "translateX(-100%)";
-                rightHandle.classList.add("hidden");
-                leftHandle.classList.remove("hidden");
-            });
+        leftHandle.addEventListener("click", e => {
+            container.querySelector(".slider").style.transform = "translateX(0%)";
+            rightHandle.classList.remove("hidden");
+            leftHandle.classList.add("hidden");
+        });
+        rightHandle.addEventListener("click", e => {
+            container.querySelector(".slider").style.transform = "translateX(-100%)";
+            rightHandle.classList.add("hidden");
+            leftHandle.classList.remove("hidden");
+        });
     }
 
 </script>
