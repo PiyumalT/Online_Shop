@@ -21,7 +21,7 @@
 input {
     font-size: larger;
   }
-#emailError , #passwordError , #confirmPasswordError{
+#emailError , #passwordError , #confirmPasswordError #otpError{
   color: red;
 } 
 

@@ -5,7 +5,7 @@ if (isset($_COOKIE['user_id'])) {
 } else {
     // The cookie has not been set
     $user_id = null;
-    header("Location: register.php");
+    header("Location: login.php");
     exit;
 }
 

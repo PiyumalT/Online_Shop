@@ -1,3 +1,6 @@
+<?php
+include_once("connect.php");
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,100 +8,80 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home Page</title>
+    <title>Index Page</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/nav_bar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/home_page.css">
 </head>
 <body>
+
+<?php
+
+function create_header(): void
+{
+    session_start();
+    $logged_in = false;
+    if ( isset($_COOKIE['user_id']) ) {
+        $logged_in = true;
+    // User is logged in
+    }
+//    else {
+//    // No one is logged in (guest)
+//    }
+?>
+    <button class="menu-icon" aria-expanded="false">menu icon</button>
+    <nav>
+        <div class="logo">LOGO</div>
+        <div class="search_box">
+            <label for="search_bar"></label>
+            <input type="text" name="search_bar" id="search_bar">
+            <i class="search-icon">S</i>
+        </div>
+        <div class="cart">cart</div>
+        <div class="account">account</div>
+    </nav>
+<?php
+}
+create_header();
+?>
+
+
 <main>
-    <div class="hero-img-container">
-        <?php
-        for ($i = 1; $i < 4; $i++) {
-            echo "<img src=\"https://via.placeholder.com/200?text=$i\" alt=\"\">";
-        }
-        ?>
+    <div class="hero-img">
     </div>
 </main>
-<section>
-    <h3 class="section-title">Popular</h3>
-    <div class="container">
-        <button class="handle left hidden"></button>
-        <div class="slider">
-            <?php
-            for ($i = 1; $i < 6; $i++) {
-                echo "<img src=\"https://via.placeholder.com/200?text=$i\" alt=\"\">";
-            }
-            ?>
-        </div>
-        <button class="handle right"></button>
+<section class="popular category">
+    <div class="category-tag">Popular</div>
+    <div class="image-container">
+        <div class="category-img"> </div>
+        <div class="category-img"> </div>
+        <div class="category-img"> </div>
+        <div class="category-img"> </div>
+        <div class="category-img"> </div>
     </div>
 </section>
-<section>
-    <h3 class="section-title">Latest</h3>
-    <div class="container">
-        <button class="handle left hidden"></button>
-        <div class="slider">
-            <?php
-            for ($i = 1; $i < 6; $i++) {
-                echo "<img src=\"https://via.placeholder.com/200?text=$i\" alt=\"\">";
-            }
-            ?>
-        </div>
-        <button class="handle right"></button>
+<section class="latest category">
+    <div class="category-tag">Latest</div>
+    <div class="image-container">
+        <div class="category-img"> </div>
+        <div class="category-img"> </div>
+        <div class="category-img"> </div>
+        <div class="category-img"> </div>
+        <div class="category-img"> </div>
     </div>
 </section>
 <script>
-
-    let sliderChanged = true;
-    const leftHandles = document.querySelectorAll(".handle.left");
-    const rightHandles = document.querySelectorAll(".handle.right");
-    const sliders = document.querySelectorAll(".slider");
-
-    // setInterval(() => {
-    //     if (sliderChanged) {
-    //         for (const slider of sliders) {
-    //             slider.style.transform = "translateX(0%)";
-    //         }
-    //         sliderChanged = !sliderChanged;
-    //
-    //         for (let i = 0; i < leftHandles.length; i++) {
-    //             rightHandles[i].classList.remove("hidden");
-    //             leftHandles[i].classList.add("hidden");
-    //         }
-    //
-    //         // rightHandle.classList.remove("hidden");
-    //         // leftHandle.classList.add("hidden");
-    //     }
-    //     else {
-    //         for (const slider of document.querySelectorAll(".slider")) {
-    //             slider.style.transform = "translateX(-100%)";
-    //         }
-    //         sliderChanged = !sliderChanged;
-    //         for (let i = 0; i < leftHandles.length; i++) {
-    //             rightHandles[i].classList.add("hidden");
-    //             leftHandles[i].classList.remove("hidden");
-    //         }
-    //         // rightHandle.classList.add("hidden");
-    //         // leftHandle.classList.remove("hidden");
-    //     }
-    // }, 3000)
-
-
-    for (const container of document.querySelectorAll(".container")) {
-        const leftHandle = container.querySelector(".handle.left");
-        const rightHandle = container.querySelector(".handle.right");
-        leftHandle.addEventListener("click", e => {
-            container.querySelector(".slider").style.transform = "translateX(0%)";
-            rightHandle.classList.remove("hidden");
-            leftHandle.classList.add("hidden");
-        });
-        rightHandle.addEventListener("click", e => {
-            container.querySelector(".slider").style.transform = "translateX(-100%)";
-            rightHandle.classList.add("hidden");
-            leftHandle.classList.remove("hidden");
-        });
+    // change hero img
+    let i = 0;
+    function changeHeroImg() {
+        const colorArray = ["red", "pink", "black"]; //php retrieve here
+        heroImg.style.background = colorArray[colorArray[i] % colorArray.length];
+        i = (i + 1)  % colorArray.length;
+        heroImg.style.background = colorArray[i];
     }
-
+    const heroImg = document.querySelector("main");
+    setInterval(changeHeroImg, 5000);
 </script>
 </body>
 </html>

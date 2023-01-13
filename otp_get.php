@@ -1,6 +1,6 @@
 <html>
     <head>
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
     </head>
     <body>
         <?php
@@ -17,7 +17,7 @@
             }
         ?>
             <div class="form-box">
-            <h1 style="text-align: center">Create New Account</h1>
+            <h1 style="text-align: center">Verify OTP</h1>
             <p>An OTP has been sent to <b> <?php echo $email ?> </b>. If you did not receive the OTP, you can:</p>
             <button type="button" onclick="changeEmail()">Change Email</button>
             <button type="button" onclick="resendEmail()">Resend Email</button>

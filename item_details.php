@@ -1,7 +1,7 @@
 <html>
     <head>
-        <link rel="stylesheet" href="item_details.css" />
-        <script src="item_details.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/item_details.css" />
+        <script src="js/item_details.js" type="text/javascript"></script>
 
     </head>
   <body>
@@ -11,8 +11,8 @@
       //incude - js function to enable submit
       //         js function to avoid add cart more than available
       //get item id and get related data from db
-      if(isset($_POST['item_id'])){
-        $item_id=$_POST['item_id'];
+      if(isset($_REQUEST['item_id'])){
+        $item_id=$_REQUEST['item_id'];
       }
       else{
         $item_id=1; // Please change this to 0 after testing

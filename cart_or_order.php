@@ -6,7 +6,7 @@
     } else {
         // The cookie has not been set
         $user_id = null;
-        header("Location: register.php");
+        header("Location: login.php");
         exit;
     }      
 
@@ -15,8 +15,15 @@
             $item_id=$_REQUEST['item_id'];
             $item_option=$_REQUEST['options'];
             $item_qty=$_REQUEST['qanutity'];
-
-            $sql="INSERT INTO cart (user_id, item_id, options, qty) VALUES ('$user_id', '$item_id', '$item_option', '$item_qty')";
+            $sql="SELECT price FROM item WHERE `item_id` = $item_id";
+            $result = mysqli_query($connect, $sql); 
+            $order_row_price=NULL;
+            if ($result) {
+                $row = mysqli_fetch_assoc($result);
+                $item_price = $row['price'];
+                $order_row_price = $item_qty * $item_price;
+            }
+            $sql="INSERT INTO cart (user_id, item_id, options, qty,price) VALUES ('$user_id', '$item_id', '$item_option', '$item_qty','$order_row_price')";
             $result = mysqli_query($connect, $sql); 
             if (mysqli_affected_rows($connect) > 0) {
                 echo("Done");
@@ -24,7 +31,7 @@
                 exit;
             } 
             else {
-                echo ("Error"); //insert failed (duplicate)
+                header("Location: cart.php"); //insert failed (duplicate)
             }
             
         }
@@ -33,7 +40,7 @@
                 $item_id=$_REQUEST['item_id'];
                 $item_option=$_REQUEST['options'];
                 $item_qty=$_REQUEST['qanutity'];
-                $user_id=1; //take from cokie
+                //$user_id=1; //take from cokie
                 $sql="INSERT INTO orders (order_id, cus_id, address_id, price) VALUES (NULL, '$user_id', NULL, NULL)";
                 $result = mysqli_query($connect, $sql); 
                 if ($result) {

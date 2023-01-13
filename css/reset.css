@@ -1,5 +1,6 @@
 *, *::before, *::after {
   box-sizing: border-box;
+  
 }
 * {
   margin: 0;
@@ -35,6 +36,7 @@ a:not([class]) {
 input, input:active, input:focus, input:target {
   outline: none;
   border: none;
+  font-size: large;
 }
 img, picture, svg {
   min-width: 100%;

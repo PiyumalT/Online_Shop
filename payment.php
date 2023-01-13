@@ -2,7 +2,10 @@
 <html>
 <head>
   <title>Order Details</title>
-  <link rel="stylesheet" href="payment.css">
+  <link rel="stylesheet" href="css/payment.css">
+  <script src="js/payment.js" type="text/javascript"></script>
+
+  
 </head>
 <body>
   <h2> Order Details </h2>
@@ -25,7 +28,7 @@ if(isset($_REQUEST['order_id'])){
         $user_id = $_COOKIE['user_id'];
     } else {
         $user_id = null;
-        header("Location: register.php");
+        header("Location: login.php");
         exit;
     }
 
@@ -102,7 +105,7 @@ if(isset($_REQUEST['order_id'])){
                 <th class="a_right"><h2><?php echo $order_total?><h2></th>
               </tr>
             </table>
-          </div>
+          
         <?php
 
 
@@ -123,21 +126,52 @@ if(isset($_REQUEST['order_id'])){
 
             ?>
             <div class="address">
-              <h3>Ship to</h2>
-              <p>
-                <?php echo $name ?><br>
-                <?php echo $line_1 ?><br>
-                <?php echo $line_2 ?><br>
-                <?php echo $city ?><br>
-                <?php echo $province ?><br>
-                <?php echo $country ?><br>
-                <?php echo "ZIP - ".$zip_code ?><br>
-                <?php echo $phone ?><br>
-              </p>
-              <form action="payment2.php" method="POST">
+              <h3>Ship to</h2><div class="address_box">
+              
+                
+                  <?php echo $name ?><br>
+                  <?php echo $line_1 ?><br>
+                  <?php echo $line_2 ?><br>
+                  <?php echo $city ?><br>
+                  <?php echo $province ?><br>
+                  <?php echo $country ?><br>
+                  <?php echo "ZIP - ".$zip_code ?><br>
+                  <?php echo $phone ?><br>
+                
+        </div></div></div> <div class="payment">
+              <form action="payment2.php" method="POST" onsubmit="return ">
+                
+                <h1>Payment form</h1>
+                <div class=card_img>
+                  <img src="site_img/card_img.png">
+                </div>
+                <section>
+                    <label for="cc-number">Card number</label>
+                    <input id="cc-number" name="cc-number" autocomplete="cc-number" inputmode="numeric" onkeyup="addSpace()" required>
+                </section>
+
+                <section>
+                    <label for="cc-name">Name on card</label>
+                    <input id="cc-name" name="cc-name" autocomplete="cc-name" pattern="[\p{L} \-\.]+" required>
+                </section>
+
+                <section id="cc-exp-csc">
+                    <div>
+                        <label for="cc-exp">Expiry date</label>
+                        <input id="cc-exp" name="cc-exp" autocomplete="cc-exp" placeholder="MM/YY" maxlength="5" onkeypress="addSlash()" required>
+                    </div>
+                    <div>
+                        <label for="cc-csc">Security code</label>
+                        <input id="cc-csc" name="cc-csc" autocomplete="cc-csc" inputmode="numeric" maxlength="3" pattern="[0-999]*" required>
+                        <div class="explanation">Back of card, last 3 digits</div>
+                    </div>
+                    <p class="Error" id="pError"></p>
+                </section>
+
                 <input type="hidden" name="order_id" value="<?php echo $order_id?>">
                 <input type="hidden" name="price" value="<?php echo $order_total?>">
                 <input type="submit" name="make_payment" value="Make Payment" id="submit">
+
               </form>
             </div>
             <?php

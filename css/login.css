@@ -83,5 +83,7 @@ body form input {
     width: 90%;
   }
 }
-
+.remember-me{
+  margin: auto;
+}
 /*# sourceMappingURL=login.css.map */
