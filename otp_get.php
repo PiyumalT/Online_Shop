@@ -18,7 +18,7 @@
         ?>
             <div class="form-box">
             <h1 style="text-align: center">Verify OTP</h1>
-            <p>An OTP has been sent to <b> <?php echo $email ?> </b>. If you did not receive the OTP, you can:</p>
+            <p>An OTP has been sent to <b> <?php echo $email ?>. </b></p><p> If you did not receive the OTP, you can:</p>
             <button type="button" onclick="changeEmail()">Change Email</button>
             <button type="button" onclick="resendEmail()">Resend Email</button>
             <br>

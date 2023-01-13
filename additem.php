@@ -1,5 +1,5 @@
 <?php
-   include 'connection.php';
+   include 'connect.php';
 
    if(isset($_POST['Add_product'])){
             $name= $_POST['name'];
@@ -21,14 +21,14 @@
         }
         else{
             $insert= "INSERT INTO item(name, description, price, category, qty, options) VALUES('$name','$discription','$price', '$category','$quantity','$options')";
-            $upload = mysqli_query($connection,$insert);
+            $upload = mysqli_query($connect,$insert);
             echo $insert;
             if($upload){
                 /*
                 move_uploaded_file($product_image_temp_name, $product_image_folder);
                 $message[] = 'new product added succesfully';
                 */
-                //$item_id =mysqli_insert_id($connection); //modify
+                //$item_id =mysqli_insert_id($connect); //modify
                 // Move the uploaded file to the item_pics folder and rename it to the item ID
                 //move_uploaded_file($item_pic['tmp_name'], 'item_pics/' . $item_id . '.jpg');
                 move_uploaded_file($product_image_tmp_name, $product_image_folder);
