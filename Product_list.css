@@ -1,0 +1,41 @@
+*{
+    background-color: rgb(246, 246, 240);
+}
+
+h1{
+    color: rgb(53, 14, 173);
+    text-align: center;
+}
+
+table, th, td {
+    border:1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+th{
+    width: 14.2%;
+    height: 50px;
+    background-color: rgb(76, 87, 93);
+    color: rgb(241, 244, 248);
+}
+
+td{
+    width: 14.2%;
+    height: 40px;     
+    text-align: center;
+    background-color: rgb(252, 253, 253);
+}
+
+.btn{
+    background: rgb(169, 227, 8);
+    padding: 5px 30px;
+    text-decoration: none;
+    color: rgb(194, 87, 15);
+    border: 1px solid black;
+}
+
+.btn:hover{
+    background: rgb(231, 227, 227);
+    color: rgb(7, 4, 182);
+}
