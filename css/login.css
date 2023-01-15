@@ -28,13 +28,7 @@ body form label, body form input {
 body form .email-field input {
   width: 100%;
 }
-body form .password-field .password-input {
-  display: flex;
-}
-body form .password-field .password-input .icon {
-  width: 30px;
-}
-body form .password-field .password-input input {
+body form .password-field input {
   display: inline-block;
 }
 body form .error-text {
@@ -56,16 +50,13 @@ body form #login-btn {
 }
 body form .ps-forgot {
   text-align: center;
-  text-decoration: underline;
 }
 body form .remember-me {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  margin: 5px 0;
 }
-body form .remember-me input {
-  transform: translateY(-10%);
+body form input {
   margin-right: 5px;
 }
 
@@ -92,5 +83,7 @@ body form .remember-me input {
     width: 90%;
   }
 }
-
+.remember-me{
+  margin: auto;
+}
 /*# sourceMappingURL=login.css.map */

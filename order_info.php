@@ -2,9 +2,6 @@
 <html>
 <head>
   <title>Order Details</title>
-  <link rel="stylesheet" href="css/payment.css">
-  <script src="js/payment.js" type="text/javascript"></script>
-
   
 </head>
 <body>
@@ -20,7 +17,6 @@
           <th>Quantity</th>
           <th>Total</th>
         </tr>
-
 <?php
 if(isset($_REQUEST['order_id'])){
     //check user loged in
@@ -45,7 +41,6 @@ if(isset($_REQUEST['order_id'])){
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         $address_id=$row['address_id'];
-
         $sql = "SELECT * FROM order_details WHERE order_id = $order_id";
         $result = mysqli_query($connect, $sql);
         $i=0;
@@ -59,10 +54,10 @@ if(isset($_REQUEST['order_id'])){
           $options=$row['options'];
           $price=$row['price'];
           $order_subtotal=$order_subtotal+$price;
-
+    
           $sql2 = "SELECT * FROM item WHERE item_id = $item_id";
           $result2 = mysqli_query($connect, $sql2);
-  
+    
           if (mysqli_num_rows($result2) > 0) {
               $row2 = mysqli_fetch_assoc($result2);
               $item_price = $row2['price'];
@@ -79,10 +74,9 @@ if(isset($_REQUEST['order_id'])){
           <td class="a_center"><?php echo $options ?></td>
           <td class="a_center"><?php echo $qty ?></td>
           <td class="a_right"><?php echo $price ?></td>
-          </tr>
-          <?php
+        
+          </tr><?php
         }
-
           $shipping_fee=0;
           $tax=0;
           $discounts=0;
@@ -109,87 +103,100 @@ if(isset($_REQUEST['order_id'])){
                 <th class="a_right"><h2><?php echo $order_total?><h2></th>
               </tr>
             </table>
-          
-        <?php
-
-
+        
+          <?php
+        
+    
         $sql = "SELECT * FROM address WHERE address_id = $address_id";
         $result = mysqli_query($connect, $sql);
-
-        if (mysqli_num_rows($result) > 0) {
-            $row = mysqli_fetch_assoc($result);
-            $name = $row['name'];
-            $line_1 = $row['line_1'];
-            $line_2 = $row['line_2'];
-            $city = $row['city'];
-            $province = $row['province'];
-            $country = $row['country'];
-            $zip_code = $row['zip_code'];
-            $phone = $row['phone'];
-            // Use the values of $name, $line_1, $line_2, $city, $province, $country, $zip_code, and $phone as needed
-
-            ?>
-            <div class="address">
-              <h3>Ship to</h2><div class="address_box">
-              
-                
-                  <?php echo $name ?><br>
-                  <?php echo $line_1 ?><br>
-                  <?php echo $line_2 ?><br>
-                  <?php echo $city ?><br>
-                  <?php echo $province ?><br>
-                  <?php echo $country ?><br>
-                  <?php echo "ZIP - ".$zip_code ?><br>
-                  <?php echo $phone ?><br>
-                
-        </div></div></div> <div class="payment">
-              <form action="payment2.php" method="POST" onsubmit="return ">
-                
-                <h1>Payment form</h1>
-                <div class=card_img>
-                  <img src="site_img/card_img.png">
-                </div>
-                <section>
-                    <label for="cc-number">Card number</label>
-                    <input id="cc-number" name="cc-number" autocomplete="cc-number" inputmode="numeric" onkeyup="addSpace()" required>
-                </section>
-
-                <section>
-                    <label for="cc-name">Name on card</label>
-                    <input id="cc-name" name="cc-name" autocomplete="cc-name" pattern="[\p{L} \-\.]+" required>
-                </section>
-
-                <section id="cc-exp-csc">
-                    <div>
-                        <label for="cc-exp">Expiry date</label>
-                        <input id="cc-exp" name="cc-exp" autocomplete="cc-exp" placeholder="MM/YY" maxlength="5" onkeypress="addSlash()" required>
-                    </div>
-                    <div>
-                        <label for="cc-csc">Security code</label>
-                        <input id="cc-csc" name="cc-csc" autocomplete="cc-csc" inputmode="numeric" maxlength="3" pattern="[0-999]*" required>
-                        <div class="explanation">Back of card, last 3 digits</div>
-                    </div>
-                    <p class="Error" id="pError"></p>
-                </section>
-
-                <input type="hidden" name="order_id" value="<?php echo $order_id?>">
-                <input type="hidden" name="price" value="<?php echo $order_total?>">
-                <input type="submit" name="make_payment" value="Make Payment" id="submit">
-
-              </form>
-            </div>
-            <?php
-
-          } else {
-            // No data found
+        if(mysqli_num_rows($result) > 0){
+          $row = mysqli_fetch_assoc($result);
+          $name = $row['name'];
+          $address = $row['line_1'] . $row['line_2'];
+          $city = $row['city'];
+          $state = $row['province'];
+          $zip = $row['zip_code'];
+          $phone = $row['phone'];
+        } else {
+          $name = "Error";
+          $address = "Error";
+          $city = "Error";
+          $state = "Error";
+          $zip = "Error";
+          $phone = "Error";
         }
-        // Use the value of $item_price as needed
-    } else {
-        // No data found
-      }
-
+        
+        echo '<div class="address-details">';
+        echo '<h3>Shipping Address</h3>';
+        echo '<table>';
+        echo '<tr>';
+        echo '<td>Name:</td>';
+        echo '<td>'.$name.'</td>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<td>Address:</td>';
+        echo '<td>'.$address.'</td>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<td>City:</td>';
+        echo '<td>'.$city.'</td>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<td>State:</td>';
+        echo '<td>'.$state.'</td>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<td>Zip:</td>';
+        echo '<td>'.$zip.'</td>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<td>Phone:</td>';
+        echo '<td>'.$phone.'</td>';
+        echo '</tr>';
+        echo '</table>';
+        echo '</div>';
+    }
+} else {
+    echo '<script> window.history.back(); </script>';
+    exit;
+    }
+    ?>
+    </div>
+    </div>
+    <style>
+      .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-?>
-  </div>
-</body>
-</html>
+
+.item-details, .address-details {
+    width: 50%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: lightgray;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+    </style>
+    </body>
+    </html>            
+    

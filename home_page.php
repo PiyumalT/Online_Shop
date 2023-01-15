@@ -54,21 +54,59 @@ create_header();
 <section class="popular category">
     <div class="category-tag">Popular</div>
     <div class="image-container">
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
+        <?php 
+        include "connect.php";
+        $sql = "SELECT item_id, COUNT(item_id) as count FROM order_details GROUP BY item_id ORDER BY count DESC LIMIT 5";
+        $result = mysqli_query($connect, $sql);
+        $i = 0;
+        if(mysqli_num_rows($result) > 0) {
+            while($i < mysqli_num_rows($result) && $i < 5) {
+                $row = mysqli_fetch_assoc($result);
+                $item_id = $row['item_id'];
+               // echo "Item ID: " . $item_id . "<br>";
+                echo '<a href="item_details.php?item_id='.$item_id.'">';
+                echo '<div class="category-img"><img src="item_pics/'. $item_id . '.jpg"></div></a>';
+                $i++;
+            }
+            for (;$i<5;$i++){
+                echo '<div class="category-img">No Data</div>';
+            }
+        }
+        else {
+            for ($i=0;$i<5;$i++){
+                echo '<div class="category-img">No Data</div>';
+            }
+        }
+        ?>
     </div>
 </section>
 <section class="latest category">
     <div class="category-tag">Latest</div>
     <div class="image-container">
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
-        <div class="category-img"> </div>
+    <?php 
+        include "connect.php";
+        $sql = "SELECT * FROM item ORDER BY item_id DESC ";
+        $result = mysqli_query($connect, $sql);
+        $i = 0;
+        if(mysqli_num_rows($result) > 0) {
+            while($i < mysqli_num_rows($result) && $i < 5) {
+                $row = mysqli_fetch_assoc($result);
+                $item_id = $row['item_id'];
+               // echo "Item ID: " . $item_id . "<br>";
+                echo '<a href="item_details.php?item_id='.$item_id.'">';
+                echo '<div class="category-img"><img src="item_pics/' . $item_id . '.jpg"></div></a>';
+                $i++;
+            }
+            for (;$i<5;$i++){
+                echo '<div class="category-img">No Data</div>';
+            }
+        }
+        else {
+            for ($i=0;$i<5;$i++){
+                echo '<div class="category-img">No Data</div>';
+            }
+        }
+        ?>
     </div>
 </section>
 <script>

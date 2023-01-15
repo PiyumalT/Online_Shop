@@ -28,11 +28,9 @@
                 move_uploaded_file($product_image_temp_name, $product_image_folder);
                 $message[] = 'new product added succesfully';
                 */
-                //$item_id =mysqli_insert_id($connect); //modify
+                $item_id =mysqli_insert_id($connect); //modify
                 // Move the uploaded file to the item_pics folder and rename it to the item ID
-                //move_uploaded_file($item_pic['tmp_name'], 'item_pics/' . $item_id . '.jpg');
-                move_uploaded_file($product_image_tmp_name, $product_image_folder);
-                $message[] = 'new product added successfully';
+                move_uploaded_file($item_pic['tmp_name'], 'item_pics/' . $item_id . '.jpg');
             }
             else{
                 $message[] = 'could not add the product';
@@ -50,7 +48,7 @@
 <html>
 
 <head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/additem.css">
 </head>
 
 
@@ -68,7 +66,7 @@
    ?>
 
         <br><br><h1>Add product</h1><br><br><br><br>
-        <form action="item.php" method="post" enctype="multipart/form-data">
+        <form action="additem.php" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="row-25">
                     <p>Name</p><br><br><br>
@@ -80,14 +78,14 @@
                 <div class="row-75">
                     <div class="top">
                         
-                        <label> <input type="text" size="100" name="name"></textarea></label><br><br><br>
-                        <label> <textarea rows="4"    cols="100" name="discription"></textarea></label><br><br><br>
+                        <label> <input type="text" size="100" name="name" required></textarea></label><br><br><br>
+                        <label> <textarea rows="4"    cols="100" name="discription" required></textarea></label><br><br><br>
                     </div>
                     <div class="bottom">
                         <div class="left"> 
-                                <label> <textarea rows="2"    cols="30" name="price"></textarea></label><br><br><br>
-                                <label> <textarea rows="2"    cols="30" name="category" ></textarea></label><br><br><br>
-                                <label> <input type="file" accept="image/jpg" name="product_image" class="box"></label><br><br><br>
+                                <label> <textarea rows="2"    cols="30" name="price" required></textarea></label><br><br><br>
+                                <label> <textarea rows="2"    cols="30" name="category" required></textarea></label><br><br><br>
+                                <label> <input type="file" accept="image/jpg" name="product_image" class="box" required></label><br><br><br>
                                  
                         </div>
             
