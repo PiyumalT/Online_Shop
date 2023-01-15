@@ -36,16 +36,15 @@ body {
       align-items: center;
       justify-content: space-between;
       overflow-y: clip;
+      .handle.left {
 
-      &:after, &:before {
-        content: "\u00";
-        position: absolute;
-        background-color: black;
-        width: 100px;
-        height: 100px;
+      }
+      &:after {
+        content: "\2039";
       }
 
       &:before {
+        content: "\203A";
         right: 0;
       }
 

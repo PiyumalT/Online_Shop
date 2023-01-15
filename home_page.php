@@ -56,6 +56,7 @@ create_header();
 </main>
 <section class="popular category">
     <h2 class="category-tag">Popular</h2>
+    <button class="left handle"></button>
     <div class="image-container">
         <?php
         for ($i = 0; $i < 5; $i++) {
@@ -66,6 +67,7 @@ create_header();
 </section>
 <section class="latest category">
     <h2 class="category-tag">Latest</h2>
+    <button class="left handle"></button>
     <div class="image-container">
         <?php
         for ($i = 0; $i < 5; $i++) {
