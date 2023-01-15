@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="992e0b6f-76fd-4d3b-a4c3-3efeb71afccb" name="Changes" comment="create user page + populate data from backend + edit mode and read only mode.">
+    <list default="true" id="992e0b6f-76fd-4d3b-a4c3-3efeb71afccb" name="Changes" comment="add retype password when user change password + validate passwords are the same.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user_page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/user_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/user_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_account.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +104,7 @@
       <workItem from="1673534025165" duration="6313000" />
       <workItem from="1673589213114" duration="626000" />
       <workItem from="1673622361504" duration="1106000" />
-      <workItem from="1673752311759" duration="15920000" />
+      <workItem from="1673752311759" duration="16428000" />
     </task>
     <task id="LOCAL-00001" summary="add login page, styles, validation js">
       <created>1672816779373</created>
@@ -242,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673766159301</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add retype password when user change password + validate passwords are the same.">
+      <created>1673776484053</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1673776484053</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +301,7 @@
     <MESSAGE value="add icon images." />
     <MESSAGE value="add icons and modify visibility toggle function of the password filed." />
     <MESSAGE value="create user page + populate data from backend + edit mode and read only mode." />
-    <option name="LAST_COMMIT_MESSAGE" value="create user page + populate data from backend + edit mode and read only mode." />
+    <MESSAGE value="add retype password when user change password + validate passwords are the same." />
+    <option name="LAST_COMMIT_MESSAGE" value="add retype password when user change password + validate passwords are the same." />
   </component>
 </project>

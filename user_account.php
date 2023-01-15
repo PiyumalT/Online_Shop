@@ -1,6 +1,6 @@
 <?php
 include_once("connect.php");
-setcookie("user_id", "1");
+setcookie("user_id", 1);
 $user_id = $_COOKIE["user_id"];
 $feedback = array();
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
                      `country`='" . $_POST["country"] . "',
                      `zip_code`='" . $_POST["zip_code"] . "',
                      `phone`='" . $_POST["phone"] . "' 
-                     WHERE `user_id`=$user_id";
+                     WHERE `user_id`='$user_id'";
         $results = mysqli_query($connect, $query);
         if (mysqli_affected_rows($connect) == 1) {
             $feedback['address'] = [
@@ -132,14 +132,14 @@ if (isset($user_id)) {
     <hr>
     <div class="address">
         <?php
-        $query = "SELECT line_1, line_2, city, province, country, zip_code, phone FROM address WHERE user_id=$user_id";
+        $query = "SELECT line_1, line_2, city, province, country, zip_code, phone FROM address WHERE user_id='$user_id'";
         if ($results = mysqli_query($connect, $query)) {
-            if (mysqli_num_rows($results) == 1) {
-                $address = mysqli_fetch_assoc($results);
-                foreach ($address as $key => $value) {
-                    echo "<label for=\"$key\">$key <input disabled type=\"text\" id=\"$key\" value=\"$value\" name='$key'></label> ";
-                }
+//            if (mysqli_num_rows($results) == 1) {
+            $address = mysqli_fetch_assoc($results);
+            foreach ($address as $key => $value) {
+                echo "<label for=\"$key\">$key <input disabled type=\"text\" id=\"$key\" value=\"$value\" name='$key'></label> ";
             }
+//            }
         }
         ?>
     </div>
