@@ -2,62 +2,44 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-
   form {
     border: 1px solid black;
     padding: 20px;
     border-radius: 5px;
     box-shadow: black 10px 10px 10px;
-
     h1 {
       margin-bottom: 10px;
       text-align: center;
     }
-
     .wrong-credentials {
       text-align: center;
-      padding: 10px 0;
+      padding: 10px 0 ;
       border: 1px red solid;
       margin: 20px;
       border-radius: 5px;
       color: red;
       font-weight: bold;
     }
-
     label, input {
       display: block;
     }
-
     .email-field {
       input {
         width: 100%;
       }
     }
-
     .password-field {
-      .password-input {
-        display: flex;
-
-        .icon {
-          width: 30px;
-        }
-
-        input {
-          display: inline-block;
-        }
+      input {
+        display: inline-block;
       }
-
     }
-
     .error-text {
       color: red;
       margin-bottom: 20px;
     }
-
     input, input:focus {
       border-bottom: 1px solid black;
     }
-
     #login-btn {
       width: 100%;
       padding: 10px;
@@ -68,22 +50,16 @@ body {
       border: none;
       border-radius: 5px;
     }
-
     .ps-forgot {
       text-align: center;
-      text-decoration: underline;
     }
-
     .remember-me {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      margin: 5px 0;
-
-      input {
-        transform: translateY(-10%);
-        margin-right: 5px;
-      }
+    }
+    input {
+      margin-right: 5px;
     }
   }
 }
@@ -91,27 +67,21 @@ body {
 @media (max-width: 500px) {
   form {
     width: 90vw;
-
     h1 {
       font-size: 4.5rem;
     }
-
     label {
       font-size: 2rem;
     }
-
     a {
       font-size: 1.5rem;
     }
-
     input[type="checkbox"] {
       padding: 500px;
     }
-
     button[type="submit"] {
-      font-size: 2rem;
-    }
-
+    font-size: 2rem;
+  }
     .password-field {
       input {
         width: 90%;

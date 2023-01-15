@@ -27,6 +27,10 @@ main {
   background: rebeccapurple;
   margin-right: 10px;
 }
+.category-img img {
+  width: 100%;
+  height: 100%;
+  }
 svg {
   position: absolute;
   z-index: 100;
