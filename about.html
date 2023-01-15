@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>About</title>
     <style>
@@ -18,6 +18,7 @@
             text-align: center;
             width: 50%;
         }
+
         .owner {
             visibility: hidden;
             animation: fly-in 3s ease-out;
@@ -36,47 +37,48 @@
 
     </style>
     <script>
-            function animateOwners() {
-                const owners = document.querySelectorAll(".owner");
-                let delay = 0;
-                owners.forEach(owner => {
-                    owner.style.animationDelay = delay + "s";
-                    owner.style.visibility = "visible";
-                    delay += 2;
-                });
-            }
+        function animateOwners() {
+            const owners = document.querySelectorAll(".owner");
+            let delay = 0;
+            owners.forEach(owner => {
+                owner.style.animationDelay = delay + "s";
+                owner.style.visibility = "visible";
+                delay += 2;
+            });
+        }
 
     </script>
 </head>
 <body onload="animateOwners()">
 
-    <div class="container">
-        <div class="box">
-            <h1>About Us</h1>
-            <p>We are a company that specializes in providing high-quality products and services to our customers. Our mission is to exceed expectations and build long-term relationships with our clients.</p>
-            <hr>
-            <h2>Meet Our Owners</h2>
-            <div class="owner" id="owner1">
-                <h3>John Smith</h3>
-                <p>John is the CEO and co-founder of the company.</p>
-            </div>
-            <div class="owner" id="owner2">
-                <h3>Jane Doe</h3>
-                <p>Jane is the CFO and co-founder of the company. </p>
-            </div>
-            <div class="owner" id="owner3">
-                <h3>Bob Johnson</h3>
-                <p>Bob is the CTO and co-founder of the company.</p>
-            </div>
-            <div class="owner" id="owner4">
-                <h3>Samantha Williams</h3>
-                <p>Samantha is the COO and co-founder of the company. </p>
-            </div>
-            <div class="owner" id="owner5">
-                <h3>Michael Brown</h3>
-                <p>Michael is the CSO and co-founder of the company.</p>
-            </div>            
+<div class="container">
+    <div class="box">
+        <h1>About Us</h1>
+        <p>We are a company that specializes in providing high-quality products and services to our customers. Our
+            mission is to exceed expectations and build long-term relationships with our clients.</p>
+        <hr>
+        <h2>Meet Our Owners</h2>
+        <div class="owner" id="owner1">
+            <h3>John Smith</h3>
+            <p>John is the CEO and co-founder of the company.</p>
+        </div>
+        <div class="owner" id="owner2">
+            <h3>Jane Doe</h3>
+            <p>Jane is the CFO and co-founder of the company. </p>
+        </div>
+        <div class="owner" id="owner3">
+            <h3>Bob Johnson</h3>
+            <p>Bob is the CTO and co-founder of the company.</p>
+        </div>
+        <div class="owner" id="owner4">
+            <h3>Samantha Williams</h3>
+            <p>Samantha is the COO and co-founder of the company. </p>
+        </div>
+        <div class="owner" id="owner5">
+            <h3>Michael Brown</h3>
+            <p>Michael is the CSO and co-founder of the company.</p>
         </div>
     </div>
+</div>
 </body>
 </html>

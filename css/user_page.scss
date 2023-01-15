@@ -1,3 +1,7 @@
+body {
+  height: 90%;
+}
+
 label, input {
   display: block;
 }
@@ -34,14 +38,15 @@ input:focus {
 }
 
 .feedback {
-  margin: 20px;
+  margin: 40px;
   font-size: .5rem;
 
   .msg {
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
     border: 1px solid;
     margin-bottom: 5px;
+    font-size: 1rem;
   }
 }
 
@@ -59,8 +64,10 @@ input:focus {
 
 .user {
   border: 1px solid grey;
-  margin: 0 50px;
+  //margin: 0 50px;
   padding: 20px 20px 0 0;
+  width: 50%;
+  margin: auto;
 
   * {
     margin: 0 20px;
@@ -77,13 +84,16 @@ input:focus {
   .address {
     display: flex;
     flex-wrap: wrap;
-
   }
 
 
   .details {
     display: flex;
     flex-wrap: wrap;
+
+    label[for="re-type-password"].hide {
+      display: none;
+    }
   }
 }
 
@@ -120,6 +130,9 @@ input:focus {
   }
   .edit-user-container {
     justify-content: center;
+  }
+  .user {
+    width: 90%;
   }
   .button-section {
     justify-content: space-evenly;
