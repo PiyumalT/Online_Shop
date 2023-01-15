@@ -3,26 +3,24 @@ require_once("code_segments/header.php");
 if (isset($_POST) and count($_POST) > 0) {
     include "connect.php";
     $table = "users";
-    $email =  $_POST["email"];
-    $password =  $_POST["password"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
     if (isset($_POST["remember-me"])) {
-        $rememberMe =  $_POST["remember-me"];
+        $rememberMe = $_POST["remember-me"];
     }
     $sql = "SELECT id, email,password FROM $table WHERE email='$email' AND password='$password'";
-    $result = mysqli_query($connect,$sql);
+    $result = mysqli_query($connect, $sql);
     if (mysqli_num_rows($result)) {
         $user_id = mysqli_fetch_assoc($result)['id'];
         echo "good";
         if (isset($rememberMe) && $rememberMe) {
             echo "good";
-            setcookie("user_id", $user_id, time() + 60* 60 * 24 * 50); // with time sec * min * hours * day
-        }
-        else {
+            setcookie("user_id", $user_id, time() + 60 * 60 * 24 * 50); // with time sec * min * hours * day
+        } else {
             setcookie("user_id", $user_id);
         }
         header("Location: home_page.php");
-    }
-    else {
+    } else {
         $wrong_credentials = true;
     }
 }
@@ -44,24 +42,31 @@ if (isset($_POST) and count($_POST) > 0) {
     <h1>Log in</h1>
     <?php if (isset($wrong_credentials) and $wrong_credentials) {
         echo "<div class='wrong-credentials'>Wrong Credentials</div>";
-    }?>
+    } ?>
     <div class="email-field"><label for="email">E-mail</label>
-        <input required title="" pattern="[a-zA-Z0-9._+-]+@[a-zA-Z0-9 -]+\.[a-z]{2,}" type="email" name="email" id="email">
-        <div class="error-text"> </div>
+        <input required title="" pattern="[a-zA-Z0-9._+-]+@[a-zA-Z0-9 -]+\.[a-z]{2,}" type="email" name="email"
+               id="email">
+        <div class="error-text"></div>
     </div>
     <div class="password-field">
         <label for="password">Password</label>
-        <input required title=""  pattern="[a-zA-Z0-9]{8,20}" type="password" name="password" id="password">
-        <i id="password-hide-show" data-ps-hidden="true">view</i><!--//todo - add icon from fontawesome-->
-        <div class="error-text"> </div>
+        <div class="password-input">
+            <input required title="" pattern="[a-zA-Z0-9]{8,20}" type="password" name="password" id="password">
+            <div class="icon" id="password-hide-show" data-ps-hidden="true">
+                <img src="./icons/eye-solid.svg" alt="eye-icon">
+            </div>
+        </div>
+        <div class="error-text"></div>
     </div>
+
     <div class="remember-me">
         <input type="checkbox" name="remember-me" id="remember-me">
         <label for="remember-me">Remember Me</label>
     </div>
     <button id="login-btn" type="submit">login</button>
     <div class="ps-forgot"><a href="#">Forgot password?</a></div>
+    <div class="ps-forgot"><a href="./register.php">Not have an account? Sign Up now.</a></div>
 </form>
-<script src="js/script.js"></script>
+<script src="js/password-visibility-toggle.js"></script>
 </body>
 </html>
