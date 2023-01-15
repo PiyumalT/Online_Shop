@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="992e0b6f-76fd-4d3b-a4c3-3efeb71afccb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a231b21-079d-4b16-a420-8a08f2db86b3.xml" beforeDir="false" />
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="add images to home page.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/home_page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/home_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/reset.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/user_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
     </list>

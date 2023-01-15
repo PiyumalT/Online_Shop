@@ -1,56 +1,74 @@
 *, *::before, *::after {
-  box-sizing: border-box;
-  
+    box-sizing: border-box;
+
 }
+
 * {
-  margin: 0;
-  padding: 0;
-  /*font: inherit;*/
+    margin: 0;
+    padding: 0;
+    /*font: inherit;*/
 }
+
 ol[role="list"], ul[role="list"] {
-  list-style: none;
+    list-style: none;
 }
+
 /*set core root default*/
 html:focus-within {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 html, body {
-  height: 100%;
+    height: 100%;
 }
+
 body {
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 }
+
+button {
+    border: none;
+    background: transparent;
+    color: black;
+}
+
 a {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
+
 /*no class element get */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
-:empty:not(img, picture, svg, input, button, hr, polygon, path, line){
-  display: none;
+
+:empty:not(img, picture, svg, input, button, hr, polygon, path, line, i) {
+    display: none;
 }
+
 input, input:active, input:focus, input:target {
-  outline: none;
-  border: none;
-  font-size: large;
+    outline: none;
+    border: none;
+    font-size: large;
 }
+
 img, picture, svg {
-  min-width: 100%;
-  display: block;
+    min-width: 100%;
+    display: block;
 }
+
 /*remove all animations, transitions*/
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
