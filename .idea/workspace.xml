@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="992e0b6f-76fd-4d3b-a4c3-3efeb71afccb" name="Changes" comment="create user page + populate data from backend + edit mode and read only mode.">
+      <change beforePath="$PROJECT_DIR$/css/user_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/user_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/user_page.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Sass File" />
+        <option value="SCSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="add-login" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Wamp PHP 8.1" />
+  <component name="ProjectId" id="2JqST9ptnxECPZPFsOR66beEdJB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "last_opened_file_path": "D:/UOK/Y-II (2022-2023)/Sem 01/SENG 21253 - Web Development/Final Project/online_shop/icons",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\UOK\Y-II (2022-2023)\Sem 01\SENG 21253 - Web Development\Final Project\online_shop\icons" />
+      <recent name="D:\UOK\Y-II (2022-2023)\SENG 21253 - Web Development\Final Project\online_shop\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\UOK\Y-II (2022-2023)\Sem 01\SENG 21253 - Web Development\Final Project\online_shop\css" />
+      <recent name="D:\UOK\Y-II (2022-2023)\SENG 21253 - Web Development\Final Project\online_shop\css" />
+      <recent name="D:\UOK\Y-II (2022-2023)\SENG 21253 - Web Development\Final Project\online_shop\js" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="992e0b6f-76fd-4d3b-a4c3-3efeb71afccb" name="Changes" comment="" />
+      <created>1672804137452</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672804137452</updated>
+      <workItem from="1672804207018" duration="578000" />
+      <workItem from="1672807714883" duration="654000" />
+      <workItem from="1672808970299" duration="27784000" />
+      <workItem from="1673264099757" duration="7345000" />
+      <workItem from="1673330282721" duration="8475000" />
+      <workItem from="1673534025165" duration="6313000" />
+      <workItem from="1673589213114" duration="626000" />
+      <workItem from="1673622361504" duration="1106000" />
+      <workItem from="1673752311759" duration="13617000" />
+    </task>
+    <task id="LOCAL-00001" summary="add login page, styles, validation js">
+      <created>1672816779373</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672816779373</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add login page, styles, validation js">
+      <created>1672816871924</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672816871924</updated>
+    </task>
+    <task id="LOCAL-00003" summary="remove social log in, center log in text">
+      <created>1672822355434</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672822355434</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add wrong credential indicator.">
+      <created>1672837304202</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672837304202</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add nav section with responsive effect.&#10;modify login page to response.">
+      <created>1672845016622</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672845016622</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add footer.">
+      <created>1672847546104</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672847546104</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add footer.">
+      <created>1672847555715</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672847555715</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add home page.">
+      <created>1673284246010</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673284246010</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add carousel effect to hero section.">
+      <created>1673285963807</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673285963807</updated>
+    </task>
+    <task id="LOCAL-00010" summary="counter :empty effect.">
+      <created>1673330807761</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673330807761</updated>
+    </task>
+    <task id="LOCAL-00011" summary="finalize carousel effect onclick and on timer.">
+      <created>1673338308456</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673338308456</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add register page link.">
+      <created>1673539394173</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1673539394173</updated>
+    </task>
+    <task id="LOCAL-00013" summary="change nav bar responsive functionality to new js file.">
+      <created>1673539449067</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673539449067</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change transition animation and remove auto scroll carousel.">
+      <created>1673539499291</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673539499291</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add hero section + carousel effect.">
+      <created>1673542793859</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1673542793859</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add icon images.">
+      <created>1673761492820</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673761492820</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add icons and modify visibility toggle function of the password filed.">
+      <created>1673761580086</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673761580086</updated>
+    </task>
+    <task id="LOCAL-00018" summary="create user page + populate data from backend + edit mode and read only mode.">
+      <created>1673761635285</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673761635285</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add login page, styles, validation js" />
+    <MESSAGE value="remove social log in, center log in text" />
+    <MESSAGE value="add wrong credentials indicator." />
+    <MESSAGE value="add wrong credential indicator." />
+    <MESSAGE value="add nav section with responsive effect.&#10;modify login page to response." />
+    <MESSAGE value="add footer." />
+    <MESSAGE value="add home page." />
+    <MESSAGE value="add carousel effect to hero section." />
+    <MESSAGE value="counter :empty effect." />
+    <MESSAGE value="finalize carousel effect onclick and on timer." />
+    <MESSAGE value="add register page link." />
+    <MESSAGE value="change nav bar responsive functionality to new js file." />
+    <MESSAGE value="change transition animation and remove auto scroll carousel." />
+    <MESSAGE value="add hero section + carousel effect." />
+    <MESSAGE value="add icon images." />
+    <MESSAGE value="add icons and modify visibility toggle function of the password filed." />
+    <MESSAGE value="create user page + populate data from backend + edit mode and read only mode." />
+    <option name="LAST_COMMIT_MESSAGE" value="create user page + populate data from backend + edit mode and read only mode." />
+  </component>
+</project>
