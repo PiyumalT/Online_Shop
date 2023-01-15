@@ -7,16 +7,16 @@ function triggerEditMode(e) {
         document.querySelector(".button-section").style.display = "flex";
 
         for (let i = 0; i < inputs.length; i++) {
-            if (inputs[i].id !== "password") {
-                inputs[i].disabled = false;
-            }
+            inputs[i].disabled = false;
         }
+        document.querySelector("label[for=\"re-type-password\"]").classList.remove("hide");
     } else {
         e.innerText = "Edit Details.";
         e.dataset.inEditMode = "false";
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].disabled = true;
         }
+        document.querySelector("label[for=\"re-type-password\"]").classList.add("hide");
         document.querySelector(".button-section").style.display = "none";
         ResetDetails();
     }

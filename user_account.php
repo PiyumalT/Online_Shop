@@ -1,12 +1,13 @@
 <?php
 include_once("connect.php");
 setcookie("user_id", "1");
-$user_data_invalid = false;
 $user_id = $_COOKIE["user_id"];
 $feedback = array();
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
     if (isset($_POST['name']) && $_POST['name'] != "" &&
         isset($_POST['email']) && $_POST['email'] != "" &&
+        isset($_POST['password']) && $_POST['password'] != "" &&
+        isset($_POST['re-type-password']) && $_POST['re-type-password'] != "" &&
         isset($_POST["line_1"]) && $_POST["line_1"] != "" &&
         isset($_POST["line_2"]) && $_POST["line_2"] != "" &&
         isset($_POST["city"]) && $_POST["city"] != "" &&
@@ -15,7 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
         isset($_POST["zip_code"]) && $_POST["zip_code"] != "" &&
         isset($_POST["phone"]) && $_POST["phone"] != ""
     ) {
-        $query = "UPDATE `users` SET `email`='" . $_POST['email'] . "',`Name`='" . $_POST['name'] . "' WHERE id='$user_id'";
+        if ($_POST['password'] != $_POST['re-type-password']) {
+            $feedback['error'] = [
+                "status" => 422,
+                "message" => "passwords entered not match.",
+            ];
+        }
+        $query = "UPDATE `users` SET `email`='" . $_POST['email'] . "',`password`='" . $_POST['password'] . "',`Name`='" . $_POST['name'] . "' WHERE id='$user_id'";
         $results = mysqli_query($connect, $query);
         if (mysqli_affected_rows($connect) == 1) {
             $feedback['user'] = [
@@ -23,12 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
                 "message" => "User updated successfully",
             ];
         }
-//        else {
-//            $feedback['user'] = [
-//                "status" => 422,
-//                "message" => "Error occurred updating user.",
-//            ];
-//        }
         $query = "UPDATE `address` SET 
                      `line_1`='" . $_POST["line_1"] . "',
                      `line_2`='" . $_POST["line_2"] . "',
@@ -45,12 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
                 "message" => "Address updated successfully",
             ];
         }
-//        else {
-//            $feedback['address'] = [
-//                "status" => 422,
-//                "message" => "Error occurred updating address.",
-//            ];
-//        }
     } else {
         $feedback['error'] = [
             "status" => 422,
@@ -89,9 +84,8 @@ if (isset($user_id)) {
     <link rel="stylesheet" href="./css/user_page.css">
 </head>
 <body>
-<div class="feedback">
+<div class="feedback" style="background-color: black">
     <?php
-    //    var_dump($feedback);
     if (isset($feedback['error'])) {
         echo "<div class='font-border-rd msg'>" . $feedback['error']["message"] . "</div>";
     }
@@ -127,6 +121,10 @@ if (isset($user_id)) {
         </label>
         <label for="password">password
             <input disabled type="password" name="password" id="password"
+                   value="<?php echo $password ?>">
+        </label>
+        <label for="re-type-password" class="hide">Retype password
+            <input disabled type="password" name="re-type-password" id="re-type-password"
                    value="<?php echo $password ?>">
         </label>
     </div>
