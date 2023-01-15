@@ -1,4 +1,6 @@
 body {
+  overflow-x: clip;
+
   main {
     overflow: clip;
     height: 80vh;
@@ -10,7 +12,7 @@ body {
       img {
         height: 80vh;
         aspect-ratio: 9 / 9;
-        margin: 0 10px 0 0 ;
+        margin: 0 10px 0 0;
       }
     }
 
@@ -27,78 +29,41 @@ body {
     }
   }
 
-  section {
-    .container {
-      width: 100%;
-      overflow: clip;
+  .category {
+    .image-container {
+      display: flex;
       position: relative;
+      align-items: center;
+      justify-content: space-between;
+      overflow-y: clip;
 
-      .handle {
+      &:after, &:before {
+        content: "\u00";
         position: absolute;
-        border: none;
-        border-radius: 1rem;
+        background-color: black;
+        width: 100px;
         height: 100px;
-        flex: 0 0 5%;
-        background: rgba(0, 0, 0, .25);
-        z-index: 100;
-        cursor: pointer;
-        transform: translateY(-50%);
-
-        &:hover, &:focus {
-          background: rgba(0, 0, 0, .5);
-        }
-
-        &:after {
-          font-size: 5rem;
-          color: white;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          line-height: 0;
-        }
-
-        &.left {
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-          top: 50%;
-          left: 20px;
-        }
-
-        &.left:after {
-          content: "\2039";
-        }
-
-        &.right {
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-          top: 50%;
-          right: 20px;
-        }
-
-        &.right:after {
-          content: "\203A";
-        }
       }
 
-      .slider {
-        display: flex;
-        transform: translateX(0%);
-        transition: .5s linear all;
+      &:before {
+        right: 0;
+      }
+
+      .category-img {
+        margin-right: 20px;
+
+        &:first-child {
+          margin-left: 50px;
+        }
 
         img {
-          min-width: 33%;
-          /*flex: 0 0 33%;*/
-          aspect-ratio: 16 / 9;
-          padding: .5rem;
-          overflow: hidden;
+          width: 500px;
+          height: 250px;
+          object-fit: cover;
+          border: 1px solid black;
         }
       }
-
     }
   }
-}
 
-
-.hidden {
-  display: none;
 }
