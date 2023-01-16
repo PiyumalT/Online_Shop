@@ -24,18 +24,36 @@
         <div class="second">
          <div class="value"><h1>Today orders</h1>
             <div class="total"> 
-                <?php  $query="SELECT * FROM orders WHERE day(date)=12 && month(date)=1 && year(date)=2023"; 
+                <?php  
+                       $date = date('Y-m-d');
+                       $query="SELECT * FROM orders WHERE date LIKE '$date%'"; 
                        $result= mysqli_query($connect,$query);
-                       if($result){echo "<h1>";echo mysqli_num_rows($result);echo "</h1>";} 
+                       if($result)
+                       {echo "<h1>";echo mysqli_num_rows($result);echo "</h1>";}
+                       else{
+                        echo "<h1> 0 </h1>";
+                       } 
                 ?>
             </div>
          </div>
          <div class="value"><h1>Today income</h1>
             <div class="total"> 
-                <?php  $query="SELECT sum(price) FROM orders WHERE day(date)=12 && month(date)=1 && year(date)=2023"; 
+                <?php  $query="SELECT sum(price) FROM orders WHERE date LIKE '$date%'"; 
+                //echo $query;
                        $result= mysqli_query($connect,$query);
                        $r=mysqli_fetch_assoc($result);
-                       if($result){echo "<h1>";echo $r['sum(price)'] ;echo "</h1>";} 
+                       
+                       if($result){
+                            if ($r['sum(price)']){
+                                echo "<h1>";echo $r['sum(price)'] ;echo "</h1>";
+                            }
+                            else{
+                                echo "<h1> 0 </h1>"; 
+                            }
+                        } 
+                       else{
+                        echo "<h1> 0 </h1>";
+                       }
                 ?>
             </div>
          </div>
