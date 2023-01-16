@@ -184,3 +184,10 @@ li a {
     cursor: pointer;
 
 }
+a{
+    line-height:1;
+}
+a span{
+    font-size: initial;
+    line-height: initial;
+}

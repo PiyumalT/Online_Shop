@@ -48,7 +48,7 @@ if (mysqli_num_rows($result) > 0) {
             } else {
                 $item_name = "Undifined";
             
-
+            }
             echo '<tr>';
             echo '<td>' . $item_name . '</td>';
             echo '<td>' . $price . '</td>';
@@ -77,7 +77,8 @@ if (mysqli_num_rows($result) > 0) {
         echo '</table><br><br><br>';
     }
     echo '</div>';
-} else {
+    }   
+else {
     echo '<h2> You have no unpaid orders </h2>';
 }
 

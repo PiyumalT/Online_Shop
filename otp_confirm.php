@@ -14,6 +14,7 @@ if(isset($_POST['Confirm_OTP'])){
         if ($result_otp==$user_otp){
             //inserting user data to user table and remove user from temp user table
             $sql_insert="INSERT INTO users (email, password, Name, reg_date) VALUES ('$email', '$result_password', null,'$reg_date')";
+            echo $sql_insert;
             $result_reg = mysqli_query($connect, $sql_insert); 
             $user_id = mysqli_insert_id($connect);
             $sql_delete = "DELETE FROM temp_users WHERE email = '$email'";
@@ -22,7 +23,7 @@ if(isset($_POST['Confirm_OTP'])){
             setcookie("user_id", $user_id);
             unset($_SESSION['email']);
 
-            //make header to home or whatever
+            header("Location:home_page.php");
         }
         else{
             header("Location:otp_get.php?error=Invalid OTP. Try Again"); 
@@ -30,7 +31,7 @@ if(isset($_POST['Confirm_OTP'])){
 
     }
     else{
-        header("Location:register_2.php");
+        header("Location:register.php");
     }
 }
 ?>

@@ -36,7 +36,7 @@
         <?php
         }
         else{
-            header("Location:register_2.php");
+            header("Location:register.php");
         }
         ?>
   </body>

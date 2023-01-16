@@ -5,16 +5,18 @@ if ($_SERVER['REQUEST_METHOD'] && isset($_POST) && count($_POST) > 0) {
     $table = "users";
     $email = mysqli_real_escape_string($connect, $_POST["email"]);
     $password = mysqli_real_escape_string($connect, $_POST["password"]);
+    $password2 = md5($password);
     if (isset($_POST["remember-me"])) {
         $rememberMe = mysqli_real_escape_string($connect, $_POST["remember-me"]);
     }
-    $sql = "SELECT id, email,password FROM $table WHERE email='$email' AND password='$password'";
+    $sql = "SELECT id, email,password FROM $table WHERE email='$email' AND (password='$password' OR password='$password2')";//remove pssword 1 later.
+    echo $sql;
     $result = mysqli_query($connect, $sql);
     if (mysqli_num_rows($result)) {
         $user_id = mysqli_fetch_assoc($result)['id'];
-        echo "good";
+        //echo "good";
         if (isset($rememberMe) && $rememberMe) {
-            echo "good";
+            //echo "good";
             setcookie("user_id", $user_id, time() + 60 * 60 * 24 * 50); // with time sec * min * hours * day
         } else {
             setcookie("user_id", $user_id);
