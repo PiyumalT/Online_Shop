@@ -73,7 +73,7 @@ create_header();
     <div class="image-container">
         <?php
         for ($i = 0; $i < 5; $i++) {
-            echo "<div class='category-img'><img src='./item_pics/6.jpg' alt='item-$i'></div>";
+            echo "<div class='category-img'><img src='item_pics/1.jpg' alt='item-$i'></div>";
         }
         ?>
     </div>
@@ -85,7 +85,7 @@ create_header();
     const imageRemoveTime = 500;
 
     function changeHeroImg() {
-        const imgArray = ['./item-image.jpg', "./item_pics/6.jpg"]; //php retrieve here
+        const imgArray = ['./item-image.jpg', "./item_pics/1.jpg"]; //php retrieve here
         const imgElement = document.createElement("img");
         imgElement.src = imgArray[i];
         imgElement.classList.add("slide-out");
@@ -103,11 +103,12 @@ create_header();
     setInterval(changeHeroImg, imgChangeTime);
 
     const imgContainers = document.querySelectorAll(".category .image-container");
-    console.log(imgContainers);
-    for (let i = 0; i < imgContainers.length; i++) {
-        imgContainers[i].style.animationDelay = `${i + 1}00ms`;
-        imgContainers[i].style.animationDuration = `${(Math.random() * 5) + 5}s`
-    }
+    setInterval(() => {
+        for (let i = 0; i < imgContainers.length; i++) {
+            imgContainers[i].style.animationDelay = `${i + 1}00ms`;
+            imgContainers[i].style.animationDuration = `${(Math.random() * 5) + 5}s`
+        }
+    }, 5000)
 </script>
 </body>
 </html>

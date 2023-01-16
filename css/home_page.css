@@ -55,7 +55,6 @@ body .category .image-container .category-img img {
   width: 33%;
   height: 20%;
   object-fit: cover;
-  border: 1px solid black;
 }
 @keyframes sliderAnimation {
   0% {
