@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fix bug in stretching of images.">
-      <change afterPath="$PROJECT_DIR$/bind_values.php" afterDir="false" />
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="smooth the :invalid effect.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/reset.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_account.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save",
+    "settings.editor.selected.configurable": "editing.templates",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -108,7 +107,7 @@
       <workItem from="1673589213114" duration="626000" />
       <workItem from="1673622361504" duration="1106000" />
       <workItem from="1673752311759" duration="19265000" />
-      <workItem from="1673871230089" duration="11094000" />
+      <workItem from="1673871230089" duration="12759000" />
     </task>
     <task id="LOCAL-00001" summary="add login page, styles, validation js">
       <created>1672816779373</created>
@@ -320,7 +319,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673877572882</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="add form validation shortcuts to input fields.">
+      <created>1673882561392</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1673882561392</updated>
+    </task>
+    <task id="LOCAL-00032" summary="smooth the :invalid effect.">
+      <created>1673882619232</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1673882619232</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,8 +371,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add wrong credential indicator." />
-    <MESSAGE value="add nav section with responsive effect.&#10;modify login page to response." />
     <MESSAGE value="add footer." />
     <MESSAGE value="add home page." />
     <MESSAGE value="add carousel effect to hero section." />
@@ -383,6 +394,12 @@
     <MESSAGE value="fix bugs in home page." />
     <MESSAGE value="add sliding functions to home page 2." />
     <MESSAGE value="fix bug in stretching of images." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug in stretching of images." />
+    <MESSAGE value="add form validation shortcuts to input fields." />
+    <MESSAGE value="smooth the :invalid effect." />
+    <option name="LAST_COMMIT_MESSAGE" value="smooth the :invalid effect." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

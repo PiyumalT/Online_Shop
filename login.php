@@ -1,12 +1,12 @@
 <?php
 require_once("code_segments/header.php");
-if (isset($_POST) and count($_POST) > 0) {
+if ($_SERVER['REQUEST_METHOD'] && isset($_POST)) {
     include "connect.php";
     $table = "users";
-    $email = $_POST["email"];
-    $password = $_POST["password"];
+    $email = mysqli_real_escape_string($connect, $_POST["email"]);
+    $password = mysqli_real_escape_string($connect, $_POST["password"]);
     if (isset($_POST["remember-me"])) {
-        $rememberMe = $_POST["remember-me"];
+        $rememberMe = mysqli_real_escape_string($connect, $_POST["remember-me"]);
     }
     $sql = "SELECT id, email,password FROM $table WHERE email='$email' AND password='$password'";
     $result = mysqli_query($connect, $sql);

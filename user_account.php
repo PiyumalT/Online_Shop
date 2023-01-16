@@ -1,28 +1,36 @@
 <?php
 include_once("connect.php");
-setcookie("user_id", 1);
+//setcookie("user_id", 1);
 $user_id = $_COOKIE["user_id"];
 $feedback = array();
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
-    if (isset($_POST['name']) && $_POST['name'] != "" &&
-        isset($_POST['email']) && $_POST['email'] != "" &&
-        isset($_POST['password']) && $_POST['password'] != "" &&
-        isset($_POST['re-type-password']) && $_POST['re-type-password'] != "" &&
-        isset($_POST["line_1"]) && $_POST["line_1"] != "" &&
-        isset($_POST["line_2"]) && $_POST["line_2"] != "" &&
-        isset($_POST["city"]) && $_POST["city"] != "" &&
-        isset($_POST["province"]) && $_POST["province"] != "" &&
-        isset($_POST["country"]) && $_POST["country"] != "" &&
-        isset($_POST["zip_code"]) && $_POST["zip_code"] != "" &&
-        isset($_POST["phone"]) && $_POST["phone"] != ""
+
+    $name = mysqli_real_escape_string($connect, $_POST['name']);
+    $email = mysqli_real_escape_string($connect, $_POST['email']);
+    $password = mysqli_real_escape_string($connect, $_POST['password']);
+    $password_re_type = mysqli_real_escape_string($connect, $_POST['re-type-password']);
+    $line1 = mysqli_real_escape_string($connect, $_POST["line_1"]);
+    $line2 = mysqli_real_escape_string($connect, $_POST["line_2"]);
+    $city = mysqli_real_escape_string($connect, $_POST["city"]);
+    $province = mysqli_real_escape_string($connect, $_POST["province"]);
+    $country = mysqli_real_escape_string($connect, $_POST["country"]);
+    $zip_code = mysqli_real_escape_string($connect, $_POST["zip_code"]);
+    $phone = mysqli_real_escape_string($connect, $_POST["phone"]);
+
+    if ($name != "" && $email != "" && $password != "" &&
+        isset($re_type_password) && $re_type_password != "" &&
+        isset($line_1) && $line_1 != "" &&
+        isset($line_2) && $line_2 != "" &&
+        $city != "" && $province != "" && $country != "" && $zip_code != "" && $phone != ""
     ) {
-        if ($_POST['password'] != $_POST['re-type-password']) {
+
+        if ($password != $_POST['re-type-password']) {
             $feedback['error'] = [
                 "status" => 422,
                 "message" => "passwords entered not match.",
             ];
         }
-        $query = "UPDATE `users` SET `email`='" . $_POST['email'] . "',`password`='" . $_POST['password'] . "',`Name`='" . $_POST['name'] . "' WHERE id='$user_id'";
+        $query = "UPDATE `users` SET `email`='" . $email . "',`password`='" . $password . "',`Name`='" . $name . "' WHERE id='$user_id'";
         $results = mysqli_query($connect, $query);
         if (mysqli_affected_rows($connect) == 1) {
             $feedback['user'] = [
@@ -31,13 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
             ];
         }
         $query = "UPDATE `address` SET 
-                     `line_1`='" . $_POST["line_1"] . "',
-                     `line_2`='" . $_POST["line_2"] . "',
-                     `city`='" . $_POST["city"] . "',
-                     `province`='" . $_POST["province"] . "',
-                     `country`='" . $_POST["country"] . "',
-                     `zip_code`='" . $_POST["zip_code"] . "',
-                     `phone`='" . $_POST["phone"] . "' 
+                     `line_1`='" . $line_1 . "',
+                     `line_2`='" . $line_2 . "',
+                     `city`='" . $city . "',
+                     `province`='" . $province . "',
+                     `country`='" . $country . "',
+                     `zip_code`='" . $zip_code . "',
+                     `phone`='" . $phone . "' 
                      WHERE `user_id`='$user_id'";
         $results = mysqli_query($connect, $query);
         if (mysqli_affected_rows($connect) == 1) {
