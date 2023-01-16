@@ -56,7 +56,7 @@ function setQuantity() {
 function validateQuantity(){
   setQuantity()
   if(parseInt(document.getElementById("h_qty").value)>parseInt(document.getElementById("available_qty").value)){
-    document.getElementById("qtyError").textContent="Available quntity lover than selected quntity";
+    document.getElementById("qtyError").textContent="Available quntity lower than selected quntity";
     document.getElementById("h_qty").value=document.getElementById("quantity").value;
     return false;
   }
