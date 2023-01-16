@@ -6,20 +6,21 @@
 
 .middle{
     
-    height: 650px;
+    height:100%;
     width: 100%;
-    background-color: rgb(97, 99, 99);
-    background-image: url(s-l1600.jpg);
+   
 }
 
 .first{
     display: flex;
+    width: 100%;
+    
 }
 
-a:link{
-    height: 100px;
+a{
+    height: 10%;
     width: 25%;
-    background-color: rgb(94, 187, 233);
+    background-color:#848c91;
     padding: 30px;
     margin: 50px;
     border: 5px solid rgb(20, 10, 10);
@@ -28,26 +29,18 @@ a:link{
     color: rgb(24, 21, 21);
     
 }
-
-a:visited {
-    background-color: #848c91;
-    color: rgb(18, 17, 16);
-    border: 5px solid rgb(13, 5, 5);
-  }
-
-a:active {
-    background-color: #eff6fb;
-    color: rgb(18, 17, 16);
-    border: 5px solid rgb(13, 5, 5);
-  }
+a:hover{
+    background-color: aliceblue;
+}
   
 .second{
     display: flex;
+    width: 100%;
    
 }
 
 .value{
-    height: 300px;
+    height: 330px;
     width: 25%;
     background-color: rgb(203, 208, 205);
     padding: 10px;
@@ -58,11 +51,11 @@ a:active {
 }
 
 .total{
-    height: 150px;
-    width: 150px;
+    height: 65%;
+    width: 70%;
     background-color: rgba(13, 13, 13, 0.93);
-    padding: 60px;
-    margin: 50px;
+    padding:70px;
+    margin: 30px 35px 30px 35px;
     text-align: center;
     color: rgb(249, 251, 253);
     
