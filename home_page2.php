@@ -12,6 +12,7 @@ include_once("connect.php");
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/nav_bar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home_page.css">
     <link rel="stylesheet" href="css/home_page2.css">
 </head>
 <body>
@@ -26,9 +27,6 @@ function create_header(): void
         $logged_in = true;
         // User is logged in
     }
-//    else {
-//    // No one is logged in (guest)
-//    }
     ?>
     <button class="menu-icon" aria-expanded="false">menu icon</button>
     <nav>
@@ -50,8 +48,11 @@ create_header();
 
 <main>
     <div class="hero-img">
+        <img src="" alt="">
     </div>
 </main>
+
+
 <section class="popular category">
     <div class="category-tag"><h2>Popular</h2></div>
     <div class="image-container">
@@ -66,7 +67,7 @@ create_header();
                 $item_id = $row['item_id'];
                 // echo "Item ID: " . $item_id . "<br>";
                 echo '<a href="item_details.php?item_id=' . $item_id . '">';
-                echo '<div class="category-img"><img src="item_pics/' . $item_id . '.jpg"></div></a>';
+                echo '<div class="category-img"><img src="item_pics/' . $item_id . '.jpg" alt=""></div></a>';
                 $i++;
             }
             for (; $i < 5; $i++) {
@@ -111,16 +112,34 @@ create_header();
 <script>
     // change hero img
     let i = 0;
+    const imgChangeTime = 5000;
+    const imageRemoveTime = 500;
 
     function changeHeroImg() {
-        const colorArray = ["red", "pink", "black"]; //php retrieve here
-        heroImg.style.background = colorArray[colorArray[i] % colorArray.length];
-        i = (i + 1) % colorArray.length;
-        heroImg.style.background = colorArray[i];
+        const imgArray = ['./item-image.jpg', "./item_pics/1.jpg"]; //php retrieve here
+        const imgElement = document.createElement("img");
+        imgElement.src = imgArray[i];
+        imgElement.classList.add("slide-out");
+        imgElement.style.animationDelay = `${imgChangeTime - imageRemoveTime}ms`;
+        imgElement.style.animationDuration = `${imageRemoveTime}ms`;
+        imgElement.style.aspectRatio = `${imgElement.width} / ${imgElement.height}`
+        i = (i + 1) % imgArray.length;
+        heroImg.querySelector("img").remove();
+        heroImg.innerHTML = "";
+        heroImg.append(imgElement);
     }
 
     const heroImg = document.querySelector("main");
-    setInterval(changeHeroImg, 5000);
+    changeHeroImg();
+    setInterval(changeHeroImg, imgChangeTime);
+
+    const imgContainers = document.querySelectorAll(".category .image-container");
+    // setInterval(() => {
+    for (let i = 0; i < imgContainers.length; i++) {
+        imgContainers[i].style.animationDelay = `${i + 1}00ms`;
+        imgContainers[i].style.animationDuration = `${(Math.random() * 5) + 5}s`
+    }
+    // }, 5000)
 </script>
 </body>
 </html>
