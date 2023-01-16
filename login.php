@@ -1,6 +1,6 @@
 <?php
 require_once("code_segments/header.php");
-if ($_SERVER['REQUEST_METHOD'] && isset($_POST)) {
+if ($_SERVER['REQUEST_METHOD'] && isset($_POST) && count($_POST) > 0) {
     include "connect.php";
     $table = "users";
     $email = mysqli_real_escape_string($connect, $_POST["email"]);
@@ -68,15 +68,6 @@ if ($_SERVER['REQUEST_METHOD'] && isset($_POST)) {
     <div class="ps-forgot"><a href="./register.php">Not have an account? Sign Up now.</a></div>
 </form>
 <script src="js/password-visibility-toggle.js"></script>
-<script>
-    const inputs = document.querySelectorAll("input");
-    for (let i = 0; i < inputs.length; i++) {
-        inputs[i].style.borderBottom = "1px solid black";
-        inputs[i].addEventListener("click", () => {
-            inputs[i].style.borderBottom = "";
-        });
-    }
-
-</script>
+<script src="js/remove_effect_of_invalid_and_valid_css_effect.js"></script>
 </body>
 </html>
