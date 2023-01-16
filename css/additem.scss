@@ -7,10 +7,15 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
-  grid-template-areas: "name price" "product_image category" "quantity options" "description description" "button button";
+  grid-template-areas:
+          "name price"
+          "product_image category"
+          "quantity options"
+          "description description"
+          "button button";
   border: 1px solid black;
   border-radius: 50px;
-  box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
+  box-shadow: rgba(0, 0, 0, .5) 10px 10px 10px;
   width: 70%;
   padding: 20px 0;
 }
@@ -45,5 +50,3 @@ button {
     text-align: center;
   }
 }
-
-/*# sourceMappingURL=additem.css.map */
