@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.main{
+    width:100%;
+    
+    background-position: center;
+    background-size: cover;
+    height:150px;
+}
+
+.navbar{
+    width:100%;
+    height:50%;
+    margin: auto;
+    background: linear-gradient(to top,rgb(2, 35, 66)50%,rgb(2, 35, 66)50%);
+}
+
+.icon{
+    width:200px;
+    float: left;
+    height:70px;
+}
+
+.logo{
+    color:rgb(40, 189, 72);
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float:left;
+    padding-top:10px;
+}
+
+.search{
+    width: 600px;
+    float: left;
+    margin-left: 220px;
+    padding-top:20px;
+    size: 300px;
+}
+
+.srch{
+    width: 350px;
+    height:30px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.btn{
+    border-radius: 12px;
+    padding: 9px;
+}
+
+.menu{
+    width:100px;
+    float:left;
+    height:70px;
+}
+
+.navbar ul{
+    float:right;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-left:62px;
+    margin-top: 27px;
+    font-size: 16px;
+    color: brown;
+
+}
+
+.navbar2{
+    width:100%;
+    height:50%;
+    margin: auto;
+    background: linear-gradient(to top,rgb(2, 35, 66)50%,rgb(2, 35, 66)50%);
+    float: left;
+}
+
+.navbar2 ul{
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+    
+}
+
+li {
+    float: left;
+  }
+
+.navbar2 ul li{
+  display: block;
+  color: rgb(58, 161, 119);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+ #img{
+    height:70px;
+    width:200px;
+ }
+
+ .car{
+    width: 120px;
+    padding: 20px;
+    border:#111;
+    margin: 0;
+    background-color:rgb(34, 15, 102);
+    text-align: center;
+ }
+
+ .Motor{
+    width: 120px;
+    padding: 20px;
+    border:#111;
+    margin: 0;
+    background-color:rgb(34, 15, 102);
+    text-align: center;
+    float: left;
+ }
+
+ .other{
+    width: 120px;
+    padding: 20px;
+    border:#111;
+    margin: 0;
+    background-color:rgb(34, 15, 102);
+    text-align: center;
+    float: left;
+ }
+
+ .tools{
+    width: 120px;
+    padding: 20px;
+    border:#111;
+    margin: 0;
+    background-color:rgb(34, 15, 102);
+    text-align: center;
+    float: left;
+ }
+
+ .tyres{
+    width: 120px;
+    padding: 20px;
+    border:#111;
+    margin: 0;
+    background-color:rgb(34, 15, 102);
+    text-align: center;
+    float: left;
+ }
+
+ .access{
+    width: 120px;
+    padding: 20px;
+    border:#111;
+    margin: 0;
+    background-color:rgb(34, 15, 102);
+    text-align: center;
+    float: left;
+ }
+ li a{
+    text-decoration: none;
+    color: white;
+    cursor:pointer;
+    
+ }

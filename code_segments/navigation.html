@@ -1,117 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <style>
-nav {
-  background-color: black;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-}
+<html>
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="home.css">
+    </head>
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-}
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <img id="img" src="site_img/logo-fin.png">
+                </div>
 
-.navbar-left {
-  flex-basis: 50%;
-}
+                <div class="search">
+                    <input class="srch" type="search" name="" placeholder="Type To text">
+                    <a href="#"> <button class="btn">Search</button></a>
+                </div>
 
-.navbar-right {
-  flex-basis: 50%;
-  text-align: right;
-}
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Cart</a></li>
+                        <li><a href="#">Account</a></li>
+                    </ul>
+                </div>
 
-.navbar-menu {
-  display: flex;
-  justify-content: center;
-}
+            </div> 
 
-.navbar-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
+            <div class="navbar2">
+                <ul>
+                    <li>
+                        <div class="car">
+                            <a  href="#home">Car Part</a>
+                        </div>
+                    
+                    </li>
+                    
+                    <li>
+                        <div class="Motor">
+                           <a href="#news">Motorcycle Part</a>
+                        </div>
+                    </li>
 
-.navbar-menu li {
-  margin-left: 1em;
-}
+                    <li>
+                        <div class="other">
+                            <a href="#news">Other Part</a>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="tools">
+                            <a href="#contact">Tools</a>
+                        </div>
+                        
+                    </li>
 
-.navbar-menu a {
-  color: white;
-  text-decoration: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: black;
-  color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-  </style>
-  <nav>
-    <div class="navbar-container">
-      <div class="navbar-left">
-        <a href="#" class="logo">Logo</a>
-        <form>
-          <input type="text" placeholder="Search...">
-          <button type="submit">Search</button>
-        </form>
-      </div>
-      <div class="navbar-right">
-        <a href="#" class="cart">Cart</a>
-        <a href="#" class="account">Account</a>
-        <div class="dropdown">
-          <a href="#" class="dropdown-button">My Account</a>
-          <div class="dropdown-content">
-            <a href="#">Profile</a>
-            <a href="#">Orders</a>
-            <a href="#">Logout</a>
-          </div>
+                    <li>
+                        <div class="tyres">
+                            <a href="#about">Tyres</a>
+                        </div>
+                    </li>
+                   
+                    <li>
+                        <div class="access">
+                            <a href="#about">Accessories</a>
+                        </div>
+                    </li>
+                    
+                  </ul>
+            </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="navbar-menu">
-      <ul>
-        <li><a href="#">Car Parts</a></li>
-        <li><a href="#">Bike Parts</a></li>
-        <li><a href="#">Other Vehicles</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Tires</a></li>
-        <li><a href="#">More</a></li>
-      </ul>
-    </div>
-  </nav>
-  
-</body>
+    </body>
 </html>
