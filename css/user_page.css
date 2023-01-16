@@ -1,132 +1,141 @@
-label, input {
-  display: block;
-}
-
-button {
-  margin: 10px 0;
-  padding: 10px;
-  color: white;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-}
-
-label {
-  font-size: 1.2rem;
-}
-
-input {
-  border-bottom: 1px solid black;
-}
-
-input:focus {
-  border-bottom: 1px solid #4CAF50;
-}
-
-.font-border-rd {
-  color: red;
-  border-color: red;
-}
-
-.font-border-green {
-  color: green;
-  border-color: green;
-}
-
-.feedback {
-  margin: 40px;
-  font-size: 0.5rem;
-}
-.feedback .msg {
-  padding: 30px;
-  border-radius: 5px;
-  border: 1px solid;
-  margin-bottom: 5px;
-  font-size: 1rem;
-}
-
-.edit-user-btn-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 5px;
-}
-.edit-user-btn-container .edit-user {
-  margin-right: 50px;
-  color: black;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.user {
-  border: 1px solid grey;
-  padding: 20px 20px 0 0;
-  width: 50%;
-  margin: 0 auto 10px;
-}
-.user * {
-  margin: 0 20px;
-}
-.user label {
-  margin-bottom: 30px;
-}
-.user input {
-  width: 100%;
-}
-.user .address {
-  display: flex;
-  flex-wrap: wrap;
-}
-.user .details {
-  display: flex;
-  flex-wrap: wrap;
-}
-.user .details label[for=re-type-password].hide {
-  display: none;
-}
-
-.button-section {
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-top: 5px;
-}
-.button-section button {
-  margin-right: 20px;
-  font-size: 1.5rem;
-}
-.button-section .save-user {
-  background: green;
-}
-.button-section .reset {
-  background: red;
-}
-
-.empty-container {
-  height: 100px;
-  visibility: hidden;
-  width: 100%;
-}
-
-@media (max-width: 750px) {
-  * {
-    font-size: 1.5rem;
+body {
+    height: 90%;
   }
-  input, input:focus {
-    font-size: 1.3rem;
+  
+  label, input {
+    display: block;
   }
+  
+  button {
+    margin: 10px 0;
+    padding: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+  
   label {
-    width: 100%;
+    font-size: 1.2rem;
   }
-  .edit-user-btn-container {
-    justify-content: center;
+  
+  input {
+    border-bottom: 1px solid black;
   }
+  
+  input:focus {
+    border-bottom: 1px solid #4CAF50;
+  }
+  
+  .font-border-rd {
+    color: red;
+    border-color: red;
+  }
+  
+  .font-border-green {
+    color: green;
+    border-color: green;
+  }
+  
+  .feedback {
+    margin: 40px;
+    font-size: .5rem;
+  
+    .msg {
+      padding: 30px;
+      border-radius: 5px;
+      border: 1px solid;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+  }
+  
+  .edit-user-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+  
+    .edit-user {
+      margin-right: 50px;
+      color: black;
+      border: 1px solid rgba(0, 0, 0, .5);
+    }
+  }
+  
   .user {
-    width: 90%;
+    border: 1px solid grey;
+    //margin: 0 50px;
+    padding: 20px 20px 0 0;
+    width: 50%;
+    margin: auto;
+  
+    * {
+      margin: 0 20px;
+    }
+  
+    label {
+      margin-bottom: 30px;
+    }
+  
+    input {
+      width: 100%;
+    }
+  
+    .address {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+  
+    .details {
+      display: flex;
+      flex-wrap: wrap;
+  
+      label[for="re-type-password"].hide {
+        display: none;
+      }
+    }
   }
+  
   .button-section {
-    justify-content: space-evenly;
-    align-items: stretch;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 5px;
+  
+    button {
+      margin-right: 20px;
+      font-size: 1.5rem;
+    }
+  
+    .save-user {
+      background: green;
+    }
+  
+    .reset {
+      background: red;
+    }
   }
-}
-
-/*# sourceMappingURL=user_page.css.map */
+  
+  @media (max-width: 750px) {
+    * {
+      font-size: 1.5rem;
+    }
+    input, input:focus {
+      font-size: 1.3rem;
+    }
+    label {
+      width: 100%;
+    }
+    .edit-user-container {
+      justify-content: center;
+    }
+    .user {
+      width: 90%;
+    }
+    .button-section {
+      justify-content: space-evenly;
+      align-items: stretch;
+    }
+  }
