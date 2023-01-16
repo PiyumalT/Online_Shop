@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="smooth the :invalid effect.">
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="add function remove effect of :valid/:invalid for one time.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/user_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/user_page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/user_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/remove_effect_of_invalid_and_valid_css_effect.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/remove_effect_of_invalid_and_valid_css_effect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/user_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/user_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_account.php" afterDir="false" />
     </list>
@@ -40,6 +45,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -107,7 +113,7 @@
       <workItem from="1673589213114" duration="626000" />
       <workItem from="1673622361504" duration="1106000" />
       <workItem from="1673752311759" duration="19265000" />
-      <workItem from="1673871230089" duration="12759000" />
+      <workItem from="1673871230089" duration="14593000" />
     </task>
     <task id="LOCAL-00001" summary="add login page, styles, validation js">
       <created>1672816779373</created>
@@ -333,7 +339,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673882619232</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="sanitize user input in forms.">
+      <created>1673884127261</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1673884127261</updated>
+    </task>
+    <task id="LOCAL-00034" summary=" .">
+      <created>1673884171581</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1673884171581</updated>
+    </task>
+    <task id="LOCAL-00035" summary="add function remove effect of :valid/:invalid for one time.">
+      <created>1673887003047</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1673887003047</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,9 +398,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add footer." />
-    <MESSAGE value="add home page." />
-    <MESSAGE value="add carousel effect to hero section." />
     <MESSAGE value="counter :empty effect." />
     <MESSAGE value="finalize carousel effect onclick and on timer." />
     <MESSAGE value="add register page link." />
@@ -396,7 +420,10 @@
     <MESSAGE value="fix bug in stretching of images." />
     <MESSAGE value="add form validation shortcuts to input fields." />
     <MESSAGE value="smooth the :invalid effect." />
-    <option name="LAST_COMMIT_MESSAGE" value="smooth the :invalid effect." />
+    <MESSAGE value="sanitize user input in forms." />
+    <MESSAGE value=" ." />
+    <MESSAGE value="add function remove effect of :valid/:invalid for one time." />
+    <option name="LAST_COMMIT_MESSAGE" value="add function remove effect of :valid/:invalid for one time." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
