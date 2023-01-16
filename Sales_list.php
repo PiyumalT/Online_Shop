@@ -27,7 +27,7 @@
       <th>Mark ship</th>
       <th>More details</th>
     </tr>
-   </table>
+   
 
    <?php 
 
@@ -72,7 +72,7 @@
 
 
 
-    echo "<table>";
+    
       echo "<tr>";
       echo "<td> $order_id</td>";
       echo "<td> $name</td>";
@@ -83,7 +83,7 @@
       echo "<td> Not Shipped </td>";} else { echo "<td> Shipped </td>";}
       echo "<td> <a href='more_details.php?id=".$r['order_id']."' class='btn'>go</a></td>";
       echo "</tr>";
-    echo "</table>"; 
+    
     
     $address_id=null;
     $date=null;
@@ -91,7 +91,7 @@
     
 
       }
-    
+      echo "</table>"; 
     }else{
         echo"Query is wrong";
     }

@@ -31,7 +31,6 @@
       <th>Edit</th>
       <th>Delete</th>
     </tr>
-   </table>
 
    <?php 
    $query="SELECT item_id,name,description,qty FROM item ";
@@ -56,7 +55,6 @@
 
 
 
-    echo "<table>";
       echo "<tr>";
       echo "<td> $id </td>";
       echo "<td> $name </td>";
@@ -66,10 +64,10 @@
       echo "<td> <a href='Add_product.php?id=".$r['item_id']."' class='btn'>Edit</a></td>";
       echo "<td> <a href='Product_list.php?id=".$r['item_id']."' class='btn'>Delete</a></td>";
       echo "</tr>";
-    echo "</table>";       
+          
 
       }
-    
+      echo "</table>"; 
     }else{
         echo"Query is wrong";
     }

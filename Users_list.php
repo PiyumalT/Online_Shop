@@ -36,7 +36,7 @@
       <th>Total Purchases</th>
       <th>Remove User</th>
     </tr>
-   </table>
+   
 
    <?php
 
@@ -76,7 +76,7 @@
     $total=$a['COUNT(order_id)'];
     
 
-    echo "<table>";
+    
       echo "<tr>";
       echo "<td> $id </td>";
       echo "<td> $name </td>";
@@ -89,9 +89,9 @@
         <?php
         //echo "<td> <a href='Users_list.php?id=".$r['id']."' class='btn'>Remove</a></td>";
         echo "</tr>";
-    echo "</table>"; }
+     }
     
-    
+     echo "</table>";
     }else{
         echo"Query is wrong";
     }
