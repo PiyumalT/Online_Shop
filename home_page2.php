@@ -95,7 +95,7 @@ create_header();
                 $item_id = $row['item_id'];
                 // echo "Item ID: " . $item_id . "<br>";
                 echo '<a href="item_details.php?item_id=' . $item_id . '">';
-                echo '<div class="category-img"><img src="item_pics/' . $item_id . '.jpg"></div></a>';
+                echo '<div class="category-img"><img src="item_pics/' . $item_id . '.jpg" alt="name"> <div>price</div> <div>name</div></div></a>';
                 $i++;
             }
             for (; $i < 5; $i++) {

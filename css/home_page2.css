@@ -26,10 +26,15 @@ main {
     flex-wrap: nowrap;
 }
 
+.category .category-tag {
+    text-align: center;
+}
+
 .category-img {
     width: 19vw;
     /*background: rebeccapurple;*/
     margin-right: 1vw;
+    text-align: center;
 }
 
 .category-img img {
