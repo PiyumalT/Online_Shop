@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="add images to home page.">
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="add sliding effect to image containers and made them overflow in x-axis.">
+      <change afterPath="$PROJECT_DIR$/item_pics/0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/item_pics/1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/home_page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/home_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home_page2.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/item_details.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/item_details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_page2.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/item_details.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_account.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,29 +66,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/UOK/Y-II (2022-2023)/Sem 01/SENG 21253 - Web Development/Final Project/online_shop/icons&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "last_opened_file_path": "D:/UOK/Y-II (2022-2023)/Sem 01/SENG 21253 - Web Development/Final Project/online_shop/item_pics",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\UOK\Y-II (2022-2023)\Sem 01\SENG 21253 - Web Development\Final Project\online_shop\item_pics" />
+      <recent name="D:\UOK\Y-II (2022-2023)\Sem 01\SENG 21253 - Web Development\Final Project\online_shop" />
       <recent name="D:\UOK\Y-II (2022-2023)\Sem 01\SENG 21253 - Web Development\Final Project\online_shop\icons" />
       <recent name="D:\UOK\Y-II (2022-2023)\SENG 21253 - Web Development\Final Project\online_shop\css" />
     </key>
@@ -96,7 +103,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="992e0b6f-76fd-4d3b-a4c3-3efeb71afccb" name="Changes" comment="" />
+      <changelist id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="add hero image section + carousel effect to hero image." />
       <created>1672804137452</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -110,6 +117,7 @@
       <workItem from="1673589213114" duration="626000" />
       <workItem from="1673622361504" duration="1106000" />
       <workItem from="1673752311759" duration="19265000" />
+      <workItem from="1673871230089" duration="6114000" />
     </task>
     <task id="LOCAL-00001" summary="add login page, styles, validation js">
       <created>1672816779373</created>
@@ -265,7 +273,35 @@
       <option name="project" value="LOCAL" />
       <updated>1673777000930</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add hero image section + carousel effect to hero image.">
+      <created>1673786267262</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1673786267262</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix icon side, check box position.">
+      <created>1673874267282</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1673874267283</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add 2 new test home pages.">
+      <created>1673874293678</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1673874293678</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add sliding effect to image containers and made them overflow in x-axis.">
+      <created>1673874347801</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1673874347801</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,6 +359,10 @@
     <MESSAGE value="add retype password when user change password + validate passwords are the same." />
     <MESSAGE value="fixed a bug in address retrieval on user_account.php." />
     <MESSAGE value="add lang attr to html tag." />
-    <option name="LAST_COMMIT_MESSAGE" value="add lang attr to html tag." />
+    <MESSAGE value="add hero image section + carousel effect to hero image." />
+    <MESSAGE value="fix icon side, check box position." />
+    <MESSAGE value="add 2 new test home pages." />
+    <MESSAGE value="add sliding effect to image containers and made them overflow in x-axis." />
+    <option name="LAST_COMMIT_MESSAGE" value="add sliding effect to image containers and made them overflow in x-axis." />
   </component>
 </project>

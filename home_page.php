@@ -23,11 +23,11 @@ include_once("connect.php");
 
 function create_header(): void
 {
-    session_start();
     $logged_in = false;
     if (isset($_COOKIE['user_id'])) {
         $logged_in = true;
     }
+
     ?>
     <button class="menu-icon" aria-expanded="false">menu icon</button>
     <nav>
@@ -60,27 +60,23 @@ create_header();
 </main>
 <section class="popular category">
     <h2 class="category-tag">Popular</h2>
-    <!--    <button class="left-btn .hide"><i class="fa-solid fa-arrow-left"></i></button>-->
     <div class="image-container">
         <?php
         for ($i = 0; $i < 5; $i++) {
-            echo "<div class='category-img'> <img src='./item-image.jpg' alt='item-$i'></div>";
+            echo "<div class='category-img'> <img src='./item_pics/8.jpg' alt='item-$i'></div>";
         }
         ?>
     </div>
-    <!--    <button class="right-btn"><i class="fa-solid fa-arrow-right"></i></button>-->
 </section>
 <section class="latest category">
     <h2 class="category-tag">Latest</h2>
-    <!--    <button class="left-btn .hide"><i class="fa-solid fa-arrow-left"></i></button>-->
     <div class="image-container">
         <?php
         for ($i = 0; $i < 5; $i++) {
-            echo "<div class='category-img'><img src='./item_pics/6.jpg' alt='item-$i'></div>";
+            echo "<div class='category-img'><img src='item_pics/1.jpg' alt='item-$i'></div>";
         }
         ?>
     </div>
-    <!--    <button class="right-btn"><i class="fa-solid fa-arrow-right"></i></button>-->
 </section>
 <script>
     // change hero img
@@ -89,7 +85,7 @@ create_header();
     const imageRemoveTime = 500;
 
     function changeHeroImg() {
-        const imgArray = ['./item-image.jpg', "./item_pics/6.jpg"]; //php retrieve here
+        const imgArray = ['./item-image.jpg', "./item_pics/1.jpg"]; //php retrieve here
         const imgElement = document.createElement("img");
         imgElement.src = imgArray[i];
         imgElement.classList.add("slide-out");
@@ -105,7 +101,14 @@ create_header();
     const heroImg = document.querySelector("main");
     changeHeroImg();
     setInterval(changeHeroImg, imgChangeTime);
+
+    const imgContainers = document.querySelectorAll(".category .image-container");
+    setInterval(() => {
+        for (let i = 0; i < imgContainers.length; i++) {
+            imgContainers[i].style.animationDelay = `${i + 1}00ms`;
+            imgContainers[i].style.animationDuration = `${(Math.random() * 5) + 5}s`
+        }
+    }, 5000)
 </script>
-<!--<script src="./js/home_page_carousel.js"></script>-->
 </body>
 </html>

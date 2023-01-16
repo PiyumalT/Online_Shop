@@ -28,7 +28,17 @@ body form label, body form input {
 body form .email-field input {
   width: 100%;
 }
+body form .password-field {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
 body form .password-field input {
+  display: inline-block;
+}
+body form .password-field .icon {
+  width: 25px;
+  height: auto;
   display: inline-block;
 }
 body form .error-text {
@@ -53,8 +63,12 @@ body form .ps-forgot {
 }
 body form .remember-me {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
+}
+body form .remember-me input {
+  margin-right: 10px;
 }
 body form input {
   margin-right: 5px;
@@ -83,7 +97,5 @@ body form input {
     width: 90%;
   }
 }
-.remember-me{
-  margin: auto;
-}
+
 /*# sourceMappingURL=login.css.map */

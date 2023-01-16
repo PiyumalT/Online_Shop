@@ -39,10 +39,11 @@ body .category button.hide {
   display: none;
 }
 body .category .image-container {
+  width: 150%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow-y: clip;
+  animation: sliderAnimation ease-in-out infinite forwards alternate;
 }
 body .category .image-container .category-img {
   margin-right: 20px;
@@ -54,7 +55,14 @@ body .category .image-container .category-img img {
   width: 33%;
   height: 20%;
   object-fit: cover;
-  border: 1px solid black;
+}
+@keyframes sliderAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-35%);
+  }
 }
 
 .slide-out {

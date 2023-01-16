@@ -47,11 +47,13 @@ body {
 
 
     .image-container {
+      width: 150%;
       display: flex;
       //flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      overflow-y: clip;
+      //overflow-y: clip;
+      animation: sliderAnimation ease-in-out infinite forwards alternate;
 
       .category-img {
         margin-right: 20px;
@@ -64,7 +66,15 @@ body {
           width: 33%;
           height: 20%;
           object-fit: cover;
-          border: 1px solid black;
+        }
+      }
+
+      @keyframes sliderAnimation {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-35%);
         }
       }
     }
