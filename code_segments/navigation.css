@@ -28,7 +28,7 @@
 .logo {
     color: rgb(40, 189, 72);
     font-size: 35px;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     padding-left: 20px;
     float: left;
     padding-top: 10px;
@@ -111,6 +111,7 @@ li {
 
 #search-bar {
     font-size: large;
+    background-color: #9dbcd7;
 }
 
 #img {
