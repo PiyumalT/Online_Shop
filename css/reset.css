@@ -54,6 +54,18 @@ input, input:active, input:focus, input:target {
     font-size: large;
 }
 
+input:invalid {
+    border-bottom: red solid 3px;
+}
+
+input:valid {
+    border-bottom: green solid 3px;
+}
+
+input:placeholder-shown {
+    background: red;
+}
+
 img, picture, svg {
     min-width: 100%;
     display: block;
