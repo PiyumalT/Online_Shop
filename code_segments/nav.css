@@ -1,31 +1,32 @@
- /* The navigation menu */
- .navbar {
+/* The navigation menu */
+.navbar {
     overflow: hidden;
     background-color: #333;
-  }
-  
-  /* Navigation links */
-  .navbar a {
+}
+
+/* Navigation links */
+.navbar a {
     float: left;
     font-size: 16px;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  /* The subnavigation menu */
-  .subnav {
+}
+
+/* The subnavigation menu */
+.subnav {
     float: left;
     overflow: hidden;
-  }
-  .subnav2 {
+}
+
+.subnav2 {
     float: right;
     overflow: hidden;
-  }
-  
-  /* Subnav button */
-  .subnav .subnavbtn {
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
     font-size: 16px;
     border: none;
     outline: none;
@@ -34,81 +35,91 @@
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-  }
-  
-  /* Add a red background color to navigation links on hover */
-  .navbar a:hover, .subnav:hover .subnavbtn {
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
     background-color: red;
-  }
-  
-  /* Style the subnav content - positioned absolute */
-  .subnav-content {
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
     display: none;
     position: absolute;
     left: 0;
     background-color: red;
     width: auto;
     z-index: 1;
-  }
-  
-  /* Style the subnav links */
-  .subnav-content a {
+}
+
+/* Style the subnav links */
+.subnav-content a {
     float: left;
     color: white;
     text-decoration: none;
-  }
-  
-  /* Add a grey background color on hover */
-  .subnav-content a:hover {
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
     background-color: #eee;
     color: black;
-  }
-  
-  /* When you move the mouse over the subnav container, open the subnav content */
-  .subnav:hover .subnav-content {
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
     display: block;
-  } 
-  .account-content{
-    display:none;
-  }
-  .account-btn:hover .account-content{
-    display:block;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.account-content {
+    display: none;
+}
+
+.account-btn:hover .account-content {
+    display: block;
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
     background-color: #000 !important;
-  }
-  .w3-bar {
+}
+
+.w3-bar {
     width: 100%;
     overflow: hidden;
-  }
-  .w3-button:hover {
+}
+
+.w3-button:hover {
     color: #000 !important;
     background-color: #ccc !important;
-  }
-  .w3-bar .w3-button {
+}
+
+.w3-bar .w3-button {
     white-space: normal;
-  }
-  .w3-bar .w3-bar-item {
+}
+
+.w3-bar .w3-bar-item {
     padding: 8px 16px;
     float: left;
     width: auto;
     border: none;
     display: block;
     outline: 0;
-  }
-  a:active, a:hover {
+}
+
+a:active, a:hover {
     outline-width: 0;
-  }
-  .w3-btn, .w3-button {
+}
+
+.w3-btn, .w3-button {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  .w3-btn, .w3-button {
+}
+
+.w3-btn, .w3-button {
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -120,30 +131,37 @@
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-  }
-  .w3-bar .w3-dropdown-hover, .w3-bar .w3-dropdown-click {
+}
+
+.w3-bar .w3-dropdown-hover, .w3-bar .w3-dropdown-click {
     position: static;
     float: left;
-  }
-  .w3-dropdown-click, .w3-dropdown-hover {
+}
+
+.w3-dropdown-click, .w3-dropdown-hover {
     position: relative;
     display: inline-block;
     cursor: pointer;
-  }
-  *, ::before, ::after {
+}
+
+*, ::before, ::after {
     box-sizing: inherit;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-button:hover {
+}
+
+.w3-button:hover {
     color: #000 !important;
     background-color: #ccc !important;
-  }
-  .w3-bar-block .w3-bar-item {
+}
+
+.w3-bar-block .w3-bar-item {
     width: 100%;
     display: block;
     padding: 8px 16px;
@@ -152,48 +170,57 @@
     white-space: normal;
     float: none;
     outline: 0;
-  }
-  .w3-bar .w3-button {
+}
+
+.w3-bar .w3-button {
     white-space: normal;
-  }
-  .w3-bar .w3-bar-item {
+}
+
+.w3-bar .w3-bar-item {
     padding: 8px 16px;
     float: left;
     width: auto;
     border: none;
     display: block;
     outline: 0;
-  }
-  .w3-bar .w3-bar-item {
+}
+
+.w3-bar .w3-bar-item {
     padding: 8px 16px;
     float: left;
     width: auto;
     border: none;
     display: block;
     outline: 0;
-  }
-  .w3-bar .w3-button {
+}
+
+.w3-bar .w3-button {
     white-space: normal;
-  }
-  .w3-button:hover {
+}
+
+.w3-button:hover {
     color: #000 !important;
     background-color: #ccc !important;
-  }
-  a:active, a:hover {
+}
+
+a:active, a:hover {
     outline-width: 0;
-  }
-  a:active, a:hover {
+}
+
+a:active, a:hover {
     outline-width: 0;
-  }
-  .w3-btn, .w3-button {
+}
+
+.w3-btn, .w3-button {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  .w3-btn, .w3-button {
+}
+
+.w3-btn, .w3-button {
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -205,8 +232,9 @@
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-  }
-  .w3-btn, .w3-button {
+}
+
+.w3-btn, .w3-button {
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -218,163 +246,206 @@
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-  }
-  .w3-btn, .w3-button {
+}
+
+.w3-btn, .w3-button {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  a {
+}
+
+a {
     color: inherit;
-  }
-  a {
+}
+
+a {
     background-color: transparent;
-  }
-  *, ::before, ::after {
+}
+
+*, ::before, ::after {
     box-sizing: inherit;
-  }
-  *, ::before, ::after {
+}
+
+*, ::before, ::after {
     box-sizing: inherit;
-  }
-  .w3-dark-grey, .w3-hover-dark-grey:hover, .w3-dark-gray, .w3-hover-dark-gray:hover {
+}
+
+.w3-dark-grey, .w3-hover-dark-grey:hover, .w3-dark-gray, .w3-hover-dark-gray:hover {
     color: #fff !important;
-  }
-  .w3-dropdown-content {
+}
+
+.w3-dropdown-content {
     cursor: auto;
     color: #000;
-  }
-  .w3-dropdown-click, .w3-dropdown-hover {
+}
+
+.w3-dropdown-click, .w3-dropdown-hover {
     cursor: pointer;
-  }
-  .w3-dropdown-click, .w3-dropdown-hover {
+}
+
+.w3-dropdown-click, .w3-dropdown-hover {
     cursor: pointer;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  html, body {
-    font-family: Verdana,sans-serif;
+}
+
+html, body {
+    font-family: Verdana, sans-serif;
     font-size: 15px;
     line-height: 1.5;
-  }
-  .fa {
+}
+
+.fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
-      font-size: 14px;
+    font-size: 14px;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  *, ::before, ::after {
+}
+
+*, ::before, ::after {
     box-sizing: inherit;
-  }
-  *, ::before, ::after {
+}
+
+*, ::before, ::after {
     box-sizing: inherit;
-  }
-  *, ::before, ::after {
+}
+
+*, ::before, ::after {
     box-sizing: inherit;
-  }
-  *, ::before, ::after {
+}
+
+*, ::before, ::after {
     box-sizing: inherit;
-  }
-  .w3-bar .w3-button {
+}
+
+.w3-bar .w3-button {
     white-space: normal;
-  }
-  .w3-bar .w3-button {
+}
+
+.w3-bar .w3-button {
     white-space: normal;
-  }
-  .w3-bar .w3-button {
+}
+
+.w3-bar .w3-button {
     white-space: normal;
-  }
-  .w3-bar .w3-button {
+}
+
+.w3-bar .w3-button {
     white-space: normal;
-  }
-  .w3-btn, .w3-button {
+}
+
+.w3-btn, .w3-button {
     color: inherit;
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-  }
-  .w3-btn, .w3-button {
+}
+
+.w3-btn, .w3-button {
     color: inherit;
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-  }
-  .w3-btn, .w3-button {
+}
+
+.w3-btn, .w3-button {
     color: inherit;
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-  }
-  .w3-btn, .w3-button {
+}
+
+.w3-btn, .w3-button {
     color: inherit;
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-  }
-  button, select {
+}
+
+button, select {
     text-transform: none;
-  }
-  button, input, select, textarea, optgroup {
+}
+
+button, input, select, textarea, optgroup {
     font: inherit;
-  }
-  .w3-dropdown-click, .w3-dropdown-hover {
+}
+
+.w3-dropdown-click, .w3-dropdown-hover {
     cursor: pointer;
-  }
-  .w3-dropdown-click, .w3-dropdown-hover {
+}
+
+.w3-dropdown-click, .w3-dropdown-hover {
     cursor: pointer;
-  }
-  .w3-dropdown-click, .w3-dropdown-hover {
+}
+
+.w3-dropdown-click, .w3-dropdown-hover {
     cursor: pointer;
-  }
-  .w3-dropdown-click, .w3-dropdown-hover {
+}
+
+.w3-dropdown-click, .w3-dropdown-hover {
     cursor: pointer;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  .w3-black, .w3-hover-black:hover {
+}
+
+.w3-black, .w3-hover-black:hover {
     color: #fff !important;
-  }
-  html, body {
-    font-family: Verdana,sans-serif;
+}
+
+html, body {
+    font-family: Verdana, sans-serif;
     font-size: 15px;
     line-height: 1.5;
-  }
-  html, body {
-    font-family: Verdana,sans-serif;
+}
+
+html, body {
+    font-family: Verdana, sans-serif;
     font-size: 15px;
     line-height: 1.5;
-  }
+}
