@@ -3,7 +3,7 @@ if (isset($_REQUEST['search'])){
     $search = $_REQUEST['search'];
 }
 else{
-    $search = " ";
+    $search = "";
 }
 include "connect.php";
 $query = "SELECT * FROM item WHERE qty>0 AND (name LIKE '%$search%' OR description LIKE '%$search%' OR category LIKE '%$search%')";
@@ -121,7 +121,29 @@ select {
             }
         }
         else{
-            echo "<h2> NO Results </h2>";
+            echo "<h2> NO Results. check amazing deals</h2>";
+            $query = "SELECT * FROM item WHERE qty>0 LIMIT 50";
+            $result = mysqli_query($connect, $query);
+            if (mysqli_num_rows($result) > 0) {
+
+                while($row = mysqli_fetch_array($result))
+                {
+                ?>
+                <a href="item_details.php?item_id=<?php echo $row["item_id"] ?>">
+                <div class="item">
+                    <img src="item_pics/<?php echo $row["item_id"] ?>.jpg" alt="<?php echo $row["name"] ?>">
+                    <div class="item-details">
+                        <h2><?php echo $row["name"] ?></h2>
+                        <p>Rs.<?php echo $row["price"] ?></p>
+                    </div>
+                </div>
+                </a>
+            <?php
+                }
+            }
+            else{
+                echo "<h2> NO Results.</h2>";
+            }
         }
         mysqli_close($connect);
         ?>

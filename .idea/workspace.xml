@@ -6,8 +6,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/additem.php" beforeDir="false" afterPath="$PROJECT_DIR$/additem.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/additem.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/additem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page2.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_page2.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

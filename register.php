@@ -29,6 +29,7 @@
         
         $sql_check_temp="select email from temp_users where email='$email'";
         $result_temp_table = mysqli_query($connect,$sql_check_temp);
+        $password=md5($password);
         if (mysqli_num_rows($result_temp_table) > 0) {
           $sql="UPDATE temp_users SET password = '$password', otp = '$otp' WHERE email = '$email'";
         }
@@ -36,9 +37,13 @@
           $sql="INSERT INTO temp_users (email, password, otp) VALUES ('$email', '$password', '$otp')";
         }
         $result_reg = mysqli_query($connect, $sql);  
-        session_start();
-        $_SESSION['email'] = $email;
-        header("Location:otp_get.php");
+        if ($result_reg){
+          session_start();
+          $_SESSION['email'] = $email;
+          header("Location:send_mail.php");
+          exit;
+        }
+        alert("Error from server");
       }
     }
     else{ 
