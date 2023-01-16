@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product list</title>
-    <link rel="stylesheet" href="Product_list.css">
+    <link rel="stylesheet" href="css/Product_list.css">
     <?php include 'connect.php'; ?>
    
 </head>
 <body>
 
+
+   <div class="first">
+          <a  href="additem.php"><h2>Add product</h2></a>
+          <a  href="Product_list.php" class="now"><h2>Product list</h2></a>
+          <a  href="Sales_list.php"><h2>Sales list</h2></a>
+          <a  href="Users_list.php"><h2>Users list</h2></a>
+   </div>
+
+  
    <h1>Product List</h1>
    <table >
     <tr>
@@ -40,8 +49,9 @@
 
     $query1="SELECT SUM(qty) FROM order_details WHERE item_id=$id";
     $result1= mysqli_query($connect,$query1);
+    if($result1){
     $a=mysqli_fetch_assoc($result1);
-    $total=$a['SUM(qty)'];
+    $total=$a['SUM(qty)'];} else{ $total= 0 ;}
     $difference=$qty-$total;
 
 
@@ -76,6 +86,7 @@
        }
 
    ?>
+
     
     
 </body>

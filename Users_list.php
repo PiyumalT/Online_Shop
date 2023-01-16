@@ -18,6 +18,13 @@
     </script> 
 </head>
 <body>
+   
+   <div class="first">
+          <a  href="additem.php"><h2>Add product</h2></a>
+          <a  href="Product_list.php" ><h2>Product list</h2></a>
+          <a  href="Sales_list.php"><h2>Sales list</h2></a>
+          <a  href="Users_list.php" class="now"><h2>Users list</h2></a>
+   </div>
 
    <h1>User List</h1>
    <table >
@@ -31,14 +38,19 @@
     </tr>
    </table>
 
-   <?php 
-   
+   <?php
+
    $query="SELECT id,Name,email FROM users";
    $result= mysqli_query($connect,$query);
    
-
    if($result){
    while ($r=mysqli_fetch_assoc($result)){
+    
+    $line_1 = null;
+    $line_2 = null;
+    $city = null;
+    $country = null;
+    $name=null;
 
     $id=$r['id'];
     $name=$r['Name'];
@@ -56,13 +68,13 @@
      if(isset($r1['city'])){
         $city=$r1['city'];}
      if(isset($r1['country'])){
-        $country=$r1['country'];}} else{$id="";}
+        $country=$r1['country'];}} else{$id="";} 
 
     $query2="SELECT COUNT(order_id) FROM orders WHERE cus_id=$id";
     $result2= mysqli_query($connect,$query2);
     $a=mysqli_fetch_assoc($result2);
     $total=$a['COUNT(order_id)'];
-
+    
 
     echo "<table>";
       echo "<tr>";
@@ -77,9 +89,8 @@
         <?php
         //echo "<td> <a href='Users_list.php?id=".$r['id']."' class='btn'>Remove</a></td>";
         echo "</tr>";
-    echo "</table>";       
-
-      }
+    echo "</table>"; }
+    
     
     }else{
         echo"Query is wrong";
