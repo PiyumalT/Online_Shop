@@ -34,6 +34,7 @@
                 header("Location: cart.php"); //insert failed (duplicate)
             }
             
+            
         }
         elseif (isset($_REQUEST['buynow'])){
             if(isset($_REQUEST['buynow'])){
@@ -53,6 +54,16 @@
                         $order_price = $item_qty * $item_price;
                         $sql="INSERT INTO order_details (order_id, item_id, qty, options, price) VALUES ('$order_id', '$item_id', '$item_qty', '$item_option', '$order_price')";
                         $result = mysqli_query($connect, $sql); 
+
+                        $get_query="SELECT qty FROM item where item_id=$item_id";
+                        $result6 =mysqli_query($connect, $get_query);
+                        $row6 = mysqli_fetch_assoc($result6);
+
+                        $available_qty=$row6['qty'];
+                        $available_qty=$available_qty-$item_qty;
+
+                        $update_query = "UPDATE item SET qty = '$available_qty' WHERE item_id = $item_id ";
+                        $result3 =mysqli_query($connect, $update_query);
                         
                         if ($result) {
                             $url = "enter_address.php?order_id=$order_id";

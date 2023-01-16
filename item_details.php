@@ -15,7 +15,7 @@
         $item_id=$_REQUEST['item_id'];
       }
       else{
-        $item_id=1; // Please change this to 0 after testing
+        $item_id=0; // Please change this to 0 after testing
       }
       $sql="Select * from item where item_id='$item_id'";
       $item_result = mysqli_query($connect,$sql);
@@ -39,12 +39,8 @@
 
     ?>
     <div class="flex-container">
-        <div class="image-buttons">
-            <button onclick="previousImage()" id="image-button1"><</button>
-            <button onclick="nextImage()" id="image-button2">></button>
-        </div>
       <div>
-        <img src="item-image.jpg" alt="Item Image" class="item-image" />
+        <img src="item_pics/<?php echo $item_id;?>.jpg" alt="Item Image" class="item-image" />
       </div>
       <div class="item-details">
         <h1 class="item-name"><?php echo $item_name;?></h1>
