@@ -68,5 +68,15 @@ if (isset($_POST) and count($_POST) > 0) {
     <div class="ps-forgot"><a href="./register.php">Not have an account? Sign Up now.</a></div>
 </form>
 <script src="js/password-visibility-toggle.js"></script>
+<script>
+    const inputs = document.querySelectorAll("input");
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].style.borderBottom = "1px solid black";
+        inputs[i].addEventListener("click", () => {
+            inputs[i].style.borderBottom = "";
+        });
+    }
+
+</script>
 </body>
 </html>

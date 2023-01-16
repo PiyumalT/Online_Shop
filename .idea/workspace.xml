@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="add sliding effect to image containers and made them overflow in x-axis.">
-      <change afterPath="$PROJECT_DIR$/item_pics/0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/item_pics/1.jpg" afterDir="false" />
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fix bug in stretching of images.">
+      <change afterPath="$PROJECT_DIR$/bind_values.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page2.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/item_details.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/item_details.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_page2.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/item_details.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +108,7 @@
       <workItem from="1673589213114" duration="626000" />
       <workItem from="1673622361504" duration="1106000" />
       <workItem from="1673752311759" duration="19265000" />
-      <workItem from="1673871230089" duration="6114000" />
+      <workItem from="1673871230089" duration="11094000" />
     </task>
     <task id="LOCAL-00001" summary="add login page, styles, validation js">
       <created>1672816779373</created>
@@ -301,7 +292,35 @@
       <option name="project" value="LOCAL" />
       <updated>1673874347801</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add temp item-id images.">
+      <created>1673877450208</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1673877450208</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fix bugs in home page.">
+      <created>1673877473767</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1673877473767</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add sliding functions to home page 2.">
+      <created>1673877512727</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1673877512727</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fix bug in stretching of images.">
+      <created>1673877572882</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1673877572882</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,9 +358,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add login page, styles, validation js" />
-    <MESSAGE value="remove social log in, center log in text" />
-    <MESSAGE value="add wrong credentials indicator." />
     <MESSAGE value="add wrong credential indicator." />
     <MESSAGE value="add nav section with responsive effect.&#10;modify login page to response." />
     <MESSAGE value="add footer." />
@@ -363,6 +379,10 @@
     <MESSAGE value="fix icon side, check box position." />
     <MESSAGE value="add 2 new test home pages." />
     <MESSAGE value="add sliding effect to image containers and made them overflow in x-axis." />
-    <option name="LAST_COMMIT_MESSAGE" value="add sliding effect to image containers and made them overflow in x-axis." />
+    <MESSAGE value="add temp item-id images." />
+    <MESSAGE value="fix bugs in home page." />
+    <MESSAGE value="add sliding functions to home page 2." />
+    <MESSAGE value="fix bug in stretching of images." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug in stretching of images." />
   </component>
 </project>
