@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="add function remove effect of :valid/:invalid for one time.">
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="reestablish user_account.php and associated stylesheets and js files.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user_page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/remove_effect_of_invalid_and_valid_css_effect.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/remove_effect_of_invalid_and_valid_css_effect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/user_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/user_page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_segments/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/code_segments/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_segments/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/code_segments/navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_segments/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_segments/navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/reset.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +110,7 @@
       <workItem from="1673589213114" duration="626000" />
       <workItem from="1673622361504" duration="1106000" />
       <workItem from="1673752311759" duration="19265000" />
-      <workItem from="1673871230089" duration="14593000" />
+      <workItem from="1673871230089" duration="16626000" />
     </task>
     <task id="LOCAL-00001" summary="add login page, styles, validation js">
       <created>1672816779373</created>
@@ -360,7 +357,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673887003047</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="remove collision of user_page.js and remove_effect_of_invalid_and_valid_css_effect.js.">
+      <created>1673887250334</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1673887250334</updated>
+    </task>
+    <task id="LOCAL-00037" summary="change decision-making process.">
+      <created>1673887308152</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1673887308152</updated>
+    </task>
+    <task id="LOCAL-00038" summary="reestablish user_account.php and associated stylesheets and js files.">
+      <created>1673887353434</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1673887353434</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,9 +416,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="counter :empty effect." />
-    <MESSAGE value="finalize carousel effect onclick and on timer." />
-    <MESSAGE value="add register page link." />
     <MESSAGE value="change nav bar responsive functionality to new js file." />
     <MESSAGE value="change transition animation and remove auto scroll carousel." />
     <MESSAGE value="add hero section + carousel effect." />
@@ -423,7 +438,10 @@
     <MESSAGE value="sanitize user input in forms." />
     <MESSAGE value=" ." />
     <MESSAGE value="add function remove effect of :valid/:invalid for one time." />
-    <option name="LAST_COMMIT_MESSAGE" value="add function remove effect of :valid/:invalid for one time." />
+    <MESSAGE value="remove collision of user_page.js and remove_effect_of_invalid_and_valid_css_effect.js." />
+    <MESSAGE value="change decision-making process." />
+    <MESSAGE value="reestablish user_account.php and associated stylesheets and js files." />
+    <option name="LAST_COMMIT_MESSAGE" value="reestablish user_account.php and associated stylesheets and js files." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
