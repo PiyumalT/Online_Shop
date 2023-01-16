@@ -107,7 +107,7 @@ if (isset($user_id)) {
     }
     ?>
 </div>
-<div class="edit-user-btn-container">
+<div class="edit-user-container">
     <button class="edit-user" onclick="triggerEditMode(this)" data-in-edit-mode="false">Edit Details.</button>
 </div>
 <form method="post" class="user">
@@ -148,8 +148,6 @@ if (isset($user_id)) {
     <button class="reset" type="reset" onclick="ResetDetails()">Reset</button>
     <button class="save-user" type="submit" id="login-btn" onclick="submitDetails()">Save</button>
 </div>
-<div class="empty-container">reset</div>
 <script src="./js/user_page.js"></script>
-<script src="./js/remove_effect_of_invalid_and_valid_css_effect.js"></script>
 </body>
 </html>
