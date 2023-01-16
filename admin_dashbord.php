@@ -6,54 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin</title>
     <link rel="stylesheet" href="css/admin_dashbord.css">
-    <?php include 'connect.php';?>
+    <?php include 'connect.php';
+      $url='site_img/s-l1600.jpg';  ?>
 </head>
 <body>
 
-    <div class="header"></div>
-
+    <style type="text/css">
+    body
+    {
+    background-image:url('<?php echo $url ?>');
+    }
+    </style>
+    
     <div class="middle">
 
         <div class="first">
-          <a onmouseover="change_background_color()" href="Add_product.php"><h2>Add product</h2></a>
-          <a onmouseover="change_background_color()" href="Product_list.php"><h2>Product list</h2></a>
-          <a onmouseover="change_background_color()" href="Sales_list.php"><h2>Sales list</h2></a>
-          <a onmouseover="change_background_color()" href="Users_list.php"><h2>Users list</h2></a>
+          <a  href="additem.php"><h2>Add product</h2></a>
+          <a  href="Product_list.php"><h2>Product list</h2></a>
+          <a  href="Sales_list.php"><h2>Sales list</h2></a>
+          <a  href="Users_list.php"><h2>Users list</h2></a>
         </div>
 
         <div class="second">
          <div class="value"><h1>Today orders</h1>
             <div class="total"> 
-                <?php  
-                       $date = date('Y-m-d');
-                       $query="SELECT * FROM orders WHERE date LIKE '$date%'"; 
+                <?php  $query="SELECT * FROM orders WHERE day(date)=9 && month(date)=1 && year(date)=2023"; 
                        $result= mysqli_query($connect,$query);
-                       if($result)
-                       {echo "<h1>";echo mysqli_num_rows($result);echo "</h1>";}
-                       else{
-                        echo "<h1> 0 </h1>";
-                       } 
+                       if($result){echo "<h1>";echo mysqli_num_rows($result);echo "</h1>";} 
                 ?>
             </div>
          </div>
          <div class="value"><h1>Today income</h1>
             <div class="total"> 
-                <?php  $query="SELECT sum(price) FROM orders WHERE date LIKE '$date%'"; 
-                //echo $query;
+                <?php  $query="SELECT sum(price) FROM orders WHERE day(date)=9 && month(date)=1 && year(date)=2023"; 
                        $result= mysqli_query($connect,$query);
                        $r=mysqli_fetch_assoc($result);
-                       
-                       if($result){
-                            if ($r['sum(price)']){
-                                echo "<h1>";echo $r['sum(price)'] ;echo "</h1>";
-                            }
-                            else{
-                                echo "<h1> 0 </h1>"; 
-                            }
-                        } 
-                       else{
-                        echo "<h1> 0 </h1>";
-                       }
+                       if($result){echo "<h1>";echo $r['sum(price)'] ;echo "</h1>";}
                 ?>
             </div>
          </div>
@@ -77,13 +65,7 @@
       
     </div>
 
-    <div class="footer"></div>
-
-    <script> 
-       change_background_color(){
-         document.getElementsByTagName ('a').style.background-color="white";}
-    
-    </script>
+  
 
     
 </body>
