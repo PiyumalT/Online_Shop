@@ -30,6 +30,17 @@ if(isset($user_id)){
             $result3 =mysqli_query($connect, $insert_query);
             $row = mysqli_fetch_assoc($result2);
             
+            $get_query="SELECT qty FROM item where item_id=$item_id";
+            $result6 =mysqli_query($connect, $get_query);
+            $row6 = mysqli_fetch_assoc($result6);
+
+            $available_qty=$row6['qty'];
+            $available_qty=$available_qty-$qty;
+
+            $update_query = "UPDATE item SET qty = '$available_qty' WHERE item_id = $item_id ";
+            $result3 =mysqli_query($connect, $update_query);
+
+            
 
     
         }

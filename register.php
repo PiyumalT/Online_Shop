@@ -23,7 +23,7 @@
       else{
         //save registration data to temp_user table
         $password=$_POST['password'];
-        $otp=123;
+        $otp = rand(100000, 999999);;
 
         //todo - add update if already email in the temp table
         
