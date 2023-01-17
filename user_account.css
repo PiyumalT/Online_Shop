@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.middle{
+    width: 60%;
+    height : 730px;
+    background-color: rgb(239, 252, 252);
+    border: 2px solid rgb(18, 4, 74);
+    margin: 4% 20%;
+    opacity: 0.6;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+    color: rgb(8, 8, 96);  
+}
+
+
+.first ol li{
+    
+    background-color: rgb(12, 4, 54);
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.first ol li:hover {
+    background-color: rgb(80, 70, 133);
+  }
+
+a{
+    color: rgb(244, 247, 250);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+   
+    text-decoration: none;
+  }
+
+img{
+    width :100px;
+    height:100px;
+    
+}
+
