@@ -52,6 +52,7 @@
 .btn {
     border-radius: 12px;
     padding: 9px;
+    background-color: #3e5986;
 }
 
 .menu {
@@ -112,7 +113,7 @@ li {
 
 #search-bar {
     font-size: large;
-    background-color: #9dbcd7;
+    background-color: #3e5986;
 }
 
 #img {

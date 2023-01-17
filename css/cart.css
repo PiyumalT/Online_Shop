@@ -8,12 +8,12 @@ table {
     padding: 8px;
   }
   
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
+  tr:nth-child(odd) {
+    background-color: #cad3dc;
   }
   
   th {
-    background-color: #4caf50;
+    background-color: #022342;
     color: white;
   }
   
@@ -23,7 +23,7 @@ table {
   }
   
   button {
-    background-color: #4caf50;
+    background-color: #022342;
     color: white;
     border: none;
     cursor: pointer;
@@ -41,7 +41,7 @@ table {
     border: 1px solid #ccc;
   }
   #place-order-button {
-    background-color: #4caf50;
+    background-color: #022342;
     color: white;
     border: none;
     cursor: pointer;
@@ -55,11 +55,11 @@ table {
   }
   
   #place-order-button:hover {
-    background-color: #45a049;
+    background-color: #022342;
     border-radius: 5%;
   }
   #place-order-button{
-    background-color: #45a049;
+    background-color: #022342;
     border-radius: 5%;
   }
 
@@ -70,7 +70,7 @@ table {
     border: none;
     cursor: pointer;
     width: auto;
-    border-radius: 0%;
+    border-radius: 2px;
 }
 a {
   text-decoration: none; /* remove underline */
