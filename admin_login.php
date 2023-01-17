@@ -12,7 +12,7 @@ $wrong_credentials = !loginFunction("admin");
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Log In</title>
     <link rel="stylesheet" href="css/reset.css">
-    <!--    <link rel="stylesheet" href="css/nav_bar.css">-->
+    <link rel="stylesheet" href="css/nav_bar.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
