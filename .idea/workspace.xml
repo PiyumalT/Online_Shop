@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="add background color to search filed.">
-      <change afterPath="$PROJECT_DIR$/css/additem.scss" afterDir="false" />
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="edit add items file and properly align items.">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a231b21-079d-4b16-a420-8a08f2db86b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8a231b21-079d-4b16-a420-8a08f2db86b3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/additem.php" beforeDir="false" afterPath="$PROJECT_DIR$/additem.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/additem.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/additem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/additem.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/additem.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/additem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/additem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/reset.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,27 +61,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "code.cleanup.on.save": "true",
-    "last_opened_file_path": "D:/UOK/Y-II (2022-2023)/Sem 01/SENG 21253 - Web Development/Final Project/online_shop/item_pics",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "editing.templates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/UOK/Y-II (2022-2023)/Sem 01/SENG 21253 - Web Development/Final Project/online_shop/item_pics&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\UOK\Y-II (2022-2023)\Sem 01\SENG 21253 - Web Development\Final Project\online_shop\item_pics" />
@@ -111,7 +112,8 @@
       <workItem from="1673589213114" duration="626000" />
       <workItem from="1673622361504" duration="1106000" />
       <workItem from="1673752311759" duration="19265000" />
-      <workItem from="1673871230089" duration="21004000" />
+      <workItem from="1673871230089" duration="21231000" />
+      <workItem from="1673930429898" duration="6627000" />
     </task>
     <task id="LOCAL-00001" summary="add login page, styles, validation js">
       <created>1672816779373</created>
@@ -400,7 +402,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673889652361</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="add product name and price tags.">
+      <created>1673894349294</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1673894349294</updated>
+    </task>
+    <task id="LOCAL-00043" summary="edit add items file and properly align items.">
+      <created>1673894406064</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1673894406064</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,8 +454,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add icon images." />
-    <MESSAGE value="add icons and modify visibility toggle function of the password filed." />
     <MESSAGE value="create user page + populate data from backend + edit mode and read only mode." />
     <MESSAGE value="add retype password when user change password + validate passwords are the same." />
     <MESSAGE value="fixed a bug in address retrieval on user_account.php." />
@@ -463,7 +477,9 @@
     <MESSAGE value="add fontaswesome cdn and add icons and add hover effect to category." />
     <MESSAGE value="add button cursor event." />
     <MESSAGE value="add background color to search filed." />
-    <option name="LAST_COMMIT_MESSAGE" value="add background color to search filed." />
+    <MESSAGE value="add product name and price tags." />
+    <MESSAGE value="edit add items file and properly align items." />
+    <option name="LAST_COMMIT_MESSAGE" value="edit add items file and properly align items." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

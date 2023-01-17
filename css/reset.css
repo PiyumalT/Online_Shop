@@ -1,5 +1,4 @@
 
-
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +41,7 @@ a:not([class]) {
     text-decoration-skip-ink: auto;
 }
 
-:empty:not(img, picture, svg, input, button, hr, polygon, path, line, i) {
+:empty:not(img, picture, svg, input, button, hr, polygon, path, line, i, textarea) {
     display: none;
 }
 
