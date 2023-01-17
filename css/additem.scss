@@ -1,12 +1,13 @@
 body {
   display: grid;
   place-items: center;
+  font-size: 1.5rem;
 }
 
 form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+  grid-template-columns: 1fr repeat(2);
+  grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
   grid-template-areas:
           "name price"
           "product_image category"
@@ -17,16 +18,33 @@ form {
   border-radius: 50px;
   box-shadow: rgba(0, 0, 0, .5) 10px 10px 10px;
   width: 70%;
-  padding: 20px 0;
+  padding: 50px 0;
+  margin: 0 auto;
 }
 
 label {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
   text-align: left;
   margin-bottom: 20px;
   padding: 0 50px;
+
+  .error-text {
+    display: none;
+    position: absolute;
+    bottom: -15px;
+    font-size: medium;
+    left: 50%;
+    right: 50%;
+  }
+}
+
+#product_image {
+  border: none !important;
+  font-size: small;
+  margin-left: 100px;
 }
 
 #description {
@@ -42,11 +60,60 @@ button {
   grid-area: button;
   margin: 0 100px;
   font-size: 2rem;
+  background-color: gray;
+  padding: 10px;
+  line-height: 1;
+  border-radius: 10px;
+  border: 1px solid black;
+  //color: white;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1050px) {
   form {
+    width: 60%;
     display: block;
     text-align: center;
+    //background-color: black;
+  }
+  body {
+    font-size: 1.5rem;
+  }
+  input, textarea, #product_image {
+    font-size: large;
+  }
+}
+
+
+@media (max-width: 600px) {
+  body {
+    justify-content: center;
+
+    form {
+      width: 85%;
+      padding: 10px 0;
+
+      label {
+        width: 80%;
+        justify-content: space-between;
+      }
+
+      input {
+        font-size: medium;
+      }
+
+      textarea {
+        margin-left: 10px;
+      }
+
+      #product_image {
+        font-size: small;
+        margin-left: 70px;
+      }
+
+      button {
+        width: 75%;
+        margin: 0 0 10px;
+      }
+    }
   }
 }

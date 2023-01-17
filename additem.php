@@ -38,6 +38,7 @@ if (isset($_POST['Add_product'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/additem.css">
     <title>Add Product Page</title>
 </head>
@@ -54,13 +55,19 @@ if (isset($message)) {
 <h1>Add product</h1>
 <form action="additem.php" method="post">
     <label for="name">
-        Name
+        Name*
         <input type="text" name="name" required id="name">
     </label>
 
     <label for="price">
-        Price(Rs.)
-        <input name="price" required id="price">
+        <span class="error-text"></span>
+        Price(Rs.)*
+        <input name="price" required id="price"
+               pattern='^[1-9]\d{0,}.?\d{0,}'
+               title="Only numeric characters are accepted."
+               oninput="validatePrice(this.value)"
+        >
+        <!-- `(([0-9]{1,3})(?!(\\|\)|\(|\"|\'|\/|\=)),?.?\d{0,2})(([0-9]{1,3})?,?.?\d{0,2})?(\.\d{0,2})?[^\w]`-->
     </label>
 
     <label for="category">
@@ -69,7 +76,7 @@ if (isset($message)) {
     </label>
 
     <label for="product_image">
-        Image
+        Image*
         <input type="file" accept="image/jpg" name="product_image" class="box" required id="product_image">
     </label>
 
@@ -85,13 +92,14 @@ if (isset($message)) {
 
 
     <label for="description">
-        Description
+        Description*
         <textarea name="description" required id="description"></textarea>
     </label>
 
     <button type="submit" class="button" name="Add_product">Add product</button>
 </form>
-</body>
+* indicates the required fields.
+<script src="./js/remove_effect_of_invalid_and_valid_css_effect.js"></script>
 <script>
     const labels = document.querySelectorAll("label");
     for (let i = 0; i < labels.length; i++) {
@@ -103,5 +111,22 @@ if (isset($message)) {
         }
         labels[i].style.gridArea = name;
     }
+    let re = RegExp(/^[1-9]\d{0,}.?\d{0,}/);
+
+    function validatePrice(value) {
+        const errTextHolder = document.querySelector("#price").parentNode.querySelector(".error-text");
+        errTextHolder.style.display = "inline-block";
+        errTextHolder.innerHTML = "";
+        if (value === "") {
+            return;
+        }
+        console.log(re.test(value));
+        if (re.test(value)) {
+            errTextHolder.innerHTML = "Acceptable&nbspprice&nbspformat";
+        } else {
+            errTextHolder.innerHTML = "Wrong&nbspprice&nbspformat.";
+        }
+    }
 </script>
+</body>
 </html>
