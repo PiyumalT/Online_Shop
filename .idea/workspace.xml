@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="remove :empty effect on textarea .">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_17_2023_10_13_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_17_2023_10_13_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fix fw bugs.">
+      <change afterPath="$PROJECT_DIR$/admin_login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login_function.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_dashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_dashbord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/additem.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/additem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/admin_dashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin_dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,7 @@
       <workItem from="1673622361504" duration="1106000" />
       <workItem from="1673752311759" duration="19265000" />
       <workItem from="1673871230089" duration="21231000" />
-      <workItem from="1673930429898" duration="7833000" />
+      <workItem from="1673930429898" duration="9229000" />
     </task>
     <task id="LOCAL-00001" summary="add login page, styles, validation js">
       <created>1672816779373</created>
@@ -428,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673939345165</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="fix fw bugs.">
+      <created>1673942917327</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1673942917327</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed a bug in address retrieval on user_account.php." />
     <MESSAGE value="add lang attr to html tag." />
     <MESSAGE value="add hero image section + carousel effect to hero image." />
     <MESSAGE value="fix icon side, check box position." />
@@ -491,7 +496,8 @@
     <MESSAGE value="edit add items file and properly align items." />
     <MESSAGE value="add pattern to price input + add validated price indicator." />
     <MESSAGE value="remove :empty effect on textarea ." />
-    <option name="LAST_COMMIT_MESSAGE" value="remove :empty effect on textarea ." />
+    <MESSAGE value="fix fw bugs." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix fw bugs." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
