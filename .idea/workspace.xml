@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fix few bugs.">
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fix bug in the footer2.html.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHPMailer/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/PHPMailer/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_segments/footer2.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_segments/footer2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/home_page2.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/user_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/user_page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/user_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_account.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/PHPMailer/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -108,14 +116,8 @@
       <workItem from="1673622361504" duration="1106000" />
       <workItem from="1673752311759" duration="19265000" />
       <workItem from="1673871230089" duration="21231000" />
-      <workItem from="1673930429898" duration="9914000" />
-    </task>
-    <task id="LOCAL-00002" summary="add login page, styles, validation js">
-      <created>1672816871924</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1672816871924</updated>
+      <workItem from="1673930429898" duration="10164000" />
+      <workItem from="1673964655347" duration="1379000" />
     </task>
     <task id="LOCAL-00003" summary="remove social log in, center log in text">
       <created>1672822355434</created>
@@ -453,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673944427370</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="fix bug in the search button.">
+      <created>1673944975123</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1673944975124</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,8 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add sliding effect to image containers and made them overflow in x-axis." />
-    <MESSAGE value="add temp item-id images." />
     <MESSAGE value="fix bugs in home page." />
     <MESSAGE value="add sliding functions to home page 2." />
     <MESSAGE value="fix bug in stretching of images." />
@@ -516,7 +523,9 @@
     <MESSAGE value="now login is done from the function in login_function.php." />
     <MESSAGE value="add admin login terminal." />
     <MESSAGE value="fix few bugs." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix few bugs." />
+    <MESSAGE value="fix bug in the search button." />
+    <MESSAGE value="fix bug in the footer2.html." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug in the footer2.html." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
