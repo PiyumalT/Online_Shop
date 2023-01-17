@@ -52,8 +52,9 @@ svg {
 
 .search button.btn {
     background: white;
-    padding: 10px 0;
-    width: 50px;
+    padding: 5px 5px;
+    /*width: 30px;*/
+    /*height: 30px;*/
     border: 3px solid rgba(0, 0, 0, 0.5);
     margin-left: 10px;
 }

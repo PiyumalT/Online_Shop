@@ -16,8 +16,55 @@ include_once("connect.php");
     <link rel="stylesheet" href="css/home_page2.css">
     <link href="./css/navigation.css" rel="stylesheet"/>
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        referrerpolicy="no-referrer" rel="stylesheet"/>
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+
+    <style>
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            width: 100%;
+            margin-top: 50px;
+            margin-left: 0 !important;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            flex-basis: 30%;
+        }
+
+        .footer-center {
+            flex-basis: 30%;
+        }
+
+        .footer-right {
+            flex-basis: 30%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1em;
+        }
+
+        .bottom-tx {
+            /*position: fixed;*/
+            /*left: 0;*/
+            /*bottom: 0;*/
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+
+    </style>
 
 </head>
 <body>
@@ -113,12 +160,12 @@ include_once("connect.php");
                 $result2 = mysqli_query($connect, $sql2);
                 $row2 = mysqli_fetch_assoc($result2);
 
-                $item_price=$row2['price'];
-                $item_name=$row2['name'];
+                $item_price = $row2['price'];
+                $item_name = $row2['name'];
                 // echo "Item ID: " . $item_id . "<br>";
                 echo '<a href="item_details.php?item_id=' . $item_id . '">';
                 echo '<div class="category-img"><img src="item_pics/' . $item_id . '.jpg" alt="name"> 
-                <div>'.$item_price.'LKR</div> <div>'.$item_name.'</div></div></a>';
+                <div>' . $item_price . 'LKR</div> <div>' . $item_name . '</div></div></a>';
                 $i++;
             }
             for (; $i < 5; $i++) {
@@ -144,12 +191,12 @@ include_once("connect.php");
             while ($i < mysqli_num_rows($result) && $i < 5) {
                 $row = mysqli_fetch_assoc($result);
                 $item_id = $row['item_id'];
-                $item_price=$row['price'];
-                $item_name=$row['name'];
+                $item_price = $row['price'];
+                $item_name = $row['name'];
                 // echo "Item ID: " . $item_id . "<br>";
                 echo '<a href="item_details.php?item_id=' . $item_id . '">';
                 echo '<div class="category-img"><img src="item_pics/' . $item_id . '.jpg" alt="name"> 
-                <div>'.$item_price.'LKR</div> <div>'.$item_name.'</div></div></a>';
+                <div>' . $item_price . 'LKR</div> <div>' . $item_name . '</div></div></a>';
                 $i++;
             }
             for (; $i < 5; $i++) {
@@ -163,6 +210,47 @@ include_once("connect.php");
         ?>
     </div>
 </section>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <nav>
+                <a href="#">Contact Us</a>
+                <ul>
+                    <li><a href="#">FB</a></li>
+                    <li><a href="#">YT</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-center">
+            <nav>
+                <a href="#">Shopping</a>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Payment Method</a></li>
+                    <li><a href="#">User Guide</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-right">
+            <nav>
+                <a href="#">Company</a>
+                <ul>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <div class="bottom-tx">
+        <p>Copyright © 2021 Nayantha Yasiru, Tharindu Piyumal, Nimesha Kavindi, Pathum Sanjana</p>
+    </div>
+
+</footer>
 <script>
     // change hero img
     let i = 0;
