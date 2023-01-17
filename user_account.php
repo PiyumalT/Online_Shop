@@ -54,7 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
     }
 
 }
-
 if (isset($user_id)) {
     $query = "SELECT name,email,password FROM users WHERE id=$user_id";
     $results = mysqli_query($connect, $query);
@@ -68,8 +67,6 @@ if (isset($user_id)) {
     }
 
 }
-
-
 ?>
 
 <!doctype html>

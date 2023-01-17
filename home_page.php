@@ -11,61 +11,13 @@ include_once("connect.php");
     <title>Index Page</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/nav_bar.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/home_page.css">
     <link rel="stylesheet" href="css/home_page2.css">
     <link href="./css/navigation.css" rel="stylesheet"/>
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           referrerpolicy="no-referrer" rel="stylesheet"/>
-
-    <style>
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            width: 100%;
-            margin-top: 50px;
-            margin-left: 0 !important;
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-left {
-            flex-basis: 30%;
-        }
-
-        .footer-center {
-            flex-basis: 30%;
-        }
-
-        .footer-right {
-            flex-basis: 30%;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 1em;
-        }
-
-        .bottom-tx {
-            /*position: fixed;*/
-            /*left: 0;*/
-            /*bottom: 0;*/
-            width: 100%;
-            background-color: #333;
-            color: white;
-            text-align: center;
-        }
-
-
-    </style>
-
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 <body>
 

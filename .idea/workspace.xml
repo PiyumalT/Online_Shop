@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fix bug in the footer2.html.">
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="reestablish user_account.php, user_page.css again.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHPMailer/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/PHPMailer/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_segments/footer2.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_segments/footer2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page2.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user_page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/user_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/user_page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/footer.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/footer.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_account.php" afterDir="false" />
     </list>
@@ -117,28 +114,7 @@
       <workItem from="1673752311759" duration="19265000" />
       <workItem from="1673871230089" duration="21231000" />
       <workItem from="1673930429898" duration="10164000" />
-      <workItem from="1673964655347" duration="1379000" />
-    </task>
-    <task id="LOCAL-00003" summary="remove social log in, center log in text">
-      <created>1672822355434</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1672822355434</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add wrong credential indicator.">
-      <created>1672837304202</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1672837304202</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add nav section with responsive effect.&#10;modify login page to response.">
-      <created>1672845016622</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1672845016622</updated>
+      <workItem from="1673964655347" duration="2769000" />
     </task>
     <task id="LOCAL-00006" summary="add footer.">
       <created>1672847546104</created>
@@ -462,7 +438,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673944975124</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="fix bug in the footer2.html.">
+      <created>1673966098204</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1673966098206</updated>
+    </task>
+    <task id="LOCAL-00053" summary="add footer + fix search button size.">
+      <created>1673966157688</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1673966157688</updated>
+    </task>
+    <task id="LOCAL-00054" summary="reestablish user_account.php, user_page.css again.">
+      <created>1673966226521</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1673966226521</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,8 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix bugs in home page." />
-    <MESSAGE value="add sliding functions to home page 2." />
     <MESSAGE value="fix bug in stretching of images." />
     <MESSAGE value="add form validation shortcuts to input fields." />
     <MESSAGE value="smooth the :invalid effect." />
@@ -525,7 +520,9 @@
     <MESSAGE value="fix few bugs." />
     <MESSAGE value="fix bug in the search button." />
     <MESSAGE value="fix bug in the footer2.html." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug in the footer2.html." />
+    <MESSAGE value="add footer + fix search button size." />
+    <MESSAGE value="reestablish user_account.php, user_page.css again." />
+    <option name="LAST_COMMIT_MESSAGE" value="reestablish user_account.php, user_page.css again." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
