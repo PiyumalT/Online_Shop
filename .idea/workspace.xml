@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="edit add items file and properly align items.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a231b21-079d-4b16-a420-8a08f2db86b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8a231b21-079d-4b16-a420-8a08f2db86b3.xml" afterDir="false" />
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="remove :empty effect on textarea .">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_17_2023_10_13_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_17_2023_10_13_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/additem.php" beforeDir="false" afterPath="$PROJECT_DIR$/additem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_dashbord.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_dashbord.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/additem.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/additem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/additem.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/additem.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/additem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/additem.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin_dashbord.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin_dashboard.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,7 @@
       <workItem from="1673622361504" duration="1106000" />
       <workItem from="1673752311759" duration="19265000" />
       <workItem from="1673871230089" duration="21231000" />
-      <workItem from="1673930429898" duration="6627000" />
+      <workItem from="1673930429898" duration="7833000" />
     </task>
     <task id="LOCAL-00001" summary="add login page, styles, validation js">
       <created>1672816779373</created>
@@ -416,7 +414,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673894406064</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="add pattern to price input + add validated price indicator.">
+      <created>1673939253334</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1673939253334</updated>
+    </task>
+    <task id="LOCAL-00045" summary="remove :empty effect on textarea .">
+      <created>1673939345165</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1673939345165</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,8 +466,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create user page + populate data from backend + edit mode and read only mode." />
-    <MESSAGE value="add retype password when user change password + validate passwords are the same." />
     <MESSAGE value="fixed a bug in address retrieval on user_account.php." />
     <MESSAGE value="add lang attr to html tag." />
     <MESSAGE value="add hero image section + carousel effect to hero image." />
@@ -479,7 +489,9 @@
     <MESSAGE value="add background color to search filed." />
     <MESSAGE value="add product name and price tags." />
     <MESSAGE value="edit add items file and properly align items." />
-    <option name="LAST_COMMIT_MESSAGE" value="edit add items file and properly align items." />
+    <MESSAGE value="add pattern to price input + add validated price indicator." />
+    <MESSAGE value="remove :empty effect on textarea ." />
+    <option name="LAST_COMMIT_MESSAGE" value="remove :empty effect on textarea ." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
