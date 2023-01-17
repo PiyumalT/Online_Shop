@@ -5,6 +5,8 @@
     border-width: 3px;
     border: 1px solid black;
     font-size: large;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    color:white;
     
   }
   p{
@@ -60,7 +62,7 @@
   }
 
   tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #022342;
   }
   .a_right{
     text-align: right;
@@ -75,16 +77,17 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-  h2{
+  h1{
     font-size: large;
     text-align: center;
+    color: white;
   }
   pError{
     color: red;
   }
 
   #submit {
-    background-color: green;
+    background-color: #1f0f5a;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -97,7 +100,7 @@
   }
   .address_box {
     width: 80%;
-    background-color: #e9e6e6;
+    background-color: #022342;
     padding: 2%;
     border-radius: 20px;
 }
@@ -132,6 +135,8 @@ body {
   font-family: sans-serif;
   font-weight: 500;
   margin: 20px 10px 0 10px;
+  background-color: #cad3dc;
+  background-image: url(../site_img/background\ img.jpg);
 }
 
 button {
@@ -167,7 +172,7 @@ section#cc-exp-csc div:not(:last-child) {
 }
 
 h1 {
-  border-bottom: 1px solid #ccc;
+
   font-size: 28px;
   font-weight: 300;
   padding: 0 0 10px 0;
@@ -180,6 +185,7 @@ input {
   padding: 15px;
   width: 90%; /* fallback */
   width: calc(100% - 30px); /* full width minus padding */
+  background-color: #cad3dc;
 }
 
 input:not(:focus):invalid,
@@ -238,9 +244,7 @@ select {
 }
 
 @media (min-width: 400px) {
-  body {
-    margin: 40px 20px 0 20px;
-  }
+
   button {
     font-size: 20px; /* fallback */
     font-size: var(--large-mobile-font-size);
@@ -274,9 +278,7 @@ select {
 }
 
 @media (min-width: 500px) {
-  body {
-    margin: 70px 70px 0 70px;
-  }
+  
   button {
     font-size: 18px; /* fallback */
     font-size: var(--desktop-font-size);

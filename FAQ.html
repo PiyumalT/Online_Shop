@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQ Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/nav_bar.css">
+    <link href="./css/navigation.css" rel="stylesheet"/>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/footer.css">
+    <script>
+        $(document).ready(function() {
+            $('.question').click(function() {
+                $(this).next('.answer').slideToggle();
+                $('.answer').not($(this).next()).slideUp();
+            });
+        });
+    </script>
+    <style>
+        /* Center the container on the page */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+        }
+
+        /* Add some padding and styling to the box */
+        .box {
+            padding: 20px;
+            text-align: center;
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.8); /* Transparent background */
+            color:#b4c1d5;
+        }
+        .question {
+            cursor: pointer;
+            text-align: left;
+        }
+        .answer {
+            display: none;
+            text-align: left;
+        }
+        body {
+        font-size: 18px;
+        background-color: #cad3dc;
+        background-image: url(site_img/background\ img.jpg);
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <a href="home_page.php">
+                <img alt="logo" id="img" src="./site_img/logo.png">
+                </a>
+            </div>
+            <script>
+                if(document.getElementById("search-bar").value){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            </script>
+    
+            <div class="search" >
+                <form action="search.php" onsubmit="return check_search_value()">
+                <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
+                <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label></button></form>
+            </div>
+    
+            <div class="menu">
+                <ul>
+                    <li><a href="./cart.php">Cart</a></li>
+                    <li><a href="./account.php">Account</a></li>
+                    <li><a href="./logout.php">Logout</a></li>
+                </ul>
+            </div>
+    
+        </div>
+    
+        <div class="navbar2">
+            <ul>
+                <li>
+                    <div class="car">
+                        <a href="./search.php?search=car">Car Part</a>
+                    </div>
+    
+                </li>
+    
+                <li>
+                    <div class="Motor">
+                        <a href="./search.php?search=Motorcycle">Motorcycle Part</a>
+                    </div>
+                </li>
+    
+                <li>
+                    <div class="other">
+                        <a href="./search.php?search=other">Other Part</a>
+                    </div>
+                </li>
+    
+                <li>
+                    <div class="tools">
+                        <a href="./search.php?search=tools">Tools</a>
+                    </div>
+    
+                </li>
+    
+                <li>
+                    <div class="tyres">
+                        <a href="./search.php?search=tyres">Tyres</a>
+                    </div>
+                </li>
+    
+                <li>
+                    <div class="access">
+                        <a href="./search.php?search=Accessories">Accessories</a>
+                    </div>
+                </li>
+    
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>  
+    
+<div class="container">
+    <div class="box">
+        <h1>FAQ Page</h1><br>
+        <div>
+            <h3 class="question">What types of parts do you sell?</h3>
+            <p class="answer">We sell a wide variety of automobile parts, including engine parts, suspension parts, braking systems, electrical components, and more.</p>
+        <br><br>
+        </div>
+        <div>
+            <h3 class="question">How can I find the specific part I need for my vehicle?</h3>
+            <p class="answer">You can use our search function to find the specific part you need by entering your vehicle's make, model, and year. You can also browse by category or use our advanced search options to filter by brand, price, and more.</p>
+            <br><br>
+        </div>
+        <div>
+            <h3 class="question">Do you offer any warranties or guarantees on your products?</h3>
+            <p class="answer">Yes, we offer a limited warranty on all of our products, and we stand behind the quality of our products.</p>
+            <br><br>
+        </div>
+        <div>
+            <h3 class="question">What is your return policy?</h3>
+            <p class="answer">We accept returns within 30 days of purchase, as long as the item is in new and unused condition. Please contact us for more information on how to initiate a return.</p>
+            <br><br>
+        </div>
+        <div>
+            <h3 class="question">How do I place an order?</h3>
+            <p class="answer">You can place an order on our website by adding items to your cart and proceeding to checkout. You can also place an order by phone or email if you prefer.</p>
+            <br><br>
+        </div>
+        <div>
+            <h3 class="question">How long will it take for my order to arrive?</h3>
+            <p class="answer">The arrival time of your order depends on the shipping method you choose and your location. You can see the estimated arrival time during the checkout process.</p>
+            <br><br>
+        </div>
+        <div>
+            <h3 class="question">Do you offer international shipping?</h3>
+            <p class="answer">Yes, we offer international shipping to most countries. Please contact us for more information about international shipping options and rates.</p>
+            <br><br>
+        </div>
+    </div>
+</div>
+<footer style="margin-top: 100px">
+    <div class="footer-container">
+        <div class="footer-left">
+            <nav>
+                <a href="#">Contact Us</a>
+                <ul>
+                    <li><a href="#">FB</a></li>
+                    <li><a href="#">YT</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-center">
+            <nav>
+                <a href="#">Shopping</a>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Payment Method</a></li>
+                    <li><a href="#">User Guide</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-right">
+            <nav>
+                <a href="#">Company</a>
+                <ul>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <div class="bottom-tx">
+        <p>Copyright © 2021 Nayantha Yasiru, Tharindu Piyumal, Nimesha Kavindi, Pathum Sanjana</p>
+    </div>
+</body>
+</html>

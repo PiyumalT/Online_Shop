@@ -3,12 +3,91 @@
 <head>
   <title>Order Details</title>
   <link rel="stylesheet" href="css/payment.css">
+  
+  <link rel="stylesheet" href="css/nav_bar.css">
+    <link href="./css/navigation.css" rel="stylesheet"/>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/footer.css">
+
   <script src="js/payment.js" type="text/javascript"></script>
 
   
 </head>
 <body>
-  <h2> Order Details </h2>
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <a href="home_page.php">
+            <img alt="logo" id="img" src="./site_img/logo.png">
+            </a>
+        </div>
+        <div class="search" >
+            <form action="search.php">
+            <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search"></form>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="./cart.php">Cart</a></li>
+                <li><a href="./account.php">Account</a></li>
+                <li><a href="./logout.php">Logout</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="navbar2">
+        <ul>
+            <li>
+                <div class="car">
+                    <a href="./search.php?search=car">Car Part</a>
+                </div>
+
+            </li>
+
+            <li>
+                <div class="Motor">
+                    <a href="./search.php?search=Motorcycle">Motorcycle Part</a>
+                </div>
+            </li>
+
+            <li>
+                <div class="other">
+                    <a href="./search.php?search=other">Other Part</a>
+                </div>
+            </li>
+
+            <li>
+                <div class="tools">
+                    <a href="./search.php?search=tools">Tools</a>
+                </div>
+
+            </li>
+
+            <li>
+                <div class="tyres">
+                    <a href="./search.php?search=tyres">Tyres</a>
+                </div>
+            </li>
+
+            <li>
+                <div class="access">
+                    <a href="./search.php?search=Accessories">Accessories</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+  
+  <h1> Order Details </h1>
   <div class="container">
     <div class="item-details">
       <h3>Item Summery</h1>
@@ -134,10 +213,10 @@ if(isset($_REQUEST['order_id'])){
               
                 
                   <?php echo $name ?><br>
-                  <?php echo $line_1 ?><br>
+                  <?php echo $line_1?>
                   <?php echo $line_2 ?><br>
-                  <?php echo $city ?><br>
-                  <?php echo $province ?><br>
+                  <?php echo $city ?>
+                  <?php echo $province ?>
                   <?php echo $country ?><br>
                   <?php echo "ZIP - ".$zip_code ?><br>
                   <?php echo $phone ?><br>
@@ -153,17 +232,20 @@ if(isset($_REQUEST['order_id'])){
                     <label for="cc-number">Card number</label>
                     <input id="cc-number" name="cc-number" autocomplete="cc-number" inputmode="numeric" onkeyup="addSpace()" required>
                 </section>
+                <br>
 
                 <section>
                     <label for="cc-name">Name on card</label>
                     <input id="cc-name" name="cc-name" autocomplete="cc-name" pattern="[\p{L} \-\.]+" required>
                 </section>
+                <br>
 
                 <section id="cc-exp-csc">
                     <div>
                         <label for="cc-exp">Expiry date</label>
                         <input id="cc-exp" name="cc-exp" autocomplete="cc-exp" placeholder="MM/YY" maxlength="5" onkeypress="addSlash()" required>
                     </div>
+                    <br>
                     <div>
                         <label for="cc-csc">Security code</label>
                         <input id="cc-csc" name="cc-csc" autocomplete="cc-csc" inputmode="numeric" maxlength="3" pattern="[0-999]*" required>
@@ -191,5 +273,44 @@ if(isset($_REQUEST['order_id'])){
 }
 ?>
   </div>
+  <footer style="margin-top: 100px">
+    <div class="footer-container">
+        <div class="footer-left">
+            <nav>
+                <a href="#">Contact Us</a>
+                <ul>
+                    <li><a href="#">FB</a></li>
+                    <li><a href="#">YT</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-center">
+            <nav>
+                <a href="#">Shopping</a>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Payment Method</a></li>
+                    <li><a href="#">User Guide</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-right">
+            <nav>
+                <a href="#">Company</a>
+                <ul>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <div class="bottom-tx">
+        <p>Copyright © 2021 Nayantha Yasiru, Tharindu Piyumal, Nimesha Kavindi, Pathum Sanjana</p>
+    </div>
+
+</footer>
 </body>
 </html>

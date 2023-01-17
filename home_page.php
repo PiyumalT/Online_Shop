@@ -10,9 +10,10 @@ include_once("connect.php");
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index Page</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/nav_bar.css">
+    
     <link rel="stylesheet" href="css/home_page.css">
     <link rel="stylesheet" href="css/home_page2.css">
+    <link rel="stylesheet" href="css/nav_bar.css">
     <link href="./css/navigation.css" rel="stylesheet"/>
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -24,12 +25,23 @@ include_once("connect.php");
 <div class="main">
     <div class="navbar">
         <div class="icon">
+            <a href="home_page.php">
             <img alt="logo" id="img" src="./site_img/logo.png">
+            </a>
         </div>
+        <script>
+            if(document.getElementById("search-bar").value){
+                return true;
+            }
+            else{
+                return false;
+            }
+        </script>
 
-        <div class="search">
+        <div class="search" >
+            <form action="search.php" onsubmit="return check_search_value()">
             <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
-            <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label></button>
+            <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label></button></form>
         </div>
 
         <div class="menu">
@@ -110,15 +122,19 @@ include_once("connect.php");
                 $item_id = $row['item_id'];
                 $sql2 = "SELECT * FROM item WHERE item_id=$item_id ";
                 $result2 = mysqli_query($connect, $sql2);
-                $row2 = mysqli_fetch_assoc($result2);
-
-                $item_price = $row2['price'];
-                $item_name = $row2['name'];
-                // echo "Item ID: " . $item_id . "<br>";
-                echo '<a href="item_details.php?item_id=' . $item_id . '">';
-                echo '<div class="category-img"><img src="item_pics/' . $item_id . '.jpg" alt="name"> 
-                <div>' . $item_price . 'LKR</div> <div>' . $item_name . '</div></div></a>';
+                if ($result2){
+                    $row2 = mysqli_fetch_assoc($result2);
+                    if ($row2){
+                        $item_price = $row2['price'];
+                        $item_name = $row2['name'];
+                        // echo "Item ID: " . $item_id . "<br>";
+                        echo '<a href="item_details.php?item_id=' . $item_id . '">';
+                        echo '<div class="category-img"><img src="item_pics/' . $item_id . '.jpg" alt="name"> 
+                        <div>' . $item_price . 'LKR</div> <div>' . $item_name . '</div></div></a>';
+                    }
+                }
                 $i++;
+                
             }
             for (; $i < 5; $i++) {
                 echo '<div class="category-img">No Data</div>';
@@ -131,6 +147,7 @@ include_once("connect.php");
         ?>
     </div>
 </section>
+<br><br><br><br><br>
 <section class="latest category">
     <div class="category-tag"><h2>Latest</h2></div>
     <div class="image-container">
@@ -168,38 +185,38 @@ include_once("connect.php");
     <div class="footer-container">
         <div class="footer-left">
             <nav>
-                <a href="#">Contact Us</a>
+                <a href="contactus.html">Contact Us</a>
                 <ul>
-                    <li><a href="#">FB</a></li>
-                    <li><a href="#">YT</a></li>
-                    <li><a href="#">Email</a></li>
+                    <li><a href="contactus.html">FB</a></li>
+                    <li><a href="contactus.html">YT</a></li>
+                    <li><a href="contactus.html">Email</a></li>
                 </ul>
             </nav>
         </div>
         <div class="footer-center">
             <nav>
-                <a href="#">Shopping</a>
+                <a href="FAQ.html">Shopping</a>
                 <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Payment Method</a></li>
-                    <li><a href="#">User Guide</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="FAQ.html">Payment Method</a></li>
+                    <li><a href="FAQ.html">User Guide</a></li>
                 </ul>
             </nav>
         </div>
         <div class="footer-right">
             <nav>
-                <a href="#">Company</a>
+                <a href="about.html">Company</a>
                 <ul>
-                    <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="about.html">Terms and Conditions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">Privacy Policy</a></li>
                 </ul>
             </nav>
         </div>
 
     </div>
     <div class="bottom-tx">
-        <p>Copyright © 2021 Nayantha Yasiru, Tharindu Piyumal, Nimesha Kavindi, Pathum Sanjana</p>
+        <p>Copyright © 2021 Nayantha Yasiru, Tharindu Piyumal, Nimesha Kavindi, Pathum Sanjana,Siva Tharsan</p>
     </div>
 
 </footer>
@@ -210,7 +227,7 @@ include_once("connect.php");
     const imageRemoveTime = 500;
 
     function changeHeroImg() {
-        const imgArray = ['./item-image.jpg', "./item_pics/1.jpg"]; //php retrieve here
+        const imgArray = ['./site_img/1.jpeg', './site_img/1.jpeg','./site_img/2.jpeg','./site_img/3.jpg']; //php retrieve here
         const imgElement = document.createElement("img");
         imgElement.src = imgArray[i];
         imgElement.classList.add("slide-out");

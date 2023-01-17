@@ -2,6 +2,7 @@ body {
     min-width: 100vw;
     min-height: 100vh;
     overflow-x: clip;
+    background-color: #cad3dc;
 }
 
 main {
@@ -24,11 +25,16 @@ main {
 .image-container {
     display: flex;
     flex-wrap: nowrap;
+    background-color: white;
 }
 
 .category .category-tag {
     text-align: center;
-}
+    border-top: 2px solid black;
+    background-color: #022342;
+    color: white;
+  }
+
 
 .category-img {
     width: 19vw;
@@ -47,11 +53,9 @@ svg {
     z-index: 100;
 }
 
-.hero-img {
-}
 
 .search button.btn {
-    background: white;
+    background: #3e5986;
     padding: 5px 5px;
     /*width: 30px;*/
     /*height: 30px;*/
