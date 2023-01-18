@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fix bugs in footer.">
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="rearranged the code.">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a231b21-079d-4b16-a420-8a08f2db86b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8a231b21-079d-4b16-a420-8a08f2db86b3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_segments/footer2.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_segments/footer2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/item_details.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_segments/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/code_segments/navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home_page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/PHPMailer/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -112,28 +116,8 @@
       <workItem from="1673752311759" duration="19265000" />
       <workItem from="1673871230089" duration="21231000" />
       <workItem from="1673930429898" duration="10164000" />
-      <workItem from="1673964655347" duration="4105000" />
-    </task>
-    <task id="LOCAL-00007" summary="add footer.">
-      <created>1672847555715</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1672847555715</updated>
-    </task>
-    <task id="LOCAL-00008" summary="add home page.">
-      <created>1673284246010</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1673284246010</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add carousel effect to hero section.">
-      <created>1673285963807</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1673285963807</updated>
+      <workItem from="1673964655347" duration="4339000" />
+      <workItem from="1674018437492" duration="4698000" />
     </task>
     <task id="LOCAL-00010" summary="counter :empty effect.">
       <created>1673330807761</created>
@@ -457,7 +441,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673967646975</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="add a footer.">
+      <created>1673968837290</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1673968837290</updated>
+    </task>
+    <task id="LOCAL-00057" summary="add bg color to category.">
+      <created>1674023515127</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1674023515128</updated>
+    </task>
+    <task id="LOCAL-00058" summary="rearranged the code.">
+      <created>1674023559549</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1674023559549</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,9 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add form validation shortcuts to input fields." />
-    <MESSAGE value="smooth the :invalid effect." />
-    <MESSAGE value="sanitize user input in forms." />
     <MESSAGE value=" ." />
     <MESSAGE value="add function remove effect of :valid/:invalid for one time." />
     <MESSAGE value="remove collision of user_page.js and remove_effect_of_invalid_and_valid_css_effect.js." />
@@ -520,7 +522,10 @@
     <MESSAGE value="add footer + fix search button size." />
     <MESSAGE value="reestablish user_account.php, user_page.css again." />
     <MESSAGE value="fix bugs in footer." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs in footer." />
+    <MESSAGE value="add a footer." />
+    <MESSAGE value="add bg color to category." />
+    <MESSAGE value="rearranged the code." />
+    <option name="LAST_COMMIT_MESSAGE" value="rearranged the code." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
