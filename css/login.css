@@ -1,5 +1,6 @@
 body {
   min-height: 100vh;
+  overflow-x: clip;
   display: grid;
   place-items: center;
   background-image: url("../site_img/background img.jpg");

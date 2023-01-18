@@ -1,33 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fixed nav.">
-      <change afterPath="$PROJECT_DIR$/css/login_copy.css" afterDir="false" />
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fixed nav in login + admin login.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FAQ.html" beforeDir="false" afterPath="$PROJECT_DIR$/FAQ.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_segments/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/code_segments/navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contactus.html" beforeDir="false" afterPath="$PROJECT_DIR$/contactus.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/login.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enter_address.php" beforeDir="false" afterPath="$PROJECT_DIR$/enter_address.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/item_details.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/order_info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/otp_get.php" beforeDir="false" afterPath="$PROJECT_DIR$/otp_get.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paid_orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/paid_orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment2.php" beforeDir="false" afterPath="$PROJECT_DIR$/payment2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unpaid_orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/unpaid_orders.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,14 +114,7 @@
       <workItem from="1673871230089" duration="21231000" />
       <workItem from="1673930429898" duration="10164000" />
       <workItem from="1673964655347" duration="4339000" />
-      <workItem from="1674018437492" duration="10206000" />
-    </task>
-    <task id="LOCAL-00018" summary="create user page + populate data from backend + edit mode and read only mode.">
-      <created>1673761635285</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1673761635285</updated>
+      <workItem from="1674018437492" duration="10649000" />
     </task>
     <task id="LOCAL-00019" summary="create user page + populate data from backend + edit mode and read only mode.">
       <created>1673766159301</created>
@@ -481,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674033846240</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="fixed nav in login + admin login.">
+      <created>1674034333635</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1674034333635</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +497,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add product name and price tags." />
     <MESSAGE value="edit add items file and properly align items." />
     <MESSAGE value="add pattern to price input + add validated price indicator." />
     <MESSAGE value="remove :empty effect on textarea ." />
@@ -544,7 +521,8 @@
     <MESSAGE value="add margin bottom to nav bar2." />
     <MESSAGE value="remove search button items being targeted." />
     <MESSAGE value="fixed nav." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed nav." />
+    <MESSAGE value="fixed nav in login + admin login." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed nav in login + admin login." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
