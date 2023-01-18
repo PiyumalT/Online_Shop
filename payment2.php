@@ -39,7 +39,7 @@
 <div class="main">
     <div class="navbar">
         <div class="icon">
-            <a href="home_page.php">
+            <a href="index.php">
                 <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
@@ -130,14 +130,13 @@
         ?>
         <h1>Order Success</h1>
         <p>Thank you for your purchase!</p>
-        <br>
+
         <hr>
-        <br>
-        <h2>Order Details</h2><br>
+        <h2>Order Details</h2>
         <p>Order Number:# <?php echo $order_id ?></p>
         <p>Order Date: <?php echo $c_date ?></p>
-        <p>Your order deliver within 7 days</p><br><br>
-        <p><a href="home.php"> Go To Home </a></p>
+        <p>Your order deliver within 7 days</p><br>
+        <p><a href="index.php"> Go To Home </a></p>
     </div>
 </div>
 <?php
@@ -146,7 +145,7 @@
     <h1>Order Failed</h1>
     <hr>
     <h2>Try again later</h2>
-    <p><a href="home.php"> Go To Home </a></p>
+    <p><a href="index.php"> Go To Home </a></p>
     </div>
     </div>
 

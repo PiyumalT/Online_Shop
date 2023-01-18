@@ -1,5 +1,19 @@
 <?php
    include 'connect.php';
+   if(isset($_REQUEST['id'])){
+    $item_id=$_REQUEST['id'];
+    $query2="SELECT * FROM item WHERE item_id=$item_id ";
+     $result2=mysqli_query($connect,$query2);
+     if ($result2) {
+         $row= mysqli_fetch_assoc($result2);
+         $name=$row['name'];
+         $discription=$row['description'];
+         $price=$row['price'];
+         $options=$row['options'];
+         $qty=$row['qty'];
+         $category=$row['category'];
+     }
+ }
 
    if(isset($_POST['Add_product'])){
         $name= $_POST['name'];
@@ -93,23 +107,23 @@
         <table border="0">
             <tr>
                <td class="input4"><h2>Name</h2></td>
-               <td  colspan="3"> <input type="text"  name="name" class="first"></td>
+               <td  colspan="3"> <input type="text"  name="name" class="first"  value="<?php echo $name?>"></td>
             </tr>
             <tr>
                <td><h2>Discription</h2></td>
-               <td  colspan="3"><input type="text"  name="discription"  class="second" ></td>
+               <td  colspan="3"><input type="text"  name="discription"  class="second" value="<?php echo $discription?>"></td>
             </tr>
             <tr>
                <td><h2>Price</h2></td>
-               <td class="input3"><input type="text"  name="price" class="third"></td>
+               <td class="input3"><input type="text"  name="price" class="third" value="<?php echo $price?>"></td>
                <td><h2 class="new">Quantity</h2></td>
-               <td><input type="text"  name="quantity" class="third"></td>
+               <td><input type="text"  name="quantity" class="third" value="<?php echo $qty?>"></td>
             </tr>
             <tr>
                <td><h2>Category</h2></td>
-               <td class="input3"><input type="text"  name="category" class="third"></td>
+               <td class="input3"><input type="text"  name="category" class="third" value="<?php echo $category?>"></td>
                <td><h2 class="new">Options</h2></td>
-               <td><input type="text"  name="options" class="third"></td>
+               <td><input type="text"  name="options" class="third" value="<?php echo $options?>"></td>
             </tr>
             <tr>
                <td><h2>Image</h2></td>

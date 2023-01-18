@@ -42,6 +42,15 @@
 
    <?php 
 
+    if (isset($_COOKIE['admin_id'])) {
+      $user_id = $_COOKIE['admin_id'];
+    } else {
+        // The cookie has not been set
+        $user_id = null;
+        header("Location: admin_login.php");
+        exit;
+    }
+
    $ship=null;
    $cus_id=0;
   

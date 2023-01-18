@@ -13,7 +13,7 @@
 <div class="main">
     <div class="navbar">
         <div class="icon">
-            <a href="home_page.php">
+            <a href="index.php">
                 <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
@@ -102,15 +102,6 @@
                     <th>Total</th>
                 </tr>
                 <?php
-                if (isset($_REQUEST['order_id'])){
-                //check user loged in
-                if (isset($_COOKIE['user_id'])) {
-                    $user_id = $_COOKIE['user_id'];
-                } else {
-                    $user_id = null;
-                    header("Location: login.php");
-                    exit;
-                }
                 if (!isset($_REQUEST['order_id'])) {
                     echo '<script> window.history.back(); </script>';
                     exit;
@@ -240,7 +231,7 @@
             echo '</tr>';
             echo '</table>';
             echo '</div>';
-            }
+
             } else {
                 echo '<script> window.history.back(); </script>';
                 exit;

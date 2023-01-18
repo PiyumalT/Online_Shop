@@ -26,7 +26,7 @@ $wrong_credentials = !loginFunction("admin");
 <div class="main">
     <div class="navbar">
         <div class="icon">
-            <a href="home_page.php">
+            <a href="index.php">
                 <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
@@ -101,14 +101,14 @@ $wrong_credentials = !loginFunction("admin");
     } ?>
     <div class="email-field"><label for="email">E-mail</label>
         <input required title="" pattern="[a-zA-Z0-9._+-]+@[a-zA-Z0-9 -]+\.[a-z]{2,}" type="email" name="email"
-               id="email">
+               id="email" style="color: white;">
         <div class="error-text"></div>
     </div>
     <div class="password-field">
         <label for="password">Password</label>
         <div class="password-input">
-            <input required title="" pattern="[a-zA-Z0-9]{8,20}" type="password" name="password" id="password">
-            <div class="icon" id="password-hide-show" data-ps-hidden="true">
+            <input required title="" pattern="[a-zA-Z0-9]{8,20}" type="password" name="password" id="password" style="color: white;">
+            <div class="icon" id="password-hide-show" data-ps-hidden="true" style="background-color: #7cbbe0;">
                 <img src="./icons/eye-solid.svg" alt="eye-icon">
             </div>
         </div>

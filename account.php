@@ -16,10 +16,18 @@
 $url = 'site_img/background img.jpg'; ?>
 </head>
 <body>
+    <?php if (isset($_COOKIE['user_id'])) {
+    $user_id = $_COOKIE['user_id'];
+} else {
+    // The cookie has not been set
+    $user_id = null;
+    header("Location: login.php");
+    exit;
+}?>
 <div class="main">
     <div class="navbar">
         <div class="icon">
-            <a href="home_page.php">
+            <a href="index.php">
                 <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>

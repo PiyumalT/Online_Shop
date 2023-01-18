@@ -4,6 +4,6 @@
     //Remove the admin_id cookie
     setcookie("admin_id", "", time() - 3600);
     //Redirect the user to the home page
-    header("Location: home_page.php");
+    header("Location: index.php");
     exit;
 ?>

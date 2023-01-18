@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="css/Product_list.css">
     <?php include 'connect.php'; ?>
     <?php include 'connect.php';
-      $url='site_img/background img.jpg';  ?>
+      $url='site_img/background img.jpg'; 
+      if(isset ($_REQUEST['id'])){
+        $item_id=$_REQUEST['id'];
+        $query2="DELETE FROM item WHERE item_id=$item_id ";
+        $result2=mysqli_query($connect,$query2);
+        if ($result2) {
+            $url = $_SERVER['PHP_SELF'];
+            header("Location: Product_list.php");
+            exit;
+        }
+       } ?>
    
 </head>
 <body>
@@ -69,11 +79,19 @@
     //echo "<table>";
       echo "<tr>";
       echo "<td> $id </td>";
-      echo "<td> $name </td>";
+      echo "<td> <a href='item_details.php?item_id=".$id."'style='
+
+        background-color: #white;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        text-align: center;
+        text-decoration: none;
+        color: black;'> $name </a></td>";
       echo "<td> $description </td>";
       echo "<td> $difference</td>"; 
       echo "<td> $total</td>";
-      echo "<td> <a href='Add_product.php?id=".$r['item_id']."' class='btn'>Edit</a></td>";
+      echo "<td> <a href='edit_product.php?id=".$r['item_id']."' class='btn'>Edit</a></td>";
       echo "<td> <a href='Product_list.php?id=".$r['item_id']."' class='btn'>Delete</a></td>";
       echo "</tr>";
     //echo "</table>";       
@@ -86,16 +104,7 @@
         echo"Query is wrong";
     }
 
-    if(isset ($_REQUEST['id'])){
-        $item_id=$_REQUEST['id'];
-        $query2="DELETE FROM item WHERE item_id=$item_id ";
-        $result2=mysqli_query($connect,$query2);
-        if ($result2) {
-            $url = $_SERVER['PHP_SELF'];
-            header("Location: $url");
-            exit;
-        }
-       }
+    
 
    ?>
 

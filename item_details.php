@@ -16,7 +16,7 @@
 <div class="main">
     <div class="navbar">
         <div class="icon">
-            <a href="home_page.php">
+            <a href="index.php">
                 <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
@@ -32,7 +32,13 @@
             <ul>
                 <li><a href="./cart.php">Cart</a></li>
                 <li><a href="./account.php">Account</a></li>
-                <li><a href="./logout.php">Logout</a></li>
+                <?php
+                if (isset($_COOKIE["user_id"])) {
+                    echo '<li><a href="./logout.php">Logout</a></li>';
+                } else {
+                    echo '<li><a href="./login.php">Log In</a></li>';
+                }
+                ?>
             </ul>
         </div>
 

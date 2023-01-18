@@ -13,7 +13,7 @@
 <div class="main">
     <div class="navbar">
         <div class="icon">
-            <a href="home_page.php">
+            <a href="index.php">
                 <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
@@ -105,9 +105,9 @@ if (isset($_SESSION['email'])) {
         <h1 style="text-align: center">Verify OTP</h1>
         <p>An OTP has been sent to <b> <?php echo $email ?>. </b></p><br>
         <p> If you did not receive the OTP, you can:</p>
-        <button type="button" onclick="changeEmail()">Change Email</button>
+        <button type="button" onclick="location.href='register.php'">Change Email</button>
         or
-        <button type="button" onclick="resendEmail()">Resend Email</button>
+        <button type="button" onclick="location.href='register.php'">Resend Email</button>
         <br>
         <br>
         <form action="otp_confirm.php" method="post" onsubmit="return validdata()">

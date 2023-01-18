@@ -26,7 +26,7 @@ function loginFunction(string $table): bool
                 } else {
                     setcookie("user_id", $user_id);
                 }
-                header("Location: home_page.php");
+                header("Location: index.php");
             } else if ($table == "admin") {
                 $admin_id = mysqli_fetch_assoc($result)['id'];
                 if (isset($rememberMe) && $rememberMe) {

@@ -24,7 +24,7 @@ $wrong_credentials = !loginFunction("users");
 <div class="main">
     <div class="navbar">
         <div class="icon">
-            <a href="home_page.php">
+            <a href="index.php">
                 <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
@@ -41,7 +41,13 @@ $wrong_credentials = !loginFunction("users");
             <ul>
                 <li><a href="./cart.php">Cart</a></li>
                 <li><a href="./account.php">Account</a></li>
-                <li><a href="./logout.php">Logout</a></li>
+                <?php
+                if (isset($_COOKIE["user_id"])) {
+                    echo '<li><a href="./logout.php">Logout</a></li>';
+                } else {
+                    echo '<li><a href="./login.php">Log In</a></li>';
+                }
+                ?>
             </ul>
         </div>
 
@@ -107,7 +113,7 @@ $wrong_credentials = !loginFunction("users");
         <label for="password">Password</label>
         <div class="password-input">
             <input required title="" pattern="[a-zA-Z0-9]{8,20}" type="password" name="password" id="password">
-            <div class="icon" id="password-hide-show" data-ps-hidden="true">
+            <div class="icon" id="password-hide-show" data-ps-hidden="true" style="background-color: #7cbbe0;">
                 <img src="./icons/eye-solid.svg" alt="eye-icon">
             </div>
         </div>

@@ -10,6 +10,7 @@ body form:not(.search-form) {
   padding: 20px;
   border-radius: 5px;
   box-shadow: black 10px 10px 10px;
+  margin-top: 20px;
 }
 body form:not(.search-form) h1 {
   margin-bottom: 10px;

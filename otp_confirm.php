@@ -22,7 +22,7 @@ if(isset($_POST['Confirm_OTP'])){
             setcookie("user_id", $user_id);
             unset($_SESSION['email']);
 
-            header("Location:home_page.php");
+            header("Location:index.php");
         }
         else{
             header("Location:otp_get.php?error=Invalid OTP. Try Again"); 

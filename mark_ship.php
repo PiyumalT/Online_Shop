@@ -6,7 +6,7 @@ if (isset($_COOKIE['admin_id'])) {
 } else {
     // The cookie has not been set
     $admin_id = null;
-    header("Location: home_page.php");
+    header("Location: index.php");
     exit;
 }
 
@@ -16,6 +16,7 @@ if (isset($_REQUEST["id"])){
     $result= mysqli_query($connect,$sql);
     if($result){
         echo "Marked as shipped";
+        header("Location: Sales_list.php");
     }
     else{
         echo "DB Error";
