@@ -89,7 +89,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #000;
 
 }
 
@@ -184,10 +184,12 @@ li a {
     cursor: pointer;
 
 }
-a{
-    line-height:1;
+
+a {
+    line-height: 1;
 }
-a span{
+
+a span {
     font-size: initial;
     line-height: initial;
 }

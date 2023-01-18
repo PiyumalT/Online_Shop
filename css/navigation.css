@@ -49,6 +49,10 @@
     border-radius: 4px;
 }
 
+#search-bar {
+    border-bottom: none;
+}
+
 .btn {
     border-radius: 12px;
     padding: 9px;
@@ -82,15 +86,14 @@
     height: 50%;
     margin: auto;
     background: linear-gradient(to top, rgb(2, 35, 66) 50%, rgb(2, 35, 66) 50%);
-    float: left;
 }
 
 .navbar2 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
