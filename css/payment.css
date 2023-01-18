@@ -195,11 +195,7 @@ input {
     background-color: #cad3dc;
 }
 
-input:not(:focus):invalid,
-input:not(:focus):invalid {
-    color: red;
-    outline-color: red;
-}
+
 
 label:not([for="search-bar"]) {
     display: block;

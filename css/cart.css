@@ -20,6 +20,7 @@ th {
 img {
     width: 100px;
     height: 100px;
+    min-width: 0;
 }
 
 /*  button {*/
