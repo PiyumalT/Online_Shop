@@ -7,13 +7,23 @@
     <title>Product list</title>
     <link rel="stylesheet" href="css/Product_list.css">
     <?php include 'connect.php'; ?>
+    <?php include 'connect.php';
+      $url='site_img/background img.jpg';  ?>
    
 </head>
 <body>
 
+   <style type="text/css">
+        body
+        {
+        background-image:url('<?php echo $url ?>');
+        }
+    </style>
+
+<div class="head"> <button type="button" class="btn1" onclick="location.href='logout.php'">Log Out</button> </div>
 
    <div class="first">
-          <a  href="additem.php"><h2>Add product</h2></a>
+          <a  href="add_item.php"><h2>Add product</h2></a>
           <a  href="Product_list.php" class="now"><h2>Product list</h2></a>
           <a  href="Sales_list.php"><h2>Sales list</h2></a>
           <a  href="Users_list.php"><h2>Users list</h2></a>
@@ -31,6 +41,7 @@
       <th>Edit</th>
       <th>Delete</th>
     </tr>
+   
 
    <?php 
    $query="SELECT item_id,name,description,qty FROM item ";
@@ -55,6 +66,7 @@
 
 
 
+    //echo "<table>";
       echo "<tr>";
       echo "<td> $id </td>";
       echo "<td> $name </td>";
@@ -64,10 +76,12 @@
       echo "<td> <a href='Add_product.php?id=".$r['item_id']."' class='btn'>Edit</a></td>";
       echo "<td> <a href='Product_list.php?id=".$r['item_id']."' class='btn'>Delete</a></td>";
       echo "</tr>";
-          
+    //echo "</table>";       
 
       }
-      echo "</table>"; 
+
+      echo "</table>";
+    
     }else{
         echo"Query is wrong";
     }
