@@ -25,7 +25,7 @@ a{
     height: 10%;
     width: 25%;
     background-color:#848c91;
-    padding: 30px;
+    padding: 1vw;
     margin: 50px;
     border: 5px solid rgb(20, 10, 10);
     text-align: center;
@@ -47,8 +47,8 @@ a:hover{
     height: 330px;
     width: 25%;
     background-color: rgb(203, 208, 205);
-    padding: 10px;
-    margin: 50px;
+    padding: 1vw;
+    margin: 3vw;
     border: 5px solid black;
     text-align: center;  
     opacity: 0.6;
@@ -58,8 +58,8 @@ a:hover{
     height: 65%;
     width: 70%;
     background-color: rgba(13, 13, 13, 0.93);
-    padding:70px;
-    margin: 30px 35px 30px 35px;
+    padding:4vw;
+    margin: 2vw 1vw 1vw 3vw;
     text-align: center;
     color: rgb(249, 251, 253);
     
