@@ -1,53 +1,171 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-.middle{
-    width: 60%;
-    height : 730px;
-    background-color: rgb(239, 252, 252);
-    border: 2px solid rgb(18, 4, 74);
-    margin: 4% 20%;
-    opacity: 0.6;
-    text-align: center;
-}
-
-h1{
-    text-align: center;
-    margin: 20px;
-    color: rgb(8, 8, 96);  
-}
-
-
-.first ol li{
-    
-    background-color: rgb(12, 4, 54);
-    margin: 50px;
-    padding: 20px;
-    text-align: center;
-    list-style-type: none;
-}
-
-.first ol li:hover {
-    background-color: rgb(80, 70, 133);
+body{
+    background: url(site_img/s-l1600.jpg);
   }
-
-a{
-    color: rgb(244, 247, 250);
-    background-color: transparent;
-    text-decoration: none;
-}
-
-a:hover {
-   
-    text-decoration: none;
-  }
-
-img{
-    width :100px;
-    height:100px;
+  
+  label, input {
+      display: block;
+    }
     
-}
-
+    button {
+      margin: 10px 0;
+      padding: 10px;
+      color:#022342;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    
+    label {
+      font-size: 1.2rem;
+    }
+    
+    input {
+      border-bottom: 1px solid black;
+    }
+    
+    input:focus {
+      border-bottom: 1px solid #6696c4;
+    }
+    
+    .font-border-rd {
+      color: red;
+      border-color: red;
+    }
+    
+    .font-border-green {
+      color: #dfe3e7;
+      border-color: #83a5c5;
+    }
+    
+    .feedback {
+      margin: 40px;
+      font-size: 0.5rem;
+     
+    }
+    .feedback .msg {
+      padding: 30px;
+      border-radius: 5px;
+      border: 1px solid;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+    
+    .edit-user-btn-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 5px;
+    }
+    .edit-user-btn-container .edit-user {
+      margin-right: 50px;
+      color: black;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+    
+    .user {
+      border: 1px solid grey;
+      padding: 50px 50px 10px 10px;
+      width: 50%;
+      margin: 0 auto 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .user * {
+      margin: 0 20px;
+    }
+    .user label {
+      margin-bottom: 30px;
+    }
+    .user input {
+      width: 100%;
+    }
+    .user .address {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .user h3{
+      color: aliceblue;
+    }
+    .user .details {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .user .details label[for=re-type-password].hide {
+      display: none;
+    }
+    
+    .button-section {
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 5px;
+    }
+    .button-section button {
+      margin-right: 20px;
+      font-size: 1.5rem;
+    }
+    .button-section .save-user {
+      background: #022342;
+      color: white;
+    }
+    .button-section .reset {
+      background: red;
+    }
+    
+    .empty-container {
+      height: 100px;
+      visibility: hidden;
+      width: 100%;
+    }
+    .details{
+      color: white;
+    }
+  
+    #name{
+      background-color: gray;
+      font-size: 1rem;
+    }
+    
+    #email{
+      background-color: gray;
+      font-size: 1rem;
+    }
+  
+    #password{
+      background-color: gray;
+      font-size: 1rem;
+    }
+  
+    .user h2{
+      font-size: xx-large;
+      text-align: center;
+      color: yellow;
+    }
+  
+    .user .address{
+      color: white;
+    }
+  
+    @media (max-width: 750px) {
+      * {
+        font-size: 1.9rem;
+      }
+      input, input:focus {
+        font-size: 1.9rem;
+        background-color:rgb(184, 181, 181);
+      }
+      label {
+        width: 100%;
+      }
+      .edit-user-btn-container {
+        justify-content: center;
+      }
+      .user {
+        width: 90%;
+      }
+      .button-section {
+        justify-content: space-evenly;
+        align-items: stretch;
+      }
+    }

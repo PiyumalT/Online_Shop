@@ -1,7 +1,7 @@
 <?php
 include_once("connect.php");
-setcookie("user_id", 1);
-$user_id = $_COOKIE["user_id"];
+
+$user_id = 1;//$_COOKIE["user_id"];
 $feedback = array();
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
     if (isset($_POST['name']) && $_POST['name'] != "" &&
@@ -54,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
     }
 
 }
+
 if (isset($user_id)) {
     $query = "SELECT name,email,password FROM users WHERE id=$user_id";
     $results = mysqli_query($connect, $query);
@@ -67,6 +68,8 @@ if (isset($user_id)) {
     }
 
 }
+
+
 ?>
 
 <!doctype html>
@@ -77,8 +80,8 @@ if (isset($user_id)) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $name ?>'s Account</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/user_page.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/user_account.css">
 </head>
 <body>
 <div class="feedback" style="background-color: black">
@@ -109,14 +112,14 @@ if (isset($user_id)) {
 </div>
 <form method="post" class="user">
     <h2>User Details</h2>
-    <hr>
-    <div class="details"><label for="name">name
+    <hr><br><br>
+    <div class="details"><label for="name">Name
             <input disabled="disabled" type="text" id="name" name="name" value="<?php echo $name ?>">
         </label>
-        <label for="email">email
+        <label for="email">E-mail
             <input disabled type="email" id="email" name="email" value="<?php echo $email ?>">
         </label>
-        <label for="password">password
+        <label for="password">Password
             <input disabled type="password" name="password" id="password"
                    value="<?php echo $password ?>">
         </label>
@@ -125,8 +128,9 @@ if (isset($user_id)) {
                    value="<?php echo $password ?>">
         </label>
     </div>
+    <br>
     <h3>Address</h3>
-    <hr>
+    <hr><br>
     <div class="address">
         <?php
         $query = "SELECT line_1, line_2, city, province, country, zip_code, phone FROM address WHERE user_id='$user_id'";
@@ -134,7 +138,7 @@ if (isset($user_id)) {
 //            if (mysqli_num_rows($results) == 1) {
             $address = mysqli_fetch_assoc($results);
             foreach ($address as $key => $value) {
-                echo "<label for=\"$key\">$key <input disabled type=\"text\" id=\"$key\" value=\"$value\" name='$key'></label> ";
+                echo "<label for=\"$key\">$key <input disabled type=\"text\" id=\"$key\"  value=\"$value\" name='$key'></label> ";
             }
 //            }
         }
@@ -150,3 +154,4 @@ if (isset($user_id)) {
 <script src="./js/remove_effect_of_invalid_and_valid_css_effect.js"></script>
 </body>
 </html>
+
