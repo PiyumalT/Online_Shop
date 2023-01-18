@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fixed lagging effect of the animation.">
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="add cursor pointer event for items in nav bars.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/enter_address.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/enter_address.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home_page2.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/payment.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/payment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enter_address.php" beforeDir="false" afterPath="$PROJECT_DIR$/enter_address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/payment.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,14 +119,7 @@
       <workItem from="1673871230089" duration="21231000" />
       <workItem from="1673930429898" duration="10164000" />
       <workItem from="1673964655347" duration="4339000" />
-      <workItem from="1674018437492" duration="5017000" />
-    </task>
-    <task id="LOCAL-00013" summary="change nav bar responsive functionality to new js file.">
-      <created>1673539449067</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1673539449067</updated>
+      <workItem from="1674018437492" duration="7110000" />
     </task>
     <task id="LOCAL-00014" summary="change transition animation and remove auto scroll carousel.">
       <created>1673539499291</created>
@@ -456,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674025421594</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="add cursor pointer event for items in nav bars.">
+      <created>1674025642951</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1674025642952</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change decision-making process." />
     <MESSAGE value="reestablish user_account.php and associated stylesheets and js files." />
     <MESSAGE value="add fontaswesome cdn and add icons and add hover effect to category." />
     <MESSAGE value="add button cursor event." />
@@ -519,7 +526,8 @@
     <MESSAGE value="center navbar2 items." />
     <MESSAGE value="reformat stylesheet linking code." />
     <MESSAGE value="fixed lagging effect of the animation." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed lagging effect of the animation." />
+    <MESSAGE value="add cursor pointer event for items in nav bars." />
+    <option name="LAST_COMMIT_MESSAGE" value="add cursor pointer event for items in nav bars." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

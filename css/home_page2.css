@@ -33,7 +33,7 @@ main {
     border-top: 2px solid black;
     background-color: #022342;
     color: white;
-  }
+}
 
 
 .category-img {
@@ -53,16 +53,3 @@ svg {
     z-index: 100;
 }
 
-
-.search button.btn {
-    background: #3e5986;
-    padding: 5px 5px;
-    /*width: 30px;*/
-    /*height: 30px;*/
-    border: 3px solid rgba(0, 0, 0, 0.5);
-    margin-left: 10px;
-}
-
-.search button.btn i {
-    font-size: 1.25rem;
-}

@@ -1,46 +1,47 @@
 table {
     border-collapse: collapse;
     width: 100%;
-  }
-  
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(odd) {
-    background-color: #cad3dc;
-  }
-  
-  th {
-    background-color: #022342;
-    color: white;
-  }
-  
-  img {
-    width: 100px;
-    height: 100px;
-  }
-  
-  button {
-    background-color: #022342;
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    font-size: 18px;
-    border-radius: 50%; /* this will make the corners round */
 }
 
-  
-  input[type=text] {
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #cad3dc;
+}
+
+th {
+    background-color: #022342;
+    color: white;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+/*  button {*/
+/*    background-color: #022342;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    width: 25px;*/
+/*    height: 25px;*/
+/*    font-size: 18px;*/
+/*    border-radius: 50%; !* this will make the corners round *!*/
+/*}*/
+
+
+input[type=text] {
     width: 50px;
     height: 25px;
     text-align: center;
     border: 1px solid #ccc;
-  }
-  #place-order-button {
+}
+
+#place-order-button {
     background-color: #022342;
     color: white;
     border: none;
@@ -52,18 +53,19 @@ table {
     position: absolute;
     right: 20%;
     margin-top: 3%;
-  }
-  
-  #place-order-button:hover {
-    background-color: #022342;
-    border-radius: 5%;
-  }
-  #place-order-button{
-    background-color: #022342;
-    border-radius: 5%;
-  }
+}
 
-  .remove-button {
+#place-order-button:hover {
+    background-color: #022342;
+    border-radius: 5%;
+}
+
+#place-order-button {
+    background-color: #022342;
+    border-radius: 5%;
+}
+
+.remove-button {
     background-color: #ff0000; /* red */
     color: white;
     padding: 2%;
@@ -72,10 +74,11 @@ table {
     width: auto;
     border-radius: 2px;
 }
+
 a {
-  text-decoration: none; /* remove underline */
-  color: inherit; /* use the text color of the parent element */
-  cursor: pointer; /* change cursor to pointer on hover */
+    text-decoration: none; /* remove underline */
+    color: inherit; /* use the text color of the parent element */
+    cursor: pointer; /* change cursor to pointer on hover */
 }
 
   
