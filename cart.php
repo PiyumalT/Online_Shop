@@ -1,9 +1,10 @@
 <html lang="en">
 <head>
     <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/cart.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="css/nav_bar.css">
+    <link rel="stylesheet" href="./css/nav_bar.css">
     <link href="./css/navigation.css" rel="stylesheet"/>
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -17,22 +18,19 @@
     <div class="navbar">
         <div class="icon">
             <a href="home_page.php">
-            <img alt="logo" id="img" src="./site_img/logo.png">
+                <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
         <script>
-            if(document.getElementById("search-bar").value){
-                return true;
-            }
-            else{
-                return false;
-            }
+            let searchButtonVisible = !!document.getElementById("search-bar").value;
         </script>
 
-        <div class="search" >
+        <div class="search">
             <form action="search.php" onsubmit="return check_search_value()">
-            <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
-            <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label></button></form>
+                <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
+                <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </button>
+            </form>
         </div>
 
         <div class="menu">
