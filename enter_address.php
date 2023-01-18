@@ -21,7 +21,7 @@
         </div>
         <div class="search">
             <form class="search-form" action="search.php">
-                <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
+                <input class="search" id="search-bar" name="search" placeholder="Search Items" type="search">
                 <button class="search-btn btn"><label for="search-bar"><i
                                 class="fa-solid fa-magnifying-glass"></i></label>
                 </button>

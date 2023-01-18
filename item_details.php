@@ -17,13 +17,15 @@
     <div class="navbar">
         <div class="icon">
             <a href="home_page.php">
-            <img alt="logo" id="img" src="./site_img/logo.png">
+                <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
-        <div class="search" >
+        <div class="search">
             <form action="search.php">
-            <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
-            <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label></button></form>
+                <input class="search" id="search-bar" name="search" placeholder="Search Items" type="search">
+                <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </button>
+            </form>
         </div>
 
         <div class="menu">

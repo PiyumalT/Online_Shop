@@ -19,7 +19,7 @@
     background: linear-gradient(to top, rgb(2, 35, 66) 50%, rgb(2, 35, 66) 50%);
 }
 
-.icon {
+.icon:not(.password-input .icon) {
     width: 200px;
     float: left;
     height: 70px;
@@ -42,7 +42,7 @@
     size: 300px;
 }
 
-.srch {
+.search {
     width: 350px;
     height: 30px;
     text-align: center;
@@ -51,6 +51,7 @@
 
 #search-bar {
     border: none;
+    text-align: center;
 }
 
 .search button.btn {
@@ -74,7 +75,6 @@
 }
 
 .navbar ul {
-    float: right;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,4 +198,10 @@ li a {
     color: white;
     cursor: pointer;
 
+}
+
+form.search-form {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
 }

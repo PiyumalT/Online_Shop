@@ -1,170 +1,175 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="contactus.css">
-        <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      referrerpolicy="no-referrer" rel="stylesheet"/>
-      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<head>
+    <link href="contactus.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link href="path/to/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-      <link rel="stylesheet" href="css/nav_bar.css">
+    <link href="css/nav_bar.css" rel="stylesheet">
     <link href="./css/navigation.css" rel="stylesheet"/>
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           referrerpolicy="no-referrer" rel="stylesheet"/>
-    <link rel="stylesheet" href="./css/footer.css">
-    </head>
+    <link href="./css/footer.css" rel="stylesheet">
+</head>
 
-    <body>
-        <div class="main">
-            <div class="navbar">
-                <div class="icon">
-                    <a href="home_page.php">
-                    <img alt="logo" id="img" src="./site_img/logo.png">
+<body>
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <a href="home_page.php">
+                <img alt="logo" id="img" src="./site_img/logo.png">
+            </a>
+        </div>
+        <script>
+            if (document.getElementById("search-bar").value) {
+                return true;
+            } else {
+                return false;
+            }
+        </script>
+
+        <div class="search">
+            <form action="search.php" onsubmit="return check_search_value()">
+                <input class="search" id="search-bar" name="search" placeholder="Search Items" type="search">
+                <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </button>
+            </form>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="./cart.php">Cart</a></li>
+                <li><a href="./account.php">Account</a></li>
+                <li><a href="./logout.php">Logout</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <style>
+        .icon {
+            width: 60px;
+        }
+
+        body {
+            background-color: #3e5986;
+        }
+    </style>
+</div>
+<br>
+<br>
+
+<section class="contact">
+
+    <div class="contact-box">
+
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p><br><br>Yes, we offer a limited warranty on all of our products, and we stand behind the quality of our
+                products</p>
+        </div>
+
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i aria-hidden="true" class="fa fa-map-marker"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>No:156, <br>Kandy road,<br> Dalugama.</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i aria-hidden="true" class="fa fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>011-5698754</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i aria-hidden="true" class="fa fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>E-mail</h3>
+                        <p>webproject1@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social">
+                <div class="box">
+                    <a href=facebook.com>
+                        <div class="icon"><i aria-hidden="true" class="fa fa-facebook"></i></div>
                     </a>
-                </div>
-                <script>
-                    if(document.getElementById("search-bar").value){
-                        return true;
-                    }
-                    else{
-                        return false;
-                    }
-                </script>
-        
-                <div class="search" >
-                    <form action="search.php" onsubmit="return check_search_value()">
-                    <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
-                    <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label></button></form>
-                </div>
-        
-                <div class="menu">
-                    <ul>
-                        <li><a href="./cart.php">Cart</a></li>
-                        <li><a href="./account.php">Account</a></li>
-                        <li><a href="./logout.php">Logout</a></li>
-                    </ul>
-                </div>
-        
-            </div>
-        
-            <style>
-                .icon{
-                    width: 60px;
-                }
-                body{
-                    background-color: #3e5986;
-                }
-            </style>
-        </div>
-        <br>
-        <br>  
-        
-        <section class="contact">
+                    <div class="text">
+                        <h3>Facebook</h3>
 
-            <div class="contact-box">
-
-                    <div class="content">
-                        <h2>Contact Us</h2>
-                        <p><br><br>Yes, we offer a limited warranty on all of our products, and we stand behind the quality of our products</p>
                     </div>
+                </div>
 
-                    <div class="container">
-                        <div class="contactInfo">
-                            <div class="box">
-                                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                <div class="text">
-                                    <h3>Address</h3>
-                                    <p>No:156, <br>Kandy road,<br> Dalugama.</p>
-                                </div>
-                            </div>
+                <div class="box">
+                    <div class="icon"><i aria-hidden="true" class="fa fa-youtube"></i></div>
+                    <div class="text">
+                        <h3>Youtube</h3>
 
-                            <div class="box">
-                                <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                                <div class="text">
-                                    <h3>Phone</h3>
-                                    <p>011-5698754</p>
-                                </div>
-                            </div>
-
-                            <div class="box">
-                                <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-                                <div class="text">
-                                    <h3>E-mail</h3>
-                                    <p>webproject1@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="social">
-                            <div class="box">
-                                <a href=facebook.com><div class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>
-                                <div class="text">
-                                    <h3>Facebook</h3>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="box">
-                                <div class="icon"><i class="fa fa-youtube" aria-hidden="true"></i></div>
-                                <div class="text">
-                                    <h3>Youtube</h3>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="box">
-                                <div class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                                <div class="text">
-                                    <h3>Twitter</h3>
-                                    
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i aria-hidden="true" class="fa fa-twitter"></i></div>
+                    <div class="text">
+                        <h3>Twitter</h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-            </div>
-           
-        </section>
-    </body>
-    <footer style="margin-top: 100px">
-        <div class="footer-container">
-            <div class="footer-left">
-                <nav>
-                    <a href="#">Contact Us</a>
-                    <ul>
-                        <li><a href="#">FB</a></li>
-                        <li><a href="#">YT</a></li>
-                        <li><a href="#">Email</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer-center">
-                <nav>
-                    <a href="#">Shopping</a>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Payment Method</a></li>
-                        <li><a href="#">User Guide</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer-right">
-                <nav>
-                    <a href="#">Company</a>
-                    <ul>
-                        <li><a href="#">Terms and Conditions</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </nav>
-            </div>
-    
+    </div>
+
+</section>
+</body>
+<footer style="margin-top: 100px">
+    <div class="footer-container">
+        <div class="footer-left">
+            <nav>
+                <a href="#">Contact Us</a>
+                <ul>
+                    <li><a href="#">FB</a></li>
+                    <li><a href="#">YT</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="bottom-tx">
-            <p>Copyright © 2021 Nayantha Yasiru, Tharindu Piyumal, Nimesha Kavindi, Pathum Sanjana</p>
+        <div class="footer-center">
+            <nav>
+                <a href="#">Shopping</a>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Payment Method</a></li>
+                    <li><a href="#">User Guide</a></li>
+                </ul>
+            </nav>
         </div>
-    
-    </footer>
+        <div class="footer-right">
+            <nav>
+                <a href="#">Company</a>
+                <ul>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <div class="bottom-tx">
+        <p>Copyright © 2021 Nayantha Yasiru, Tharindu Piyumal, Nimesha Kavindi, Pathum Sanjana</p>
+    </div>
+
+</footer>
 </html>

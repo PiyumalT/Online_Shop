@@ -7,70 +7,73 @@
     <title>Paid Orders</title>
 
     <script>
-    function payNow(orderId) {
-        // code to redirect to payment page and pass the orderId as a parameter
-    }
+        function payNow(orderId) {
+            // code to redirect to payment page and pass the orderId as a parameter
+        }
 
-    function cancelOrder(orderId) {
-        // code to cancel the order and update the status in the database
-    }
-</script>
-<style>
-    body {
-    background-color: #cad3dc;
-    background-image: url(site_img/background\ img.jpg);
-    }
-    .box {
-        width: 50%;
-        margin: 0 auto;
-        text-align: center;
-        padding: 20px;
-        border-width: 3px;
-        border: 1px solid black;
-        padding: 2%;
-        border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
-        color:white;
-    }
+        function cancelOrder(orderId) {
+            // code to cancel the order and update the status in the database
+        }
+    </script>
+    <style>
+        body {
+            background-color: #cad3dc;
+            background-image: url(site_img/background\ img.jpg);
+        }
 
-    table {
-        width: 100%;
-        margin: 10px 0;
-        border-collapse: collapse;
-        border: 1px solid gray;
-    }
+        .box {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            border-width: 3px;
+            border: 1px solid black;
+            padding: 2%;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+            color: white;
+        }
 
-    tr {
-        background-color: #f2f2f2;
-    }
+        table {
+            width: 100%;
+            margin: 10px 0;
+            border-collapse: collapse;
+            border: 1px solid gray;
+        }
 
-    th, td {
-        border: 1px solid gray;
-        text-align: center;
-        padding: 8px;
-    }
-    th{
-        background-color:#cad3dc;
-        color:black;
-    }
-    td{
-        background-color:#cad3dc;
-        color:black;
-    }
+        tr {
+            background-color: #f2f2f2;
+        }
 
-    .pay-now, .cancel-order {
-        padding: 10px 20px;
-        background-color: #022342;
-        color: white;
-        border: none;
-        cursor: pointer;
-        text-align: center;
-        margin: 3px;
-    }
+        th, td {
+            border: 1px solid gray;
+            text-align: center;
+            padding: 8px;
+        }
 
-    .cancel-order {
-        background-color: #220f66;
-    }
+        th {
+            background-color: #cad3dc;
+            color: black;
+        }
+
+        td {
+            background-color: #cad3dc;
+            color: black;
+        }
+
+        .pay-now, .cancel-order {
+            padding: 10px 20px;
+            background-color: #022342;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            margin: 3px;
+        }
+
+        .cancel-order {
+            background-color: #220f66;
+        }
     </style>
 
     <link rel="stylesheet" href="css/nav_bar.css">
@@ -86,22 +89,23 @@
     <div class="navbar">
         <div class="icon">
             <a href="home_page.php">
-            <img alt="logo" id="img" src="./site_img/logo.png">
+                <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
         <script>
-            if(document.getElementById("search-bar").value){
+            if (document.getElementById("search-bar").value) {
                 return true;
-            }
-            else{
+            } else {
                 return false;
             }
         </script>
 
-        <div class="search" >
+        <div class="search">
             <form action="search.php" onsubmit="return check_search_value()">
-            <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
-            <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label></button></form>
+                <input class="search" id="search-bar" name="search" placeholder="Search Items" type="search">
+                <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </button>
+            </form>
         </div>
 
         <div class="menu">
@@ -158,7 +162,7 @@
     </div>
 </div>
 <br>
-<br>  
+<br>
 
 <?php
 include "connect.php";
@@ -183,8 +187,8 @@ if (mysqli_num_rows($result) > 0) {
         $order_id = $row['order_id'];
 
         $order_total = $row['price'];
-        $shipped=$row['shipped'];
-        $date=$row['date'];
+        $shipped = $row['shipped'];
+        $date = $row['date'];
 
         echo '<table>';
         echo '<tr>';
@@ -212,19 +216,19 @@ if (mysqli_num_rows($result) > 0) {
             } else {
                 $item_name = "Undifined";
             }
-            
+
 
             echo '<tr>';
             echo '<td>' . $item_name . '</td>';
             echo '<td>' . $price . '</td>';
             echo '<td>' . $option . '</td>';
             echo '<td>' . $qty . '</td>';
-            echo '<td>' . ($price*$qty) . '</td>';
+            echo '<td>' . ($price * $qty) . '</td>';
             echo '</tr>';
         }
         echo '<tr>';
         echo '<td >Order Date</td>';
-        echo '<td colspan="2"><b>'. $date . '</b></td>';
+        echo '<td colspan="2"><b>' . $date . '</b></td>';
         echo '<td >Order Total:</td>';
         echo '<td> <b>$' . $order_total . '</b> </td>';
         echo '</tr>';
@@ -232,13 +236,13 @@ if (mysqli_num_rows($result) > 0) {
         echo '<td colspan="5">';
         if ($shipped) {
             echo ' <button onclick="window.location.href =\'track_order.php?order_id=' . $order_id . '\'" class="pay-now">Order Shipped</button> ';
-                  
+
         } else {
             echo '<button onclick="window.location.href =\'track_order.php?order_id=' . $order_id . '\'" class="pay-now">Order Not shipped</button>';
         }
-        
+
         echo '<button class="cancel-order" onclick="window.location.href=\'order_info.php?order_id=' . $order_id . '\'">Order details</button> </td>';
-        
+
         echo '</tr>';
         echo '</table><br>';
     }

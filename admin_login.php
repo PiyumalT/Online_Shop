@@ -11,11 +11,11 @@ $wrong_credentials = !loginFunction("admin");
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Log In</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/nav_bar.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/nav_bar.css">
+    <link rel="stylesheet" href="./css/login.css">
 
-    
+
     <link href="./css/navigation.css" rel="stylesheet"/>
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -27,22 +27,16 @@ $wrong_credentials = !loginFunction("admin");
     <div class="navbar">
         <div class="icon">
             <a href="home_page.php">
-            <img alt="logo" id="img" src="./site_img/logo.png">
+                <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
-        <script>
-            if(document.getElementById("search-bar").value){
-                return true;
-            }
-            else{
-                return false;
-            }
-        </script>
 
-        <div class="search" >
-            <form action="search.php" onsubmit="return check_search_value()">
-            <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
-            <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label></button></form>
+        <div class="search">
+            <form action="search.php" onsubmit="return check_search_value()" class="search-form">
+                <input class="search" id="search-bar" name="search" placeholder="Search Items" type="search">
+                <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </button>
+            </form>
         </div>
 
         <div class="menu">
@@ -170,5 +164,8 @@ $wrong_credentials = !loginFunction("admin");
     </div>
 
 </footer>
+<script>
+    let hideSearchButton = !!document.getElementById("search-bar").value;
+</script>
 </body>
 </html>

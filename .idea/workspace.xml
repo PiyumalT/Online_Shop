@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="add cursor pointer event for items in nav bars.">
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fixed nav.">
+      <change afterPath="$PROJECT_DIR$/css/login_copy.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FAQ.html" beforeDir="false" afterPath="$PROJECT_DIR$/FAQ.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/enter_address.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/enter_address.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page2.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_segments/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/code_segments/navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contactus.html" beforeDir="false" afterPath="$PROJECT_DIR$/contactus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/payment.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/payment.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enter_address.php" beforeDir="false" afterPath="$PROJECT_DIR$/enter_address.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/item_details.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/order_info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/otp_get.php" beforeDir="false" afterPath="$PROJECT_DIR$/otp_get.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paid_orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/paid_orders.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/payment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment2.php" beforeDir="false" afterPath="$PROJECT_DIR$/payment2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unpaid_orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/unpaid_orders.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,29 +81,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/UOK/Y-II (2022-2023)/Sem 01/SENG 21253 - Web Development/Final Project/online_shop/item_pics&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "last_opened_file_path": "D:/UOK/Y-II (2022-2023)/Sem 01/SENG 21253 - Web Development/Final Project/online_shop/css",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "editing.templates",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\UOK\Y-II (2022-2023)\Sem 01\SENG 21253 - Web Development\Final Project\online_shop\css" />
       <recent name="D:\UOK\Y-II (2022-2023)\Sem 01\SENG 21253 - Web Development\Final Project\online_shop\item_pics" />
       <recent name="D:\UOK\Y-II (2022-2023)\Sem 01\SENG 21253 - Web Development\Final Project\online_shop" />
       <recent name="D:\UOK\Y-II (2022-2023)\Sem 01\SENG 21253 - Web Development\Final Project\online_shop\icons" />
@@ -119,35 +136,7 @@
       <workItem from="1673871230089" duration="21231000" />
       <workItem from="1673930429898" duration="10164000" />
       <workItem from="1673964655347" duration="4339000" />
-      <workItem from="1674018437492" duration="7110000" />
-    </task>
-    <task id="LOCAL-00014" summary="change transition animation and remove auto scroll carousel.">
-      <created>1673539499291</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1673539499291</updated>
-    </task>
-    <task id="LOCAL-00015" summary="add hero section + carousel effect.">
-      <created>1673542793859</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1673542793859</updated>
-    </task>
-    <task id="LOCAL-00016" summary="add icon images.">
-      <created>1673761492820</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1673761492820</updated>
-    </task>
-    <task id="LOCAL-00017" summary="add icons and modify visibility toggle function of the password filed.">
-      <created>1673761580086</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1673761580086</updated>
+      <workItem from="1674018437492" duration="10206000" />
     </task>
     <task id="LOCAL-00018" summary="create user page + populate data from backend + edit mode and read only mode.">
       <created>1673761635285</created>
@@ -464,7 +453,35 @@
       <option name="project" value="LOCAL" />
       <updated>1674025642952</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="add search button, made stylesheet paths relative, .">
+      <created>1674027897141</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1674027897142</updated>
+    </task>
+    <task id="LOCAL-00064" summary="add margin bottom to nav bar2.">
+      <created>1674027941478</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1674027941478</updated>
+    </task>
+    <task id="LOCAL-00065" summary="remove search button items being targeted.">
+      <created>1674028005392</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1674028005392</updated>
+    </task>
+    <task id="LOCAL-00066" summary="fixed nav.">
+      <created>1674033846240</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1674033846240</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,10 +519,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reestablish user_account.php and associated stylesheets and js files." />
-    <MESSAGE value="add fontaswesome cdn and add icons and add hover effect to category." />
-    <MESSAGE value="add button cursor event." />
-    <MESSAGE value="add background color to search filed." />
     <MESSAGE value="add product name and price tags." />
     <MESSAGE value="edit add items file and properly align items." />
     <MESSAGE value="add pattern to price input + add validated price indicator." />
@@ -527,7 +540,11 @@
     <MESSAGE value="reformat stylesheet linking code." />
     <MESSAGE value="fixed lagging effect of the animation." />
     <MESSAGE value="add cursor pointer event for items in nav bars." />
-    <option name="LAST_COMMIT_MESSAGE" value="add cursor pointer event for items in nav bars." />
+    <MESSAGE value="add search button, made stylesheet paths relative, ." />
+    <MESSAGE value="add margin bottom to nav bar2." />
+    <MESSAGE value="remove search button items being targeted." />
+    <MESSAGE value="fixed nav." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed nav." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -12,30 +12,31 @@
           referrerpolicy="no-referrer" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/footer.css">
 </head>
-    <?php include 'connect.php';
-      $url='site_img/background img.jpg';  ?>
+<?php include 'connect.php';
+$url = 'site_img/background img.jpg'; ?>
 </head>
 <body>
 <div class="main">
     <div class="navbar">
         <div class="icon">
             <a href="home_page.php">
-            <img alt="logo" id="img" src="./site_img/logo.png">
+                <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
         <script>
-            if(document.getElementById("search-bar").value){
+            if (document.getElementById("search-bar").value) {
                 return true;
-            }
-            else{
+            } else {
                 return false;
             }
         </script>
 
-        <div class="search" >
+        <div class="search">
             <form action="search.php" onsubmit="return check_search_value()">
-            <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
-            <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label></button></form>
+                <input class="search" id="search-bar" name="search" placeholder="Search Items" type="search">
+                <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </button>
+            </form>
         </div>
 
         <div class="menu">
@@ -93,26 +94,25 @@
 </div>
 <br>
 <br>
-    <style type="text/css">
-        body
-        {
-        background-image:url('<?php echo $url ?>');
-        }
-    </style>
+<style type="text/css">
+    body {
+        background-image: url('<?php echo $url ?>');
+    }
+</style>
 
-    <div class="middle">
-        <h1> Hello User</h1>
-        <img src="site_img/User-Profile-PNG-Clipart.png" alt="user profile">
-        <div class="first">
-            <ol>
-            <li><a  href="user_account.php" ><h2>Veiw account details</h2></a></li>
-            <li><a  href="edit_account.php" ><h2>Edit account details</h2></a></li>
-            <li><a  href="unpaid_orders.php"><h2>View unpaid orders</h2></a></li>
-            <li><a  href="paid_orders.php"  ><h2>View paid orders</h2></a></li>
-            </ol>
-        </div>
+<div class="middle">
+    <h1> Hello User</h1>
+    <img src="site_img/User-Profile-PNG-Clipart.png" alt="user profile">
+    <div class="first">
+        <ol>
+            <li><a href="user_account.php"><h2>Veiw account details</h2></a></li>
+            <li><a href="edit_account.php"><h2>Edit account details</h2></a></li>
+            <li><a href="unpaid_orders.php"><h2>View unpaid orders</h2></a></li>
+            <li><a href="paid_orders.php"><h2>View paid orders</h2></a></li>
+        </ol>
     </div>
-    <footer style="margin-top: 100px;width: 100%;">
+</div>
+<footer style="margin-top: 100px;width: 100%;">
     <div class="footer-container">
         <div class="footer-left">
             <nav>
@@ -150,6 +150,6 @@
         <p>Copyright © 2021 Nayantha Yasiru, Tharindu Piyumal, Nimesha Kavindi, Pathum Sanjana</p>
     </div>
 
-</footer>   
+</footer>
 </body>
 </html>

@@ -2,20 +2,24 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
+  background-image: url("../site_img/background img.jpg");
 }
-
+body .main .navbar .search {
+  transform: translateX(-50%);
+}
+body .main .navbar .menu {
+  transform: translateX(100%);
+}
 body form:not(.search-form) {
   border: 1px solid black;
   padding: 20px;
   border-radius: 5px;
   box-shadow: black 10px 10px 10px;
 }
-
 body form:not(.search-form) h1 {
   margin-bottom: 10px;
   text-align: center;
 }
-
 body form:not(.search-form) .wrong-credentials {
   text-align: center;
   padding: 10px 0;
@@ -25,40 +29,33 @@ body form:not(.search-form) .wrong-credentials {
   color: red;
   font-weight: bold;
 }
-
 body form:not(.search-form) label, body form:not(.search-form) input {
   display: block;
+  background-color: transparent;
 }
-
 body form:not(.search-form) .email-field input {
   width: 100%;
 }
-
 body form:not(.search-form) .password-field {
   display: flex;
   flex-direction: column;
   margin: 20px 0;
 }
-
 body form:not(.search-form) .password-field input {
   display: inline-block;
 }
-
 body form:not(.search-form) .password-field .icon {
   width: 25px;
   height: auto;
   display: inline-block;
 }
-
 body form:not(.search-form) .error-text {
   color: red;
   margin-bottom: 20px;
 }
-
 body form:not(.search-form) input, body form:not(.search-form) input:focus {
   border-bottom: 1px solid black;
 }
-
 body form:not(.search-form) #login-btn {
   width: 100%;
   padding: 10px;
@@ -69,22 +66,19 @@ body form:not(.search-form) #login-btn {
   border: none;
   border-radius: 5px;
 }
-
 body form:not(.search-form) .ps-forgot {
   text-align: center;
+  text-decoration: underline;
 }
-
 body form:not(.search-form) .remember-me {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
 }
-
 body form:not(.search-form) .remember-me input {
   margin-right: 10px;
 }
-
 body form:not(.search-form) input {
   margin-right: 5px;
 }
@@ -93,27 +87,21 @@ body form:not(.search-form) input {
   form {
     width: 90vw;
   }
-
   form h1 {
     font-size: 4.5rem;
   }
-
   form label {
     font-size: 2rem;
   }
-
   form a {
     font-size: 1.5rem;
   }
-
   form input[type=checkbox] {
     padding: 500px;
   }
-
   form button[type=submit] {
     font-size: 2rem;
   }
-
   form .password-field input {
     width: 90%;
   }

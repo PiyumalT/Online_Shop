@@ -2,8 +2,22 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
+  background-image: url("../site_img/background img.jpg");
 
-  form {
+  .main {
+    .navbar {
+      .search {
+        transform: translateX(-50%);
+      }
+
+      .menu {
+        transform: translateX(100%)
+      }
+
+    }
+  }
+
+  form:not(.search-form) {
     border: 1px solid black;
     padding: 20px;
     border-radius: 5px;
@@ -26,6 +40,7 @@ body {
 
     label, input {
       display: block;
+      background-color: transparent;
     }
 
     .email-field {
@@ -37,7 +52,7 @@ body {
     .password-field {
       display: flex;
       flex-direction: column;
-      margin: 20px 0 ;
+      margin: 20px 0;
 
       input {
         display: inline-block;
@@ -72,6 +87,7 @@ body {
 
     .ps-forgot {
       text-align: center;
+      text-decoration: underline;
     }
 
     .remember-me {

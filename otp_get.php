@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
     <link rel="stylesheet" type="text/css" href="css/style2.css">
     <link rel="stylesheet" href="css/nav_bar.css">
     <link href="./css/navigation.css" rel="stylesheet"/>
@@ -8,28 +8,29 @@
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           referrerpolicy="no-referrer" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/footer.css">
-    </head>
-    <body>
-    <div class="main">
+</head>
+<body>
+<div class="main">
     <div class="navbar">
         <div class="icon">
             <a href="home_page.php">
-            <img alt="logo" id="img" src="./site_img/logo.png">
+                <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
         <script>
-            if(document.getElementById("search-bar").value){
+            if (document.getElementById("search-bar").value) {
                 return true;
-            }
-            else{
+            } else {
                 return false;
             }
         </script>
 
-        <div class="search" >
+        <div class="search">
             <form action="search.php" onsubmit="return check_search_value()">
-            <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
-            <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label></button></form>
+                <input class="search" id="search-bar" name="search" placeholder="Search Items" type="search">
+                <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </button>
+            </form>
         </div>
 
         <div class="menu">
@@ -86,45 +87,45 @@
     </div>
 </div>
 <br>
-<br>  
-   
-        <?php
-        
-        session_start();
-        if (isset($_SESSION['email'])) {
-            $email = $_SESSION['email'];
-            //echo "Email: " . $email;
-            if(isset($_REQUEST['error'])){
-                $error_otp=$_REQUEST['error'];
-              }
-            else{
-                $error_otp="";
-            }
-        ?>
-            <div class="form-box">
-            <h1 style="text-align: center">Verify OTP</h1>
-            <p>An OTP has been sent to <b> <?php echo $email ?>. </b></p><br><p> If you did not receive the OTP, you can:</p>
-            <button type="button" onclick="changeEmail()">Change Email</button> or
-            <button type="button" onclick="resendEmail()">Resend Email</button>
+<br>
+
+<?php
+
+session_start();
+if (isset($_SESSION['email'])) {
+    $email = $_SESSION['email'];
+    //echo "Email: " . $email;
+    if (isset($_REQUEST['error'])) {
+        $error_otp = $_REQUEST['error'];
+    } else {
+        $error_otp = "";
+    }
+    ?>
+    <div class="form-box">
+        <h1 style="text-align: center">Verify OTP</h1>
+        <p>An OTP has been sent to <b> <?php echo $email ?>. </b></p><br>
+        <p> If you did not receive the OTP, you can:</p>
+        <button type="button" onclick="changeEmail()">Change Email</button>
+        or
+        <button type="button" onclick="resendEmail()">Resend Email</button>
+        <br>
+        <br>
+        <form action="otp_confirm.php" method="post" onsubmit="return validdata()">
+            <label for="otp">OTP:</label>
             <br>
+            <input type="text" id="otp" name="otp" style="width:100%; font-size: larger" required>
             <br>
-            <form action="otp_confirm.php" method="post" onsubmit="return validdata()">
-                <label for="otp">OTP:</label>
-                <br>
-                <input type="text" id="otp" name="otp" style="width:100%; font-size: larger" required>
-                <br>
-                <p id="otpError"><?php echo $error_otp?></p>
-                <br>
-                <input type="submit" value="Confirm OTP" name="Confirm_OTP" id="Confirm_OTP" style="width:100%"></button>
-            </form>
-            </div>
-        <?php
-        }
-        else{
-            header("Location:register.php");
-        }
-        ?>
- <footer style="margin-top: 100px">
+            <p id="otpError"><?php echo $error_otp ?></p>
+            <br>
+            <input type="submit" value="Confirm OTP" name="Confirm_OTP" id="Confirm_OTP" style="width:100%"></button>
+        </form>
+    </div>
+    <?php
+} else {
+    header("Location:register.php");
+}
+?>
+<footer style="margin-top: 100px">
     <div class="footer-container">
         <div class="footer-left">
             <nav>
@@ -163,5 +164,5 @@
     </div>
 
 </footer>
-  </body>
+</body>
 </html>
