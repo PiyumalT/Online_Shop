@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fixed overflow-x in login + admin login.">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_18_2023_2_55_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_18_2023_2_55_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fixed bugs of banner gif.">
+      <change beforePath="$PROJECT_DIR$/additem.php" beforeDir="false" afterPath="$PROJECT_DIR$/additem.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,21 +111,7 @@
       <workItem from="1673871230089" duration="21231000" />
       <workItem from="1673930429898" duration="10164000" />
       <workItem from="1673964655347" duration="4339000" />
-      <workItem from="1674018437492" duration="12138000" />
-    </task>
-    <task id="LOCAL-00020" summary="add retype password when user change password + validate passwords are the same.">
-      <created>1673776484053</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1673776484053</updated>
-    </task>
-    <task id="LOCAL-00021" summary="fixed a bug in address retrieval on user_account.php.">
-      <created>1673776967088</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1673776967088</updated>
+      <workItem from="1674018437492" duration="12343000" />
     </task>
     <task id="LOCAL-00022" summary="add lang attr to html tag.">
       <created>1673777000930</created>
@@ -463,7 +442,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674034741133</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="fixed navigation and wrote positioning from bottom.">
+      <created>1674041550426</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1674041550426</updated>
+    </task>
+    <task id="LOCAL-00070" summary="fixed bugs of banner gif.">
+      <created>1674041588014</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1674041588014</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,8 +494,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add pattern to price input + add validated price indicator." />
-    <MESSAGE value="remove :empty effect on textarea ." />
     <MESSAGE value="fix fw bugs." />
     <MESSAGE value="extract login function to new file." />
     <MESSAGE value="now login is done from the function in login_function.php." />
@@ -526,7 +517,9 @@
     <MESSAGE value="fixed nav." />
     <MESSAGE value="fixed nav in login + admin login." />
     <MESSAGE value="fixed overflow-x in login + admin login." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed overflow-x in login + admin login." />
+    <MESSAGE value="fixed navigation and wrote positioning from bottom." />
+    <MESSAGE value="fixed bugs of banner gif." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bugs of banner gif." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
