@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="rearranged the code.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a231b21-079d-4b16-a420-8a08f2db86b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8a231b21-079d-4b16-a420-8a08f2db86b3.xml" afterDir="false" />
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fixed lagging effect of the animation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_segments/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/code_segments/navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/home_page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/home_page.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,28 +111,7 @@
       <workItem from="1673871230089" duration="21231000" />
       <workItem from="1673930429898" duration="10164000" />
       <workItem from="1673964655347" duration="4339000" />
-      <workItem from="1674018437492" duration="4698000" />
-    </task>
-    <task id="LOCAL-00010" summary="counter :empty effect.">
-      <created>1673330807761</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1673330807761</updated>
-    </task>
-    <task id="LOCAL-00011" summary="finalize carousel effect onclick and on timer.">
-      <created>1673338308456</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1673338308456</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add register page link.">
-      <created>1673539394173</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1673539394173</updated>
+      <workItem from="1674018437492" duration="5017000" />
     </task>
     <task id="LOCAL-00013" summary="change nav bar responsive functionality to new js file.">
       <created>1673539449067</created>
@@ -462,7 +435,28 @@
       <option name="project" value="LOCAL" />
       <updated>1674023559549</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="center navbar2 items.">
+      <created>1674025345244</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1674025345244</updated>
+    </task>
+    <task id="LOCAL-00060" summary="reformat stylesheet linking code.">
+      <created>1674025378530</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1674025378530</updated>
+    </task>
+    <task id="LOCAL-00061" summary="fixed lagging effect of the animation.">
+      <created>1674025421594</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1674025421594</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,9 +494,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=" ." />
-    <MESSAGE value="add function remove effect of :valid/:invalid for one time." />
-    <MESSAGE value="remove collision of user_page.js and remove_effect_of_invalid_and_valid_css_effect.js." />
     <MESSAGE value="change decision-making process." />
     <MESSAGE value="reestablish user_account.php and associated stylesheets and js files." />
     <MESSAGE value="add fontaswesome cdn and add icons and add hover effect to category." />
@@ -525,7 +516,10 @@
     <MESSAGE value="add a footer." />
     <MESSAGE value="add bg color to category." />
     <MESSAGE value="rearranged the code." />
-    <option name="LAST_COMMIT_MESSAGE" value="rearranged the code." />
+    <MESSAGE value="center navbar2 items." />
+    <MESSAGE value="reformat stylesheet linking code." />
+    <MESSAGE value="fixed lagging effect of the animation." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed lagging effect of the animation." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
