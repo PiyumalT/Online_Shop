@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="fixed bugs of banner gif.">
-      <change beforePath="$PROJECT_DIR$/additem.php" beforeDir="false" afterPath="$PROJECT_DIR$/additem.php" afterDir="false" />
+    <list default="true" id="735e55dc-108d-4f65-ab42-12ab7d69b393" name="Changes" comment="reestablish additem.php to functionality state.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/enter_address.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/enter_address.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enter_address.php" beforeDir="false" afterPath="$PROJECT_DIR$/enter_address.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,14 +116,7 @@
       <workItem from="1673871230089" duration="21231000" />
       <workItem from="1673930429898" duration="10164000" />
       <workItem from="1673964655347" duration="4339000" />
-      <workItem from="1674018437492" duration="12343000" />
-    </task>
-    <task id="LOCAL-00022" summary="add lang attr to html tag.">
-      <created>1673777000930</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1673777000930</updated>
+      <workItem from="1674018437492" duration="13196000" />
     </task>
     <task id="LOCAL-00023" summary="add hero image section + carousel effect to hero image.">
       <created>1673786267262</created>
@@ -456,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674041588014</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="reestablish additem.php to functionality state.">
+      <created>1674041821187</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1674041821187</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +499,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix fw bugs." />
     <MESSAGE value="extract login function to new file." />
     <MESSAGE value="now login is done from the function in login_function.php." />
     <MESSAGE value="add admin login terminal." />
@@ -519,7 +523,8 @@
     <MESSAGE value="fixed overflow-x in login + admin login." />
     <MESSAGE value="fixed navigation and wrote positioning from bottom." />
     <MESSAGE value="fixed bugs of banner gif." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bugs of banner gif." />
+    <MESSAGE value="reestablish additem.php to functionality state." />
+    <option name="LAST_COMMIT_MESSAGE" value="reestablish additem.php to functionality state." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

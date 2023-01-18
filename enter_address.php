@@ -8,7 +8,6 @@
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           referrerpolicy="no-referrer" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/footer.css">
-    <script src="./js/enter_address.js"></script>
     <title>Online Shop</title>
 </head>
 <body style="overflow-x: clip">
@@ -133,8 +132,6 @@ if (true) {//get cookie
         <input type="hidden" id="h_country" name="country" value="<?php echo $country; ?>">
         <input type="hidden" id="h_zip" name="zip" value="<?php echo $zip; ?>">
         <input type="hidden" id="h_phone" name="phone" value="<?php echo $phone; ?>">
-
-
         <div class="container">
             <h1>Enter Address</h1>
             <form onsubmit="return validateForm()" action="address_save.php">
@@ -210,7 +207,6 @@ if (true) {//get cookie
             </form>
             <button type="submit" onclick="goBack()">Cancel Order</button>
         </div>
-
         </div>
         <?php
     } else {
@@ -259,5 +255,6 @@ if (true) {//get cookie
         <p>Copyright © 2021 Nayantha Yasiru, Tharindu Piyumal, Nimesha Kavindi, Pathum Sanjana</p>
     </div>
 </footer>
+<script defer src="./js/enter_address.js"></script>
 </body>
 </html>
