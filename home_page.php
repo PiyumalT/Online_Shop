@@ -1,5 +1,10 @@
 <?php
 include_once("connect.php");
+$logged_in = false;
+setcookie("user_id", 1);
+if (isset($_COOKIE["user_id"])) {
+    $logged_in = true;
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -48,7 +53,13 @@ include_once("connect.php");
             <ul>
                 <li><a href="./cart.php">Cart</a></li>
                 <li><a href="./account.php">Account</a></li>
-                <li><a href="./logout.php">Logout</a></li>
+                <?php
+                if ($logged_in) {
+                    echo '<li><a href="./logout.php">Logout</a></li>';
+                } else {
+                    echo '<li><a href="./logout.php">Log In / Sign Up</a></li>';
+                }
+                ?>
             </ul>
         </div>
 
