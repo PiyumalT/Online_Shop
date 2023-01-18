@@ -26,14 +26,17 @@ function loginFunction(string $table): bool
                 } else {
                     setcookie("user_id", $user_id);
                 }
+                header("Location: home_page.php");
             } else if ($table == "admin") {
+                $admin_id = mysqli_fetch_assoc($result)['id'];
                 if (isset($rememberMe) && $rememberMe) {
-                    setcookie("admin_logged_in", true, time() + 60 * 60 * 24 * 50); // with time sec * min * hours * day
+                    setcookie("admin_id", $admin_id, time() + 60 * 60 * 24 * 50); // with time sec * min * hours * day
                 } else {
-                    setcookie("admin_logged_in", true);
+                    setcookie("admin_id", $admin_id);
                 }
+                header("Location: admin_dashbord.php");
             }
-            header("Location: home_page.php");
+            
         } else {
             return false;
         }
