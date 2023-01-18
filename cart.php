@@ -125,9 +125,9 @@ if (mysqli_num_rows($result) > 0) {
         echo '<td><a href=item_details.php?item_id=' . $item_id . '"><h3>' . $item_name . '</h3><p>' . $item_details . '</p></td></a>';
         echo '<td><p> Option : ' . $options . '</p>';
         echo '
-                    ' . $min_tx . '<button>-</button></a>
+                    ' . $min_tx . '<button style="background: #0187ca;/*! margin: 15; */padding: 4px;border-radius: 3px;">-</button></a>
                     <input type="text" value="' . $quantity . '">
-                    ' . $plus_tx . '<button>+</button></td></a>';
+                    ' . $plus_tx . '<button style="background: #0187ca;/*! margin: 15; */padding: 4px;border-radius: 3px;">+</button></td></a>';
         echo '<td><p> RS:' . $row_price . '</p>';
         echo '<td><button class="remove-button" onclick="window.location.href =\'remove_from_cart.php?item_id=' . $item_id . '&options=' . $options . '&qty=' . $quantity . '\';">Remove</button></td>';
         echo '</tr>';

@@ -8,6 +8,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            
         }
 
         /* Add some padding and styling to the content */
@@ -16,6 +17,13 @@
             background-color: #f2f2f2;
             text-align: center;
             font-size: large;
+            background-color: rgba(0, 0, 0, 0.8); /* Transparent background */
+            color: #cad3dc;
+        }
+        body {
+            background-color: #3e5986;
+            background: url(site_img/s-l1600.jpg);
+
         }
 
     </style>

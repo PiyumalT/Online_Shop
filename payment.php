@@ -12,8 +12,14 @@
     <link rel="stylesheet" href="./css/footer.css">
 
     <script src="js/payment.js" type="text/javascript"></script>
-
-
+<style>
+    input{
+        background-color:#cad3dc;
+    }
+    img{
+        min-width: 0;
+    }
+</style>
 </head>
 <body>
 <div class="main">
