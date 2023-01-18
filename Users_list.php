@@ -18,9 +18,17 @@
     </script> 
 </head>
 <body>
-   
+<?php
+if (isset($_COOKIE['user_id'])) {
+        $user_id = $_COOKIE['admin_id'];
+    } else {
+        // The cookie has not been set
+        $user_id = null;
+        header("Location: admin_login.php");
+        exit;
+    }?>
    <div class="first">
-          <a  href="additem.php"><h2>Add product</h2></a>
+          <a  href="add_item.php"><h2>Add product</h2></a>
           <a  href="Product_list.php" ><h2>Product list</h2></a>
           <a  href="Sales_list.php"><h2>Sales list</h2></a>
           <a  href="Users_list.php" class="now"><h2>Users list</h2></a>
