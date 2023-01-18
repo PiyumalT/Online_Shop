@@ -34,7 +34,7 @@
    $ship=null;
    $cus_id=0;
   
-   $query="SELECT order_id,item_id,qty FROM order_details";
+   $query="SELECT order_details.order_id,order_details.item_id,order_details.qty FROM order_details,orders WHERE order_details.order_id=orders.order_id AND orders.paid='1' ORDER BY orders.date DESC;";
    $result= mysqli_query($connect,$query);
    
 
@@ -46,14 +46,14 @@
     $item_id=$r['item_id'];
     $qty=$r['qty'];
     
-    $query1="SELECT date,shipped FROM orders WHERE orders.order_id=$order_id";
+    $query1="SELECT date,shipped FROM orders WHERE (orders.order_id=$order_id AND paid='1') ORDER BY date DESC" ;
     $result1= mysqli_query($connect,$query1);
     if($result1){
     $r1=mysqli_fetch_assoc($result1);
     if(isset($r1['date'])){ 
          $date=$r1['date'];}
     if(isset($r1['shipped'])){ 
-         $ship=$r1['shipped'];}
+         $ship=$r1['shipped'];}else{$ship=NULL;}
     }
 
     $query2="SELECT options FROM order_details WHERE item_id= $item_id AND order_id= $order_id";
@@ -80,7 +80,8 @@
       echo "<td> $qty</td>"; 
       echo "<td> $date</td>";
       if($ship==null){
-      echo "<td> Not Shipped </td>";} else { echo "<td> Shipped </td>";}
+      echo "<td> <a href='mark_ship.php?id=".$r['order_id']."' class='btn'>mark_shipped</a></td>";} else { echo "<td> Shipped </td>";}
+
       echo "<td> <a href='more_details.php?id=".$r['order_id']."' class='btn'>go</a></td>";
       echo "</tr>";
     
