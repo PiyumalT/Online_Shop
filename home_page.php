@@ -21,7 +21,7 @@ include_once("connect.php");
 </head>
 <body>
 
-<div class="main" style="margin-bottom: 15px">
+<div class="main" style="margin-bottom:15px">
     <div class="navbar">
         <div class="icon">
             <a href="home_page.php">
