@@ -116,38 +116,38 @@ $url = 'site_img/background img.jpg'; ?>
     <div class="footer-container">
         <div class="footer-left">
             <nav>
-                <a href="#">Contact Us</a>
+                <a href="contactus.html">Contact Us</a>
                 <ul>
-                    <li><a href="#">FB</a></li>
-                    <li><a href="#">YT</a></li>
-                    <li><a href="#">Email</a></li>
+                    <li><a href="contactus.html">FB</a></li>
+                    <li><a href="contactus.html">YT</a></li>
+                    <li><a href="contactus.html">Email</a></li>
                 </ul>
             </nav>
         </div>
         <div class="footer-center">
             <nav>
-                <a href="#">Shopping</a>
+              <a href="FAQ.html">Shopping</a>
                 <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Payment Method</a></li>
-                    <li><a href="#">User Guide</a></li>
-                </ul>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="FAQ.html">Payment Method</a></li>
+                    <li><a href="FAQ.html">User Guide</a></li>
+                </ul></ul>
             </nav>
         </div>
         <div class="footer-right">
             <nav>
-                <a href="#">Company</a>
+             <a href="about.html">Company</a>
                 <ul>
-                    <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="about.html">Terms and Conditions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">Privacy Policy</a></li>
                 </ul>
             </nav>
         </div>
 
     </div>
     <div class="bottom-tx">
-        <p>Copyright © 2021 Nayantha Yasiru, Tharindu Piyumal, Nimesha Kavindi, Pathum Sanjana</p>
+        <p>Copyright © 2021 Nayantha Yasiru, Tharindu Piyumal, Nimesha Kavindi, Pathum Sanjana,Siva Tharsan,Siva Tharsan,Siva Tharsan,Siva Tharsan,Siva Tharsan</p>
     </div>
 
 </footer>
