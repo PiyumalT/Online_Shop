@@ -2,23 +2,21 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background-color: #cad3dc;
-  background-image: url(../site_img/background\ img.jpg);
 }
-body .login-form {
+
+body form:not(.search-form) {
   border: 1px solid black;
   padding: 20px;
   border-radius: 5px;
-  margin-top: 100px;
   box-shadow: black 10px 10px 10px;
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
-  color:#cad3dc;
 }
-body form h1 {
+
+body form:not(.search-form) h1 {
   margin-bottom: 10px;
   text-align: center;
 }
-body form .wrong-credentials {
+
+body form:not(.search-form) .wrong-credentials {
   text-align: center;
   padding: 10px 0;
   border: 1px red solid;
@@ -27,81 +25,95 @@ body form .wrong-credentials {
   color: red;
   font-weight: bold;
 }
-body form label, body form input {
+
+body form:not(.search-form) label, body form:not(.search-form) input {
   display: block;
 }
-body form .email-field input {
+
+body form:not(.search-form) .email-field input {
   width: 100%;
 }
-body form .password-field {
+
+body form:not(.search-form) .password-field {
   display: flex;
   flex-direction: column;
   margin: 20px 0;
 }
-body form .password-field input {
+
+body form:not(.search-form) .password-field input {
   display: inline-block;
 }
-body form .password-field .icon {
+
+body form:not(.search-form) .password-field .icon {
   width: 25px;
   height: auto;
   display: inline-block;
 }
-body form .error-text {
+
+body form:not(.search-form) .error-text {
   color: red;
   margin-bottom: 20px;
 }
-body form input, body form input:focus {
+
+body form:not(.search-form) input, body form:not(.search-form) input:focus {
   border-bottom: 1px solid black;
 }
-body form #login-btn {
+
+body form:not(.search-form) #login-btn {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   color: white;
-  background: #022342;
+  background: green;
   outline: none;
   border: none;
   border-radius: 5px;
 }
-body form .ps-forgot {
+
+body form:not(.search-form) .ps-forgot {
   text-align: center;
 }
-body form .remember-me {
+
+body form:not(.search-form) .remember-me {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
 }
-body form .remember-me input {
+
+body form:not(.search-form) .remember-me input {
   margin-right: 10px;
 }
-body form input {
+
+body form:not(.search-form) input {
   margin-right: 5px;
-  background-color: #cad3dc; /* Green */
-}
-.login-form a{
-  color: #cad3dc;
 }
 
 @media (max-width: 500px) {
   form {
     width: 90vw;
   }
+
   form h1 {
     font-size: 4.5rem;
   }
+
   form label {
     font-size: 2rem;
   }
+
   form a {
     font-size: 1.5rem;
   }
+
   form input[type=checkbox] {
     padding: 500px;
   }
+
   form button[type=submit] {
     font-size: 2rem;
   }
+
   form .password-field input {
     width: 90%;
   }
