@@ -9,11 +9,10 @@ include_once("connect.php");
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index Page</title>
-    <link rel="stylesheet" href="css/reset.css">
-    
-    <link rel="stylesheet" href="css/home_page.css">
-    <link rel="stylesheet" href="css/home_page2.css">
-    <link rel="stylesheet" href="css/nav_bar.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/home_page.css">
+    <link rel="stylesheet" href="./css/home_page2.css">
+    <link rel="stylesheet" href="./css/nav_bar.css">
     <link href="./css/navigation.css" rel="stylesheet"/>
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -22,26 +21,24 @@ include_once("connect.php");
 </head>
 <body>
 
-<div class="main">
+<div class="main" style="margin-bottom: 15px">
     <div class="navbar">
         <div class="icon">
             <a href="home_page.php">
-            <img alt="logo" id="img" src="./site_img/logo.png">
+                <img alt="logo" id="img" src="./site_img/logo.png">
             </a>
         </div>
         <script>
-            if(document.getElementById("search-bar").value){
-                return true;
-            }
-            else{
-                return false;
-            }
+            const return
+            !!document.getElementById("search-bar").value;
         </script>
 
-        <div class="search" >
+        <div class="search">
             <form action="search.php" onsubmit="return check_search_value()">
-            <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
-            <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label></button></form>
+                <input class="srch" id="search-bar" name="search" placeholder="Search Items" type="search">
+                <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </button>
+            </form>
         </div>
 
         <div class="menu">
@@ -53,7 +50,6 @@ include_once("connect.php");
         </div>
 
     </div>
-
     <div class="navbar2">
         <ul>
             <li>
@@ -97,15 +93,11 @@ include_once("connect.php");
         </ul>
     </div>
 </div>
-
-
 <main>
     <div class="hero-img">
         <img src="" alt="">
     </div>
 </main>
-
-
 <section class="popular category">
     <div class="category-tag"><h2>Popular</h2></div>
     <div class="image-container">
@@ -122,9 +114,9 @@ include_once("connect.php");
                 $item_id = $row['item_id'];
                 $sql2 = "SELECT * FROM item WHERE item_id=$item_id ";
                 $result2 = mysqli_query($connect, $sql2);
-                if ($result2){
+                if ($result2) {
                     $row2 = mysqli_fetch_assoc($result2);
-                    if ($row2){
+                    if ($row2) {
                         $item_price = $row2['price'];
                         $item_name = $row2['name'];
                         // echo "Item ID: " . $item_id . "<br>";
@@ -134,7 +126,7 @@ include_once("connect.php");
                     }
                 }
                 $i++;
-                
+
             }
             for (; $i < 5; $i++) {
                 echo '<div class="category-img">No Data</div>';
@@ -147,7 +139,11 @@ include_once("connect.php");
         ?>
     </div>
 </section>
-<br><br><br><br><br>
+<section class="banner">
+    Banner <br>
+    add images <br>
+    layout will be done later after the content in here.
+</section>
 <section class="latest category">
     <div class="category-tag"><h2>Latest</h2></div>
     <div class="image-container">
@@ -227,7 +223,7 @@ include_once("connect.php");
     const imageRemoveTime = 500;
 
     function changeHeroImg() {
-        const imgArray = ['./site_img/1.jpeg', './site_img/1.jpeg','./site_img/2.jpeg','./site_img/3.jpg']; //php retrieve here
+        const imgArray = ['./site_img/1.jpeg', './site_img/1.jpeg', './site_img/2.jpeg', './site_img/3.jpg']; //php retrieve here
         const imgElement = document.createElement("img");
         imgElement.src = imgArray[i];
         imgElement.classList.add("slide-out");
