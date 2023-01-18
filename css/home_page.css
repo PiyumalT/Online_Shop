@@ -14,6 +14,7 @@ body main img {
 }
 body .category {
   position: relative;
+  background-color: white;
 }
 body .category button {
   position: absolute;
@@ -44,9 +45,6 @@ body .category .image-container {
   align-items: center;
   justify-content: space-between;
   animation: sliderAnimation ease-in-out infinite forwards alternate;
-  border: 3px solid black;
-  border-radius: 5px;
-
 }
 body .category .image-container .category-img {
   margin-right: 20px;
