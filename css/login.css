@@ -5,12 +5,6 @@ body {
   place-items: center;
   background-image: url("../site_img/background img.jpg");
 }
-body .main .navbar .search {
-  transform: translateX(-50%);
-}
-body .main .navbar .menu {
-  transform: translateX(100%);
-}
 body form:not(.search-form) {
   border: 1px solid black;
   padding: 20px;
