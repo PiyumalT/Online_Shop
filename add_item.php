@@ -57,6 +57,14 @@
 <body>
 
    <?php
+    if (isset($_COOKIE['user_id'])) {
+        $user_id = $_COOKIE['admin_id'];
+    } else {
+        // The cookie has not been set
+        $user_id = null;
+        header("Location: admin_login.php");
+        exit;
+    }
     if(isset($message)){
         foreach($message as $message){
             echo '<span class ="message"><h2 style="text-align:center">'.$message.'</h2></span>';
