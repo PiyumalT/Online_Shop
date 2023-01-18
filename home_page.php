@@ -140,9 +140,9 @@ include_once("connect.php");
     </div>
 </section>
 <section class="banner">
-    Banner <br>
-    add images <br>
-    layout will be done later after the content in here.
+    <div class="banner2">
+    <img src="site_img/banner.gif">
+    </div>
 </section>
 <section class="latest category">
     <div class="category-tag"><h2>Latest</h2></div>
@@ -223,7 +223,7 @@ include_once("connect.php");
     const imageRemoveTime = 500;
 
     function changeHeroImg() {
-        const imgArray = ['./site_img/1.jpeg', './site_img/1.jpeg', './site_img/2.jpeg', './site_img/3.jpg']; //php retrieve here
+        const imgArray = ['./site_img/1.png', './site_img/2.png', './site_img/3.png']; //php retrieve here
         const imgElement = document.createElement("img");
         imgElement.src = imgArray[i];
         imgElement.classList.add("slide-out");
