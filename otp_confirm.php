@@ -14,7 +14,6 @@ if(isset($_POST['Confirm_OTP'])){
         if ($result_otp==$user_otp){
             //inserting user data to user table and remove user from temp user table
             $sql_insert="INSERT INTO users (email, password, Name, reg_date) VALUES ('$email', '$result_password', null,'$reg_date')";
-            echo $sql_insert;
             $result_reg = mysqli_query($connect, $sql_insert); 
             $user_id = mysqli_insert_id($connect);
             $sql_delete = "DELETE FROM temp_users WHERE email = '$email'";
