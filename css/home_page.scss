@@ -92,6 +92,13 @@ body {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      aspect-ratio: 16/9;
+    }
   }
 }
 

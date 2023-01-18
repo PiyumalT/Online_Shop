@@ -36,7 +36,10 @@ include_once("connect.php");
         <div class="search">
             <form action="search.php" onsubmit="return check_search_value()">
                 <input class="search" id="search-bar" name="search" placeholder="Search Items" type="search">
-                <button class="btn"><label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+                <button class="btn">
+                    <label for="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
                 </button>
             </form>
         </div>
@@ -140,9 +143,7 @@ include_once("connect.php");
     </div>
 </section>
 <section class="banner">
-    <div class="banner2">
-    <img src="site_img/banner.gif">
-    </div>
+    <img src="./site_img/banner.gif" alt="banner">
 </section>
 <section class="latest category">
     <div class="category-tag"><h2>Latest</h2></div>

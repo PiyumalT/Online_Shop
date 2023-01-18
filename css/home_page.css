@@ -55,17 +55,6 @@ body .category .image-container .category-img img {
   height: 20%;
   object-fit: cover;
 }
-.banner .image-container2 {
-  width: 90%;
-}
-.banner2{
-  width:80%;
-  margin:20px;
-
-}
-.banner2 img{
-  width:100%;
-}
 @keyframes sliderAnimation {
   0% {
     transform: translateX(0%);
@@ -83,6 +72,12 @@ body .banner {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
+}
+body .banner img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  aspect-ratio: 16/9;
 }
 
 .slide-out {
