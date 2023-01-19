@@ -22,12 +22,12 @@ if (isset($_SESSION['email'])) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username='kawdaboy9999@gmail.com'; 
-        $mail->Password = 'otmytqvmethfebst';
+        $mail->Username='mail@gmail.com'; // Add admin emails
+        $mail->Password = 'otmyt'; // add app password
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
-        $mail->setFrom('kawdaboy9999@gmail.com'); 
+        $mail->setFrom('mail@gmail.com'); // Add admin emails
         $mail->addAddress($email);
         $mail->isHTML(true);
         $mail->Subject="Verify Your Email";
