@@ -13,6 +13,8 @@ if (isset($_COOKIE["user_id"])) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index Page</title>
+    </title>
+    <link rel="icon" type="image/png" href="site_img/icon.png">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/home_page.css">
     <link rel="stylesheet" href="./css/home_page2.css">

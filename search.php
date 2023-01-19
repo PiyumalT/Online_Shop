@@ -13,6 +13,8 @@ $result = mysqli_query($connect, $query);
 
 <head>
     <title>Search Results</title>
+    </title>
+    <link rel="icon" type="image/png" href="site_img/icon.png">
     <link rel="stylesheet" href="css/nav_bar.css">
     <link href="./css/navigation.css" rel="stylesheet"/>
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User list</title>
+    </title>
+    <link rel="icon" type="image/png" href="site_img/icon.png">
     <link rel="stylesheet" href="css/Users_list.css">
     <?php include 'connect.php'; ?> 
     <?php include 'connect.php';
@@ -20,6 +22,17 @@
     </script> 
 </head>
 <body>
+    <?php
+        if(isset ($_REQUEST['id'])){
+        $id=$_REQUEST['id'];
+        $query2="DELETE FROM users WHERE users.id=$id ";
+        $result2= mysqli_query($connect,$query2);
+        if ($result2) {
+            $url = $_SERVER['PHP_SELF'];
+            header("Location: $url");
+            exit;
+        }
+       }?>
     <style type="text/css">
         body
         {
@@ -107,16 +120,7 @@
         echo"Query is wrong";
     }
 
-    if(isset ($_REQUEST['id'])){
-        $id=$_REQUEST['id'];
-        $query2="DELETE FROM users WHERE users.id=$id ";
-        $result2= mysqli_query($connect,$query2);
-        if ($result2) {
-            $url = $_SERVER['PHP_SELF'];
-            header("Location: $url");
-            exit;
-        }
-       }
+    
 
    ?>
   

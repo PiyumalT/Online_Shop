@@ -10,6 +10,8 @@
           referrerpolicy="no-referrer" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/footer.css">
     <title>Item Details</title>
+    </title>
+    <link rel="icon" type="image/png" href="site_img/icon.png">
 
 </head>
 <body style="margin: 0; padding: 0; overflow-x: clip">

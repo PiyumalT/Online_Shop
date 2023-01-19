@@ -1,7 +1,7 @@
 <?php
 include_once("connect.php");
 
-$user_id = 1;//$_COOKIE["user_id"];
+$user_id = $_COOKIE["user_id"];
 $feedback = array();
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST)) {
     if (isset($_POST['name']) && $_POST['name'] != "" &&
@@ -80,6 +80,8 @@ if (isset($user_id)) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $name ?>'s Account</title>
+    </title>
+    <link rel="icon" type="image/png" href="site_img/icon.png">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="css/user_account.css">
     <link rel="stylesheet" href="css/nav_bar.css">
@@ -187,7 +189,7 @@ if (isset($user_id)) {
 <div class="edit-user-btn-container">
     <button class="edit-user" onclick="triggerEditMode(this)" data-in-edit-mode="false">Edit Details.</button>
 </div>
-<form method="post" class="user">
+<form method="post" class="user" action="user_account.php">
     <h2>User Details</h2>
     <hr><br><br>
     <div class="details"><label for="name">Name

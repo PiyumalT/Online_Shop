@@ -9,6 +9,8 @@
           referrerpolicy="no-referrer" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/footer.css">
     <title>Online Shop</title>
+    </title>
+    <link rel="icon" type="image/png" href="site_img/icon.png">
 </head>
 <body style="overflow-x: clip">
 <div class="main">

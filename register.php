@@ -4,6 +4,8 @@
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <script src="js/register.js" type="text/javascript"></script>
     <title>Regiser New Account</title>
+    </title>
+    <link rel="icon" type="image/png" href="site_img/icon.png">
 
     <link rel="stylesheet" href="css/nav_bar.css">
     <link href="./css/navigation.css" rel="stylesheet"/>

@@ -1,6 +1,8 @@
 <html lang="en">
 <head>
     <title>Shopping Cart</title>
+    </title>
+    <link rel="icon" type="image/png" href="site_img/icon.png">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/cart.css">
     <link rel="stylesheet" href="./css/footer.css">

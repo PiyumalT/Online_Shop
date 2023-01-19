@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Order Success</title>
+    </title>
+    <link rel="icon" type="image/png" href="site_img/icon.png">
     <style>
         /* Center the container on the page */
         .container {

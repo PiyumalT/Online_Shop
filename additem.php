@@ -41,6 +41,8 @@ if (isset($_POST['Add_product'])) {
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/additem.css">
     <title>Add Product Page</title>
+    </title>
+    <link rel="icon" type="image/png" href="site_img/icon.png">
 </head>
 <body>
 <?php

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <title>Order Details</title>
+    </title>
+    <link rel="icon" type="image/png" href="site_img/icon.png">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/payment.css">
     <link rel="stylesheet" href="./css/nav_bar.css">
