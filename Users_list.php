@@ -12,13 +12,17 @@
     <?php include 'connect.php';
       $url='site_img/background img.jpg';  ?>
     <script>
-    function confirmLink(link) {
+    /*function confirmLink(link) {
     var confirmed = confirm("Are you sure you want to continue?");
 
     if (confirmed) {
         location.assign(link);
     }
+    }*/
+    function checkdelete(){
+        return confirm('Are you sure to remove this record?');
     }
+
     </script> 
 </head>
 <body>
@@ -28,9 +32,9 @@
         $query2="DELETE FROM users WHERE users.id=$id ";
         $result2= mysqli_query($connect,$query2);
         if ($result2) {
-            $url = $_SERVER['PHP_SELF'];
-            header("Location: $url");
-            exit;
+           $url = $_SERVER['PHP_SELF'];
+           header("Location: $url");
+           exit;
         }
        }?>
     <style type="text/css">
@@ -108,9 +112,9 @@
       echo "<td> $total</td>";
         $url="Users_list.php?id=".$r['id'];
         ?>
-        <td><a href="<?php echo $url ?>" class='btn' onclick="confirmLink(<?php echo $url ?>); return false;">Remove</a></td>
+        <!--<td><a href="<?php echo $url ?>" class='btn' onclick="confirmLink(<?php echo $url ?>); return false;">Remove</a></td>-->
         <?php
-        //echo "<td> <a href='Users_list.php?id=".$r['id']."' class='btn'>Remove</a></td>";
+        echo "<td> <a href='Users_list.php?id=".$r['id']."' class='btn' onclick='return checkdelete()'>Remove</a></td>";
         echo "</tr>";
     //echo "</table>"; 
      }

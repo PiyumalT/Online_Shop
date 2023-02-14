@@ -21,6 +21,14 @@
             exit;
         }
        } ?>
+
+    <script>
+   
+    function checkdelete(){
+        return confirm('Are you sure to delete this record?');
+    }
+
+    </script> 
    
 </head>
 <body>
@@ -94,7 +102,7 @@
       echo "<td> $difference</td>"; 
       echo "<td> $total</td>";
       echo "<td> <a href='edit_product.php?id=".$r['item_id']."' class='btn'>Edit</a></td>";
-      echo "<td> <a href='Product_list.php?id=".$r['item_id']."' class='btn'>Delete</a></td>";
+      echo "<td> <a href='Product_list.php?id=".$r['item_id']."' class='btn' onclick='return checkdelete()'>Delete</a></td>";
       echo "</tr>";
     //echo "</table>";       
 

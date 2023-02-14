@@ -11,6 +11,14 @@
     <?php include 'connect.php'; ?>
     <?php include 'connect.php';
       $url='site_img/background img.jpg';  ?>
+
+   <script>
+   
+   function checkshipped(){
+       return confirm('Are you sure to mark shipped ?');
+   }
+
+   </script> 
 </head>
 <body>
 
@@ -106,7 +114,7 @@
       echo "<td> $date</td>";
       if($ship==null){
       //echo "<td> Not Shipped </td>";} else { echo "<td> Shipped </td>";}
-      echo "<td> <a href='mark_ship.php?id=".$r['order_id']."' class='btn'>mark_shipped</a></td>";} else { echo "<td> Shipped </td>";}
+      echo "<td> <a href='mark_ship.php?id=".$r['order_id']."' class='btn' onclick='return checkshipped()'>mark_shipped</a></td>";} else { echo "<td> Shipped </td>";}
       echo "<td> <a href='order_info.php?order_id=".$r['order_id']."' class='btn'>go</a></td>";
       echo "</tr>";
     //echo "</table>"; 
